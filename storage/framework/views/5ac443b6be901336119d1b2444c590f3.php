@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('content')
+<?php $__env->startSection('content'); ?>
    
     
     <main class="container">
@@ -8,17 +7,17 @@
         <div class="border rounded-3 p-4 shadow-sm bg-body">
           
           <form action="/register" method="post"> 
-            @csrf
+            <?php echo csrf_field(); ?>
 
-            @if ($errors->any())
+            <?php if($errors->any()): ?>
                 <div class="alert alert-danger">
                     <ul class="mb-0">
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
+                        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <li><?php echo e($error); ?></li>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </ul>
                 </div>
-            @endif
+            <?php endif; ?>
 
             <h2 class="mb-1">Create an account</h2>
             <p class="text-body-secondary mb-4">Join Table Tennis today</p>
@@ -76,4 +75,5 @@
       <p class="mb-0"><a href="#">Back to top</a></p>
     </footer>
     
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\USER\Herd\cs262_midterm_project\resources\views/register.blade.php ENDPATH**/ ?>
