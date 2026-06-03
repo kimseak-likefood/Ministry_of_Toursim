@@ -7,30 +7,38 @@
             </div>
         </div>
         <div class="row">
-            @php
-            $offers = [
-                ['class' => 'product01', 'subtitle' => null, 'title' => "Things to do on <br>your trip", 'btn' => 'Learn More'],
-                ['class' => 'product02', 'subtitle' => 'Enjoy Summer Deals', 'title' => 'Up to 70% Discount!', 'btn' => 'View Deal'],
-            ];
-            @endphp
-            @foreach ($offers as $offer)
+
+            <!-- Offer 1 -->
             <div class="col-12 col-md-6 mb-3 mb-md-0 overflow-hidden hoverShine">
-                <div class="box {{ $offer['class'] }}">
+                <div class="box product01">
                     <div class="content">
-                        @if ($offer['subtitle'])
-                        <p class="fs-6 mb-2 theme-text-white">{{ $offer['subtitle'] }}</p>
-                        @endif
-                        <p class="fs-1 theme-heading theme-text-white mb-4">{!! $offer['title'] !!}</p>
+                        <p class="fs-1 theme-heading theme-text-white mb-4">Things to do on <br>your trip</p>
                         <div class="custom-button">
                             <a href="javascript:void(0)" class="btn btn-shop small">
-                                {{ $offer['btn'] }}
+                                Learn More
                                 <i class="bi bi-arrow-up-right fs-6 ms-2"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            @endforeach
+
+            <!-- Offer 2 -->
+            <div class="col-12 col-md-6 mb-3 mb-md-0 overflow-hidden hoverShine">
+                <div class="box product02">
+                    <div class="content">
+                        <p class="fs-6 mb-2 theme-text-white">Enjoy Summer Deals</p>
+                        <p class="fs-1 theme-heading theme-text-white mb-4">Up to 70% Discount!</p>
+                        <div class="custom-button">
+                            <a href="javascript:void(0)" class="btn btn-shop small">
+                                View Deal
+                                <i class="bi bi-arrow-up-right fs-6 ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

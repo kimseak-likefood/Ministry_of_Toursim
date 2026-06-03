@@ -8,41 +8,27 @@
             <div class="col-12">
                 @include('partials.destinations-tabs')
                 <div class="tab-content mt-5" id="pills-tab2Content">
-                    @foreach (['regions' => 'Regions', 'cities' => 'Cities', 'contact' => 'Places of interest'] as $tab => $label)
-                    <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}" id="pills-{{ $tab }}" role="tabpanel"
-                        aria-labelledby="pills-{{ $tab }}-tab" tabindex="0">
+
+                    <!-- Regions Tab -->
+                    <div class="tab-pane fade show active" id="pills-regions" role="tabpanel"
+                        aria-labelledby="pills-regions-tab" tabindex="0">
                         <div class="row">
-                            @php
-                            $destinations = [
-                                ['name' => 'Hawai', 'img' => 'destination01.jpg'],
-                                ['name' => 'Turkey', 'img' => 'destination02.jpg'],
-                                ['name' => 'Iceland', 'img' => 'destination03.jpg'],
-                                ['name' => 'Maldives', 'img' => 'destination04.jpg'],
-                                ['name' => 'Australia', 'img' => 'destination05.jpg'],
-                                ['name' => 'Rome', 'img' => 'destination06.jpg'],
-                                ['name' => 'England', 'img' => 'destination07.jpg'],
-                                ['name' => 'London', 'img' => 'destination08.jpg'],
-                                ['name' => 'Zealand', 'img' => 'destination09.jpg'],
-                                ['name' => 'Peru', 'img' => 'destination10.jpg'],
-                                ['name' => 'France', 'img' => 'destination11.jpg'],
-                                ['name' => 'Paris', 'img' => 'destination12.jpg'],
-                            ];
-                            @endphp
-                            @foreach ($destinations as $dest)
+
+                            <!-- Destination 1 -->
                             <div class="col-12 col-lg-3">
                                 <div class="theme-bg-white mb-5">
                                     <div class="row g-0 align-items-center">
                                         <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
                                             <div class="overflow-hidden">
                                                 <figure class="mb-0 img-effect">
-                                                    <img src="{{ asset('assets/images/destinations/' . $dest['img']) }}" class="img-fluid" alt="{{ $dest['name'] }}" title="{{ $dest['name'] }}">
+                                                    <img src="/assets/images/destinations/destination01.jpg" class="img-fluid" alt="Hawai" title="Hawai">
                                                 </figure>
                                             </div>
                                         </div>
                                         <div class="col-8 col-xxl-10">
                                             <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
                                                 <div class="d-flex flex-column">
-                                                    <span class="d-flex fs-6">{{ $dest['name'] }}</span>
+                                                    <span class="d-flex fs-6">Hawai</span>
                                                     <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
                                                 </div>
                                                 <div class="d-flex">
@@ -53,10 +39,910 @@
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
+
+                            <!-- Destination 2 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination02.jpg" class="img-fluid" alt="Turkey" title="Turkey">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Turkey</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination 3 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination03.jpg" class="img-fluid" alt="Iceland" title="Iceland">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Iceland</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination 4 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination04.jpg" class="img-fluid" alt="Maldives" title="Maldives">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Maldives</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination 5 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination05.jpg" class="img-fluid" alt="Australia" title="Australia">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Australia</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination 6 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination06.jpg" class="img-fluid" alt="Rome" title="Rome">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Rome</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination 7 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination07.jpg" class="img-fluid" alt="England" title="England">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">England</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination 8 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination08.jpg" class="img-fluid" alt="London" title="London">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">London</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination 9 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination09.jpg" class="img-fluid" alt="Zealand" title="Zealand">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Zealand</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination 10 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination10.jpg" class="img-fluid" alt="Peru" title="Peru">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Peru</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination 11 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination11.jpg" class="img-fluid" alt="France" title="France">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">France</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destination 12 -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination12.jpg" class="img-fluid" alt="Paris" title="Paris">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Paris</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    @endforeach
+
+                    <!-- Cities Tab -->
+                    <div class="tab-pane fade" id="pills-cities" role="tabpanel" aria-labelledby="pills-cities-tab" tabindex="0">
+                        <div class="row">
+                            <!-- Same 12 destinations, copy from above and change as needed -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination01.jpg" class="img-fluid" alt="Hawai" title="Hawai">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Hawai</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination02.jpg" class="img-fluid" alt="Turkey" title="Turkey">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Turkey</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination03.jpg" class="img-fluid" alt="Iceland" title="Iceland">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Iceland</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination04.jpg" class="img-fluid" alt="Maldives" title="Maldives">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Maldives</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination05.jpg" class="img-fluid" alt="Australia" title="Australia">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Australia</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination06.jpg" class="img-fluid" alt="Rome" title="Rome">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Rome</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination07.jpg" class="img-fluid" alt="England" title="England">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">England</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination08.jpg" class="img-fluid" alt="London" title="London">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">London</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination09.jpg" class="img-fluid" alt="Zealand" title="Zealand">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Zealand</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination10.jpg" class="img-fluid" alt="Peru" title="Peru">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Peru</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination11.jpg" class="img-fluid" alt="France" title="France">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">France</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination12.jpg" class="img-fluid" alt="Paris" title="Paris">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Paris</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Places of Interest Tab -->
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                        <div class="row">
+                            <!-- Same 12 destinations, copy from above and change as needed -->
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination01.jpg" class="img-fluid" alt="Hawai" title="Hawai">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Hawai</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination02.jpg" class="img-fluid" alt="Turkey" title="Turkey">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Turkey</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination03.jpg" class="img-fluid" alt="Iceland" title="Iceland">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Iceland</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination04.jpg" class="img-fluid" alt="Maldives" title="Maldives">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Maldives</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination05.jpg" class="img-fluid" alt="Australia" title="Australia">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Australia</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination06.jpg" class="img-fluid" alt="Rome" title="Rome">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Rome</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination07.jpg" class="img-fluid" alt="England" title="England">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">England</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination08.jpg" class="img-fluid" alt="London" title="London">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">London</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination09.jpg" class="img-fluid" alt="Zealand" title="Zealand">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Zealand</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination10.jpg" class="img-fluid" alt="Peru" title="Peru">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Peru</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination11.jpg" class="img-fluid" alt="France" title="France">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">France</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-3">
+                                <div class="theme-bg-white mb-5">
+                                    <div class="row g-0 align-items-center">
+                                        <div class="col-4 col-xxl-2 overflow-hidden rounded-circle">
+                                            <div class="overflow-hidden">
+                                                <figure class="mb-0 img-effect">
+                                                    <img src="/assets/images/destinations/destination12.jpg" class="img-fluid" alt="Paris" title="Paris">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 col-xxl-10">
+                                            <div class="mt-2 mt-xxl-0 ps-3 d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="d-flex fs-6">Paris</span>
+                                                    <span class="d-flex small fw-normal theme-text-accent-one">12,683 Hotels</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="link-btn"><span><i class="bi bi-arrow-up-right"></i></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

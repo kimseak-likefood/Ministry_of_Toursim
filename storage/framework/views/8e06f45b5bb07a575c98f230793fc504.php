@@ -1,10 +1,18 @@
 <ul class="nav nav-pills mb-3 destination-pill" id="pills-tab2" role="tablist">
-    <?php $__currentLoopData = ['regions' => 'Regions', 'cities' => 'Cities', 'contact' => 'Places of interest']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tab => $label): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <li class="nav-item" role="presentation">
-        <button class="nav-link <?php echo e($loop->first ? 'active' : ''); ?>" id="pills-<?php echo e($tab); ?>-tab" data-bs-toggle="pill"
-            data-bs-target="#pills-<?php echo e($tab); ?>" type="button" role="tab" aria-controls="pills-<?php echo e($tab); ?>"
-            aria-selected="<?php echo e($loop->first ? 'true' : 'false'); ?>"><?php echo e($label); ?></button>
+        <button class="nav-link active" id="pills-regions-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-regions" type="button" role="tab" aria-controls="pills-regions"
+            aria-selected="true">Regions</button>
     </li>
-    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-cities-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-cities" type="button" role="tab" aria-controls="pills-cities"
+            aria-selected="false">Cities</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+            aria-selected="false">Places of interest</button>
+    </li>
 </ul>
 <?php /**PATH C:\Users\dogso\OneDrive\Documents\GitHub\Ministry_of_Toursim\resources\views/partials/destinations-tabs.blade.php ENDPATH**/ ?>

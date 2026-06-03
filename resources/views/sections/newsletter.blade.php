@@ -3,7 +3,7 @@
         <div class="row justify-between items-center">
             <div class="col-12 col-lg-6">
                 <div class="d-flex align-items-center">
-                    <img src="{{ asset('assets/images/icons/subscribe-icon.png') }}" alt="subscribe" class="img-fluid">
+                    <img src="/assets/images/icons/subscribe-icon.png" alt="subscribe" class="img-fluid">
                     <div class="ms-3">
                         <h4 class="text-26 text-white fw-600">Your Travel Journey Starts Here</h4>
                         <p class="text-white">Sign up and we'll send the best deals to you</p>

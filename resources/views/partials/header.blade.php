@@ -1,8 +1,8 @@
 <header class="header theme-bg-white">
     <div class="container">
         <nav class="navbar navbar-expand-lg py-3 py-lg-0 px-0">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="Brand Logo" title="Brand Logo" class="img-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/assets/images/logo.png" alt="Brand Logo" title="Brand Logo" class="img-fluid">
             </a>
             <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

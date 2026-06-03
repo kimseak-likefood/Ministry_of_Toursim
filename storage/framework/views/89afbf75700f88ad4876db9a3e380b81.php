@@ -16,9 +16,12 @@
                 <div class="d-flex"><h5 class="mb-5 fs-6">Company</h5></div>
                 <div class="d-flex">
                     <ul class="fl-menu">
-                        <?php $__currentLoopData = ['About Us', 'Careers', 'Blog', 'Press', 'Offers', 'Deals']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <li class="nav-item"><a href="javascript:void(0)"><?php echo e($item); ?></a></li>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <li class="nav-item"><a href="javascript:void(0)">About Us</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Careers</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Blog</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Press</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Offers</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Deals</a></li>
                     </ul>
                 </div>
             </div>
@@ -26,9 +29,11 @@
                 <h5 class="mb-5 fs-6">Support</h5>
                 <div class="mt-5">
                     <ul class="fl-menu">
-                        <?php $__currentLoopData = ['Contact', 'Legal Notice', 'Privacy Policy', 'Terms and Conditions', 'Sitemap']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <li class="nav-item"><a href="javascript:void(0)"><?php echo e($item); ?></a></li>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <li class="nav-item"><a href="javascript:void(0)">Contact</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Legal Notice</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Privacy Policy</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Terms and Conditions</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Sitemap</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,9 +41,13 @@
                 <div class="d-flex justify-content-lg-center"><h5 class="mb-5 fs-6">Other Services</h5></div>
                 <div class="d-flex justify-content-lg-center">
                     <ul class="fl-menu">
-                        <?php $__currentLoopData = ['Bus', 'Activity Finder', 'Tour List', 'Flight Search', 'Cruise Ticket', 'Holidays', 'Travel Agents']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <li class="nav-item"><a href="javascript:void(0)"><?php echo e($item); ?></a></li>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <li class="nav-item"><a href="javascript:void(0)">Bus</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Activity Finder</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Tour List</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Flight Search</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Cruise Ticket</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Holidays</a></li>
+                        <li class="nav-item"><a href="javascript:void(0)">Travel Agents</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,7 +55,7 @@
                 <h5 class="mb-5 fs-6">Download App</h5>
                 <a href="javascript:void(0)" class="d-inline-flex align-items-center border px-3 py-2 theme-border-radius min-w-150">
                     <div class="flex-shrink-0">
-                        <img src="<?php echo e(asset('assets/images/icons/play-icon.png')); ?>" class="img-fluid" alt="Google-Play" title="Google-Play">
+                        <img src="/assets/images/icons/play-icon.png" class="img-fluid" alt="Google-Play" title="Google-Play">
                     </div>
                     <div class="flex-grow-1 ms-2">
                         <p class="mb-0 small theme-text-accent-two">Get it on</p>
@@ -55,7 +64,7 @@
                 </a>
                 <a href="javascript:void(0)" class="d-inline-flex align-items-center border px-3 py-2 theme-border-radius mt-2 min-w-150">
                     <div class="flex-shrink-0">
-                        <img src="<?php echo e(asset('assets/images/icons/apple.png')); ?>" class="img-fluid" alt="apple" title="apple">
+                        <img src="/assets/images/icons/apple.png" class="img-fluid" alt="apple" title="apple">
                     </div>
                     <div class="flex-grow-1 ms-2">
                         <p class="mb-0 small theme-text-accent-two">Get it on</p>
@@ -70,16 +79,18 @@
             </div>
             <div class="col-12 col-lg-6 mt-5">
                 <ul class="footer-link d-flex flex-row flex-wrap justify-content-lg-center align-items-center">
-                    <?php $__currentLoopData = ['Privacy', 'Terms', 'Site Map']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <li><a href="javascript:void(0)"><?php echo e($item); ?></a></li>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <li><a href="javascript:void(0)">Privacy</a></li>
+                    <li><a href="javascript:void(0)">Terms</a></li>
+                    <li><a href="javascript:void(0)">Site Map</a></li>
                 </ul>
             </div>
             <div class="col-12 col-lg-3 mt-5">
                 <div class="d-flex social justify-content-lg-end">
-                    <?php $__currentLoopData = ['facebook', 'twitter-x', 'linkedin', 'instagram', 'whatsapp']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $social): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <a href="javascript:void(0)" class="fs-4 <?php echo e($loop->last ? '' : 'pe-3'); ?>"><i class="bi bi-<?php echo e($social); ?>"></i></a>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <a href="javascript:void(0)" class="fs-4 pe-3"><i class="bi bi-facebook"></i></a>
+                    <a href="javascript:void(0)" class="fs-4 pe-3"><i class="bi bi-twitter-x"></i></a>
+                    <a href="javascript:void(0)" class="fs-4 pe-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="javascript:void(0)" class="fs-4 pe-3"><i class="bi bi-instagram"></i></a>
+                    <a href="javascript:void(0)" class="fs-4"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
         </div>

@@ -7,24 +7,54 @@
         </button>
         <div class="dropdown-menu" aria-labelledby="{{ $buttonId }}">
             <ul class="drop-rest">
-                @foreach (['Adults' => 'onewayAdult', 'Child' => 'onewayChild', 'Rooms' => 'onewayInfant'] as $label => $field)
                 <li>
-                    <div class="d-flex small">{{ $label }}</div>
+                    <div class="d-flex small">Adults</div>
                     <div class="ms-auto input-group plus-minus-input">
                         <div class="input-group-button">
-                            <button type="button" class="circle" data-quantity="minus" data-field="{{ $field }}">
+                            <button type="button" class="circle" data-quantity="minus" data-field="onewayAdult">
                                 <i class="bi bi-dash"></i>
                             </button>
                         </div>
-                        <input class="input-group-field" type="number" name="{{ $field }}" value="0">
+                        <input class="input-group-field" type="number" name="onewayAdult" value="0">
                         <div class="input-group-button">
-                            <button type="button" class="circle" data-quantity="plus" data-field="{{ $field }}">
+                            <button type="button" class="circle" data-quantity="plus" data-field="onewayAdult">
                                 <i class="bi bi-plus"></i>
                             </button>
                         </div>
                     </div>
                 </li>
-                @endforeach
+                <li>
+                    <div class="d-flex small">Child</div>
+                    <div class="ms-auto input-group plus-minus-input">
+                        <div class="input-group-button">
+                            <button type="button" class="circle" data-quantity="minus" data-field="onewayChild">
+                                <i class="bi bi-dash"></i>
+                            </button>
+                        </div>
+                        <input class="input-group-field" type="number" name="onewayChild" value="0">
+                        <div class="input-group-button">
+                            <button type="button" class="circle" data-quantity="plus" data-field="onewayChild">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex small">Rooms</div>
+                    <div class="ms-auto input-group plus-minus-input">
+                        <div class="input-group-button">
+                            <button type="button" class="circle" data-quantity="minus" data-field="onewayInfant">
+                                <i class="bi bi-dash"></i>
+                            </button>
+                        </div>
+                        <input class="input-group-field" type="number" name="onewayInfant" value="0">
+                        <div class="input-group-button">
+                            <button type="button" class="circle" data-quantity="plus" data-field="onewayInfant">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
