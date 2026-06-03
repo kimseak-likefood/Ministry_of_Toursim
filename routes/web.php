@@ -3,17 +3,20 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
-Route::get('/', function () { return view('index'); });
-Route::get('/register', [UserController::class, 'showRegister']);
-Route::post('/register', [UserController::class, 'register']);
+Route::get('/', function () {
+    return view('home');
+});
 
-Route::get('/login', [UserController::class, 'showLogin']);
-Route::post('/login', [UserController::class, 'login']);
+Route::middleware('guest')->group(function () {
+    Route::get('/register', [UserController::class, 'showRegister'])->name('register');
+    Route::post('/register', [UserController::class, 'register']);
 
-Route::post('/logout', [UserController::class, 'logout']);
+    Route::get('/login', [UserController::class, 'showLogin'])->name('login');
+    Route::post('/login', [UserController::class, 'login']);
+});
+
+Route::post('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware('auth');
-
-
+})->middleware('auth')->name('dashboard');
