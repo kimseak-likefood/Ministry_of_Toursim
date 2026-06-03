@@ -10,3 +10,4 @@
         </div>
     </div>
 </div>
+<?php /**PATH C:\Users\User\Herd\Ministry_of_Toursim-main\resources\views/partials/search-engine.blade.php ENDPATH**/ ?>

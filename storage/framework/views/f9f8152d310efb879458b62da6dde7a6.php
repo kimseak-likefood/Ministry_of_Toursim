@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('content')
+<?php $__env->startSection('content'); ?>
     
     </div>
     <main class="container">
@@ -10,11 +9,11 @@
           <p class="text-body-secondary mb-4">Sign in to your account</p>
 
         <form action="/login" method = "post">
-          @csrf
+          <?php echo csrf_field(); ?>
 
-          @if(session('error'))
-            <div class="alert alert-danger">{{session('error')}}</div>
-          @endif
+          <?php if(session('error')): ?>
+            <div class="alert alert-danger"><?php echo e(session('error')); ?></div>
+          <?php endif; ?>
 
           <div class="mb-3">
             <label class="form-label">Email address</label>
@@ -55,4 +54,5 @@
       <p class="mb-0"><a href="#">Back to top</a></p>
     </footer>
     
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\User\Herd\Ministry_of_Toursim-main\resources\views/login.blade.php ENDPATH**/ ?>

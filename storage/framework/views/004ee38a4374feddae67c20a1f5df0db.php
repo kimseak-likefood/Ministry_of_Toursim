@@ -2,7 +2,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg py-3 py-lg-0 px-0">
             <a class="navbar-brand" href="/">
-                <img src="/assets/images/logo.png" alt="Brand Logo" title="Brand Logo" class="img-fluid">
+                <img src="/assets/images/logo.png" alt="Brand Logo" title="Brand Logo" class="logo.png"style="width: 90px; height: auto;">
             </a>
             <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -26,4 +26,4 @@
         </nav>
     </div>
 </header>
-<?php /**PATH C:\Users\dogso\OneDrive\Documents\GitHub\Ministry_of_Toursim\resources\views/partials/header.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Users\User\Herd\Ministry_of_Toursim-main\resources\views/partials/header.blade.php ENDPATH**/ ?>
