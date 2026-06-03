@@ -118,3 +118,4 @@
         </div>
     </div>
 </section>
+<?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/sections/recommended.blade.php ENDPATH**/ ?>

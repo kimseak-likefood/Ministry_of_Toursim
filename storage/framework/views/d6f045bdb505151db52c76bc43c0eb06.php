@@ -8,3 +8,4 @@
         <li><a class="dropdown-item" href="#">French</a></li>
     </ul>
 </li>
+<?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/partials/nav/language.blade.php ENDPATH**/ ?>

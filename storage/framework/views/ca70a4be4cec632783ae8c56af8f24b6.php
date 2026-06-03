@@ -71,3 +71,4 @@
         </div>
     </div>
 </section>
+<?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/sections/blog.blade.php ENDPATH**/ ?>
