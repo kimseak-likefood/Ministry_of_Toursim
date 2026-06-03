@@ -1,5 +1,12 @@
 @extends('layouts.app')
 @section('content')
+
+@section('content')
+    <div class="pagewrap">
+        <div class="head-wrapper">
+            @include('partials.header')
+        </div>
+    </div>
     
     </div>
     <main class="container">

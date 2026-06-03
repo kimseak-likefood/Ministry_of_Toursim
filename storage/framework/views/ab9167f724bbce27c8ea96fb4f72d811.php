@@ -1,4 +1,5 @@
 <header class="header theme-bg-white">
+    <header class="header theme-bg-white shadow">
     <div class="container">
         <nav class="navbar navbar-expand-lg py-3 py-lg-0 px-0">
             <a class="navbar-brand" href="/">
