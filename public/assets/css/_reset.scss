@@ -1,0 +1,40 @@
+@use 'var' as vars;
+
+* {
+
+    outline: none;
+
+}
+
+html,
+body,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: vars.$theme-link-color;
+}
+
+a:hover,
+a:active,
+a:focus {
+    transition: all ease-in-out 0.3s;
+    color: vars.$theme-primary-color;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background: vars.$theme-secondary-color;
+}
+
+.form-control:focus {
+    color: vars.$theme-secondary-color;
+    background-color: vars.$theme-color-white;
+    border-color: vars.$theme-link-color;
+    outline: 0;
+    box-shadow: none;
+}
