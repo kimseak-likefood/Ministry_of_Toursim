@@ -24,10 +24,10 @@
                             </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link pe-5" href="{{ url('activities') }}">Activities</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('holidays&events') }}">Holidays & Events</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('holidays&events') }}">Events</a></li>
                     <li class="nav-item"><a class="nav-link pe-5" href="{{ url('tourism') }}">Tourism</a></li>
                     <li class="nav-item"><a class="nav-link pe-5" href="{{ url('statistics') }}">Statistics</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('laws&regulations') }}">Laws and Regulations</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('laws&regulations') }}">Regulations</a></li>
                 </ul>
                 <ul class="navbar-nav page-menu mb-3 mb-lg-0">
                     @include('partials.nav.language')

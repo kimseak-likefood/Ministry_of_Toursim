@@ -3,12 +3,13 @@
 @section('title', 'Featured Tourist Attractions')
 
 @section('content')
+@include('partials.header')
 
 <div style="max-width:1200px; margin:3rem auto; padding:0 1.5rem;">
 
     {{-- Section Title --}}
     <div style="text-align:center; margin-bottom:2.5rem;">
-        <h2 style="font-size:2rem; font-weight:700; color:#; margin:0 0 12px;">
+        <h2 style="font-size:2rem; font-weight:700; margin:0 0 12px;">
             Featured Tourist Attractions
         </h2>
         <div style="width:60px; height:3px; background:#c0392b; margin:0 auto;"></div>

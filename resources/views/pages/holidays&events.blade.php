@@ -3,6 +3,7 @@
 @section('title', 'Public Holidays 2026')
 
 @section('content')
+@include('partials.header')
 
 <div style="max-width:800px; margin:2rem auto; padding:0 1.5rem;">
 

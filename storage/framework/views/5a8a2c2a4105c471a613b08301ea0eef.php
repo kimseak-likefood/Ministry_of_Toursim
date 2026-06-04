@@ -24,10 +24,10 @@
                             </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('activities')); ?>">Activities</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('holidays&events')); ?>">Holidays & Events</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('holidays&events')); ?>">Events</a></li>
                     <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('tourism')); ?>">Tourism</a></li>
                     <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('statistics')); ?>">Statistics</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('laws&regulations')); ?>">Laws and Regulations</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('laws&regulations')); ?>">Regulations</a></li>
                 </ul>
                 <ul class="navbar-nav page-menu mb-3 mb-lg-0">
                     <?php echo $__env->make('partials.nav.language', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
