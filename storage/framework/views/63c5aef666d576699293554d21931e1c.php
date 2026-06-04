@@ -1,8 +1,6 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', 'Public Holidays 2026'); ?>
 
-@section('title', 'Public Holidays 2026')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <div style="max-width:800px; margin:2rem auto; padding:0 1.5rem;">
 
@@ -92,4 +90,5 @@
 
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/pages/holidays&events.blade.php ENDPATH**/ ?>

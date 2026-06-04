@@ -8,10 +8,6 @@
             <div class="col-12 col-lg-6 align-self-center justify-content-end d-flex">
                 <div class="d-flex">
                     <div class="dropdown-center">
-                        <button class="btn btn-secondary dropdown-toggle recomended-btn" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Hotels
-                        </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Hotels</a></li>
                             <li><a class="dropdown-item" href="#">Flight</a></li>
@@ -24,98 +20,61 @@
         <div class="row mt-5">
 
             <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                <div class="card-wrap">
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex">
+                <div class="card-wrap w-100 d-flex flex-column">
                     <div class="con-img-wrap m-auto">
                         <img src="/assets/images/recommend(1)/oudong-monastery.jpg" class="img-fluid mx-auto d-block" alt="product picture">
-                        <div class="offer-tag bg-warning">Best Deal</div>
                         <span class="wishlist-tag"><i class="bi bi-heart"></i></span>
                     </div>
-                    <div class="con-wrap mt-4">
-                        <h2 class="fs-6 mt-4 fw-bold text-truncate">The Montcalm At Brewery London City</h2>
-                        <p class="mb-2 theme-text-accent-two small">Westminster Borough, London</p>
-                        <div class="d-flex bottom mb-2">
-                            <div class="rating-cover">
-                                <span class="p-1 small rounded-1 bg-warning theme-text-white">4.8</span>
-                                <span class="me-2 small theme-text-accent-one">Exceptional</span>
-                                <span class="small">3,014 reviews</span>
-                            </div>
-                        </div>
-                        <p class="mb-0 theme-text-accent-one">Starting from US$72</p>
+                    <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
+                        <h2 class="fs-6 fw-bold text-truncate">The Montcalm At Brewery London City</h2>
+                        <p class="mb-0 theme-text-accent-two small">Westminster Borough, London</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                <div class="card-wrap">
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex">
+                <div class="card-wrap w-100 d-flex flex-column">
                     <div class="con-img-wrap m-auto">
                         <img src="/assets/images/recommend(1)/phnom_chisor.jpg" class="img-fluid mx-auto d-block" alt="product picture">
-                        <div class="offer-tag bg-info">Best Deal</div>
                         <span class="wishlist-tag"><i class="bi bi-heart"></i></span>
                     </div>
-                    <div class="con-wrap mt-4">
-                        <h2 class="fs-6 mt-4 fw-bold text-truncate">Flying Over Bali</h2>
-                        <p class="mb-2 theme-text-accent-two small">Beautiful Lands, Indonesia</p>
-                        <div class="d-flex bottom mb-2">
-                            <div class="rating-cover">
-                                <span class="p-1 small rounded-1 bg-danger theme-text-white">4.7</span>
-                                <span class="me-2 small theme-text-accent-one">Exceptional</span>
-                                <span class="small">4,114 reviews</span>
-                            </div>
-                        </div>
-                        <p class="mb-0 theme-text-accent-one">Starting from US$89</p>
+                    <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
+                        <h2 class="fs-6 fw-bold text-truncate">Flying Over Bali</h2>
+                        <p class="mb-0 theme-text-accent-two small">Beautiful Lands, Indonesia</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                <div class="card-wrap">
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex">
+                <div class="card-wrap w-100 d-flex flex-column">
                     <div class="con-img-wrap m-auto">
                         <img src="/assets/images/recommend(1)/Sokha_Beach.png" class="img-fluid mx-auto d-block" alt="product picture">
-                        <div class="offer-tag bg-success">Best Deal</div>
                         <span class="wishlist-tag"><i class="bi bi-heart"></i></span>
                     </div>
-                    <div class="con-wrap mt-4">
-                        <h2 class="fs-6 mt-4 fw-bold text-truncate">American Landscapes</h2>
-                        <p class="mb-2 theme-text-accent-two small">Pestminster Worough, USA</p>
-                        <div class="d-flex bottom mb-2">
-                            <div class="rating-cover">
-                                <span class="p-1 small rounded-1 bg-success theme-text-white">4.9</span>
-                                <span class="me-2 small theme-text-accent-one">Exceptional</span>
-                                <span class="small">3,894 reviews</span>
-                            </div>
-                        </div>
-                        <p class="mb-0 theme-text-accent-one">Starting from US$88</p>
+                    <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
+                        <h2 class="fs-6 fw-bold text-truncate">American Landscapes</h2>
+                        <p class="mb-0 theme-text-accent-two small">Pestminster Worough, USA</p>
                     </div>
                 </div>
             </div>
 
             <!-- Card 4 -->
-            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                <div class="card-wrap">
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex">
+                <div class="card-wrap w-100 d-flex flex-column">
                     <div class="con-img-wrap m-auto">
                         <img src="/assets/images/recommend(1)/Koh-Ker-Temple-2.png" class="img-fluid mx-auto d-block" alt="product picture">
-                        <div class="offer-tag">Best Deal</div>
                         <span class="wishlist-tag"><i class="bi bi-heart"></i></span>
                     </div>
-                    <div class="con-wrap mt-4">
-                        <h2 class="fs-6 mt-4 fw-bold text-truncate">The Beauty of Scotland</h2>
-                        <p class="mb-2 theme-text-accent-two small">Mestminster Gorough, UK</p>
-                        <div class="d-flex bottom mb-2">
-                            <div class="rating-cover">
-                                <span class="p-1 small rounded-1 bg-info theme-text-white">4.5</span>
-                                <span class="me-2 small theme-text-accent-one">Exceptional</span>
-                                <span class="small">2,914 reviews</span>
-                            </div>
-                        </div>
-                        <p class="mb-0 theme-text-accent-one">Starting from US$69</p>
+                    <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
+                        <h2 class="fs-6 fw-bold text-truncate">The Beauty of Scotland</h2>
+                        <p class="mb-0 theme-text-accent-two small">Mestminster Gorough, UK</p>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-</section>
-<?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/sections/recommended.blade.php ENDPATH**/ ?>
+</section><?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/sections/recommended.blade.php ENDPATH**/ ?>

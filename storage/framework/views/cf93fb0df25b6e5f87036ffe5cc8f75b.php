@@ -1,12 +1,10 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', 'Featured Tourist Attractions'); ?>
 
-@section('title', 'Featured Tourist Attractions')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <div style="max-width:1200px; margin:3rem auto; padding:0 1.5rem;">
 
-    {{-- Section Title --}}
+    
     <div style="text-align:center; margin-bottom:2.5rem;">
         <h2 style="font-size:2rem; font-weight:700; color:#; margin:0 0 12px;">
             Featured Tourist Attractions
@@ -14,10 +12,10 @@
         <div style="width:60px; height:3px; background:#c0392b; margin:0 auto;"></div>
     </div>
 
-    {{-- Grid --}}
+    
     <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:4px;">
 
-        {{-- Row 1 --}}
+        
         <a href="#" style="text-decoration:none; display:block; position:relative; overflow:hidden;">
          <img src="/assets/images/activities/dong-te.jpg"
                  alt="Wooden river boats moored on calm water at Kampot Dong Te with green banks and distant limestone hills"
@@ -89,4 +87,5 @@
 
 </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/pages/activies.blade.php ENDPATH**/ ?>

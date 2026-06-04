@@ -18,45 +18,5 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
-
-            <!-- Stat 1 -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-lg-0">
-                <div class="d-flex align-items-center p-4 p-md-0">
-                    <i class="bi bi-airplane fs-4 theme-text-primary"></i>
-                    <h3 class="fs-2 mb-0 mx-3">4259</h3>
-                    <p class="fs-4 mb-0 theme-text-accent-one">Flights</p>
-                </div>
-            </div>
-
-            <!-- Stat 2 -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-lg-0">
-                <div class="d-flex align-items-center p-4 p-md-0">
-                    <i class="bi bi-hospital fs-4 theme-text-primary"></i>
-                    <h3 class="fs-2 mb-0 mx-3">8289</h3>
-                    <p class="fs-4 mb-0 theme-text-accent-one">Hotels</p>
-                </div>
-            </div>
-
-            <!-- Stat 3 -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-lg-0">
-                <div class="d-flex align-items-center p-4 p-md-0">
-                    <i class="bi bi-award fs-4 theme-text-primary"></i>
-                    <h3 class="fs-2 mb-0 mx-3">9789</h3>
-                    <p class="fs-4 mb-0 theme-text-accent-one">Packages</p>
-                </div>
-            </div>
-
-            <!-- Stat 4 -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-lg-0">
-                <div class="d-flex align-items-center p-4 p-md-0">
-                    <i class="bi bi-star fs-4 theme-text-primary"></i>
-                    <h3 class="fs-2 mb-0 mx-3">9999</h3>
-                    <p class="fs-4 mb-0 theme-text-accent-one">Ratings</p>
-                </div>
-            </div>
-
-        </div>
     </div>
-</section>
-<?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/sections/experience.blade.php ENDPATH**/ ?>
+</section><?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/sections/experience.blade.php ENDPATH**/ ?>

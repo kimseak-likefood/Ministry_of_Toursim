@@ -1,12 +1,3 @@
-<<<<<<< HEAD:storage/framework/views/86c0f348d78b6ac70f414c3bd6371ec8.php
-<?php if(session('error')): ?>
-    <p><?php echo e(session('error')); ?></p>
-<?php endif; ?>
-<form method="POST" action="/login">
-    <?php echo csrf_field(); ?>
-
-    <input type="email" name="email" placeholder="Email" required>
-=======
 <?php $__env->startSection('content'); ?>
     
     </div>
@@ -16,15 +7,10 @@
         <div class="border rounded-3 p-4 shadow-sm bg-body">
           <h2 class="mb-1">Welcome back</h2>
           <p class="text-body-secondary mb-4">Sign in to your account</p>
->>>>>>> 0018d61865fcd4fc201e72ca1db5044d5ac371ba:storage/framework/views/d4e9a6d7bcdaee4640d01914ae2bc53e.php
 
-    <input type="password" name="password" placeholder="Password" required>
+        <form action="/login" method = "post">
+          <?php echo csrf_field(); ?>
 
-<<<<<<< HEAD:storage/framework/views/86c0f348d78b6ac70f414c3bd6371ec8.php
-    <button type="submit">Login</button>
-</form>
-<?php /**PATH C:\Users\dogso\OneDrive\Documents\GitHub\Ministry_of_Toursim\resources\views/login.blade.php ENDPATH**/ ?>
-=======
           <?php if(session('error')): ?>
             <div class="alert alert-danger"><?php echo e(session('error')); ?></div>
           <?php endif; ?>
@@ -70,4 +56,3 @@
     
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/login.blade.php ENDPATH**/ ?>
->>>>>>> 0018d61865fcd4fc201e72ca1db5044d5ac371ba:storage/framework/views/d4e9a6d7bcdaee4640d01914ae2bc53e.php
