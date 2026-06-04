@@ -12642,17 +12642,31 @@ a:hover {
 }
 .recommended .card-wrap {
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .recommended .card-wrap .con-img-wrap {
   position: relative;
   border-radius: 50px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .recommended .card-wrap .con-img-wrap img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
   transition: all 0.2s ease;
 }
 .recommended .card-wrap .con-img-wrap img:hover {
   transform: scale(1.1);
+}
+.recommended .card-wrap .con-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 0.75rem;
 }
 .recommended .card-wrap .con-img-wrap .offer-tag {
   background-color: #0393D2;
