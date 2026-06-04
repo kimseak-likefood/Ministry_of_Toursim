@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="ThemesLay">
-    <title>@yield('title', 'RoundTours')</title>
+    <title><?php echo $__env->yieldContent('title', 'RoundTours'); ?></title>
     <link rel="icon" type="image/png" sizes="80x80" href="/assets/images/favicon.png">
     <link href="/assets/css/main.css" rel="stylesheet">
-    @stack('styles')
+    <?php echo $__env->yieldPushContent('styles'); ?>
 </head>
 <body>
-    @yield('content')
+    <?php echo $__env->yieldContent('content'); ?>
 
-    @include('partials.footer')
+    <?php echo $__env->make('partials.footer', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
     
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    @stack('scripts')
+    <?php echo $__env->yieldPushContent('scripts'); ?>
 </body>
-</html>
+</html><?php /**PATH C:\Users\MSILMC\Ministry_of_Toursim\resources\views/layouts/app.blade.php ENDPATH**/ ?>
