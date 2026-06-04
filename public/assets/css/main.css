@@ -12286,7 +12286,7 @@ a:hover {
 
 .search-engine {
   padding: 12rem 0 5rem 0;
-  background: url(../images/section/banner-image.png);
+  background: url(/assets/images/section/banner-image.jpg);
   background-size: cover;
   min-height: auto;
   background-repeat: no-repeat;
@@ -12740,10 +12740,10 @@ a:hover {
   z-index: 1;
 }
 .special-offers .product01 {
-  background-image: url(../images/section/product-banner01.png);
+  background-image: url(/assets/images/section/product-banner01.png);
 }
 .special-offers .product02 {
-  background-image: url(../images/section/product-banner02.png);
+  background-image: url(/assets/images/section/product-banner02.png);
 }
 
 .destinations {
@@ -12773,7 +12773,7 @@ a:hover {
 .experience .wrap {
   position: relative;
   background-color: rgba(3, 147, 210, 0.1);
-  background-image: url(../images/section/bg-picture.jpg);
+  background-image: url(/assets/images/section/bg-picture.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -12867,4 +12867,4 @@ a:hover {
 .popular-routes .flightLine > :nth-child(2) {
   right: 0;
   background-color: #DDDDDD;
-}/*# sourceMappingURL=main.css.map */
+}

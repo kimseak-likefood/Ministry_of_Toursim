@@ -87,7 +87,7 @@
 // Search engine css
 .search-engine {
     padding: 12rem 0 5rem 0;
-    background: url(../images/section/banner-image.png);
+    background: url(/assets/images/section/banner-image.jpg);
     background-size: cover;
     min-height: auto;
     background-repeat: no-repeat;
@@ -110,7 +110,7 @@
         top: 0;
         left: 0;
         background: vars.$theme-primary-color;
-        background: linear-gradient(180deg, rgba(vars.$theme-primary-color, 0.32816876750700286) 0%, rgba(vars.$theme-secondary-color, 0.76234243697479) 100%);
+        background: linear-gradient(180deg, rgba(vars.$theme-primary-color, 0.15) 0%, rgba(vars.$theme-secondary-color, 0.45) 100%);
     }
 }
 
@@ -521,6 +521,7 @@
 
 // recomended section css
 .recommended {
+    
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
 
@@ -530,13 +531,21 @@
 
     .card-wrap {
         background-color: vars.$theme-color-white;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
 
         .con-img-wrap {
             position: relative;
             border-radius: vars.$theme-border-radius;
             overflow: hidden;
+            flex-shrink: 0;
 
             img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                display: block;
                 transition: all 0.2s ease;
 
                 &:hover {
@@ -583,6 +592,10 @@
         }
 
         .con-wrap {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding-top: 0.75rem;
 
             .rating-cover {
                 color: vars.$theme-accent-two;
@@ -598,10 +611,8 @@
                 }
 
                 color: vars.$theme-accent-two;
-
             }
         }
-
     }
 }
 
@@ -650,11 +661,11 @@
     }
 
     .product01 {
-        background-image: url(../images/section/product-banner01.png);
+        background-image: url(/assets/images/section/product-banner01.png);
     }
 
     .product02 {
-        background-image: url(../images/section/product-banner02.png);
+        background-image: url(/assets/images/section/product-banner02.png);
     }
 }
 
@@ -692,7 +703,7 @@
     .wrap {
         position: relative;
         background-color: rgba(vars.$theme-primary-color, 0.1);
-        background-image: url(../images/section/bg-picture.jpg);
+        background-image: url(/assets/images/section/bg-picture.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;

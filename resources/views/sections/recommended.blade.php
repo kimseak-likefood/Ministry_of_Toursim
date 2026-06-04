@@ -8,10 +8,6 @@
             <div class="col-12 col-lg-6 align-self-center justify-content-end d-flex">
                 <div class="d-flex">
                     <div class="dropdown-center">
-                        <button class="btn btn-secondary dropdown-toggle recomended-btn" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Hotels
-                        </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Hotels</a></li>
                             <li><a class="dropdown-item" href="#">Flight</a></li>
