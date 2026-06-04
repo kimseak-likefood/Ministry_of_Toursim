@@ -11,10 +11,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto page-menu" id="nav">
-                    <li class="nav-item"><a class="nav-link pe-5 ps-0 ps-lg-5" href="#deals">Deals</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="#offers">Offers</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="#holidays">Holidays</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="#review">Review</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle pe-5" href="#" id="DiscoverDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Discover</a>
+                             <ul class="dropdown-menu" aria-labelledby="DiscoverDropdown">
+                                 <li><a class="dropdown-item" href="<?php echo e(url('phnompenh')); ?>">Phnom Penh</a></li>
+                                 <li><a class="dropdown-item" href="<?php echo e(url('siemreap')); ?>">Siem Reap</a></li>
+                                 <li><a class="dropdown-item" href="<?php echo e(url('mondulkiri')); ?>">Mondulkiri</a></li>
+                                 <li><a class="dropdown-item" href="<?php echo e(url('battambang')); ?>">Battambang</a></li>
+                                 <li><a class="dropdown-item" href="<?php echo e(url('kohkong')); ?>">Kohkong</a></li>
+                                 <li><a class="dropdown-item" href="<?php echo e(url('kampot')); ?>">Kampot</a></li>
+                            </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('activities')); ?>">Activities</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('holidays&events')); ?>">Holidays & Events</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('tourism')); ?>">Tourism</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('statistics')); ?>">Statistics</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5" href="<?php echo e(url('laws&regulations')); ?>">Laws and Regulations</a></li>
                 </ul>
                 <ul class="navbar-nav page-menu mb-3 mb-lg-0">
                     <?php echo $__env->make('partials.nav.language', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
@@ -24,6 +37,7 @@
                 </ul>
             </div>
         </nav>
+        
     </div>
 </header>
 <?php /**PATH C:\Users\dogso\OneDrive\Documents\GitHub\Ministry_of_Toursim\resources\views/partials/header.blade.php ENDPATH**/ ?>

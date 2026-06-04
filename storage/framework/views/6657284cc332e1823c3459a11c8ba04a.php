@@ -1,6 +1,4 @@
-<?php $__env->startSection('content'); ?>
-   
-    
+<?php $__env->startSection('content'); ?>   
     <main class="container">
     <div class="row justify-content-center py-5">
       <div class="col-md-6 col-lg-5">
@@ -20,17 +18,13 @@
             <?php endif; ?>
 
             <h2 class="mb-1">Create an account</h2>
-            <p class="text-body-secondary mb-4">Join Table Tennis today</p>
+            <p class="text-body-secondary mb-4">Visit Cambodia Today</p>
 
             <div class="row g-3 mb-3">
               <div class="col">
                 <label class="form-label">Username</label>
                 <input type="text" class="form-control" placeholder="John Doe" name="name">
               </div>
-              <!-- <div class="col">
-                <label class="form-label">Last name</label>
-                <input type="text" class="form-control" placeholder="Doe">
-              </div> -->
             </div>
 
             <div class="mb-3">
@@ -40,12 +34,21 @@
 
             <div class="mb-3">
               <label class="form-label">Password</label>
-              <input type="password" class="form-control" placeholder="Min. 8 characters" name = "password">
+              <input type="password" class="form-control" placeholder="Min. 6 characters" name = "password">
             </div>
-
+            <?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+              <div class="text-danger small mt-1"><?php echo e($message); ?></div>
+            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?> 
             <div class="mb-3">
               <label class="form-label">Confirm password</label>
-              <input type="password" class="form-control" placeholder="Repeat password" name = "password_confirmation">
+              <input type="password" class="form-control" placeholder="Confirm password" name = "password_confirmation">
             </div>
 
             <div class="mb-4 form-check">
@@ -58,7 +61,10 @@
             <button class="btn btn-dark w-100" type="submit">Create account</button>
 
             <p class="text-center text-body-secondary small mt-3 mb-0">
-              Already have an account? <a href="/login">Sign in</a>
+              Already have an account? <a href="/login">Log in</a>
+            </p>
+            <p class="text-center text-body-secondary small mt-3 mb-0">
+              Back to Home <a href="/">Home</a>
             </p>
           </form>
         </div>

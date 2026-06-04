@@ -14,7 +14,7 @@
     <?php echo $__env->yieldContent('content'); ?>
 
     <?php echo $__env->make('partials.footer', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
-
+    
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <?php echo $__env->yieldPushContent('scripts'); ?>
