@@ -1,8 +1,8 @@
-@include('partials.header')
-@extends('layouts.app')
-@section('title', 'Tourism')
+<?php echo $__env->make('partials.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
-@section('content')
+<?php $__env->startSection('title', 'Tourism'); ?>
+
+<?php $__env->startSection('content'); ?>
 
 
 <section style="
@@ -105,4 +105,5 @@
 </section>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\User\Herd\Ministry_of_Toursim-main\resources\views/pages/tourism.blade.php ENDPATH**/ ?>
