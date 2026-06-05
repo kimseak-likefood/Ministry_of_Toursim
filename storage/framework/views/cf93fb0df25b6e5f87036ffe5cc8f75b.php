@@ -129,7 +129,7 @@
             <!-- Card 1 -->
             <a href="#" style="text-decoration:none; display:block;">
                 <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/dong-te.jpg"
+                    <img src="/assets/images/activities/dong_te.jpg"
                          alt="Wooden river boats moored on calm water at Kampot Dong Te with green banks and distant limestone hills"
                          style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
                    
@@ -143,7 +143,7 @@
             <!-- Card 2 -->
             <a href="#" style="text-decoration:none; display:block;">
                 <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/national-museum.jpg"
+                    <img src="/assets/images/activities/photo1.jpg"
                          alt="Phnom Penh - Minority"
                          style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
                    
@@ -157,7 +157,7 @@
             <!-- Card 3 -->
             <a href="#" style="text-decoration:none; display:block;">
                 <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/yeak-loam.jpg"
+                    <img src="/assets/images/activities/Boeng-Yeak-Laom-2.png"
                          alt="Rattanakiri - EcoTourism"
                          style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
                    
@@ -171,7 +171,7 @@
             <!-- Card 4 -->
             <a href="#" style="text-decoration:none; display:block;">
                 <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/koh-ker.jpg"
+                    <img src="/assets/images/activities/koh_ker.jpg"
                          alt="Ancient stone temple ruins surrounded by trees and moss at Koh Ker archaeological site"
                          style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
                    
@@ -185,7 +185,7 @@
             <!-- Card 5 -->
             <a href="#" style="text-decoration:none; display:block;">
                 <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/ttp.jpg"
+                    <img src="/assets/images/activities/market.jpg"
                          alt="Busy indoor market aisle lined with colorful stalls and shoppers in Phnom Penh"
                          style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
                    
@@ -206,7 +206,7 @@
                 </div>
                 <div style="padding:16px 4px 0;">
                     <h3 style="color:#1f2937; font-size:16px; font-weight:600; margin:0 0 4px;">Maloop</h3>
-                    <p style="color:#9ca3af; font-size:14px; margin:0;">Tourist Complex</p>
+                    <p style="color:#9ca3af; font-size:14px; margin:0;">Hidden place for traveller and nature lovers</p>
                 </div>
             </a>
 
