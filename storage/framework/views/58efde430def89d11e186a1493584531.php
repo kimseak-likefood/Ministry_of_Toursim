@@ -15,6 +15,7 @@
         <li>
             <form action="/logout" method="post">
                 <?php echo csrf_field(); ?>
+                <a href="/profile" class="dropdown-item btn btn-primary">Profile</a>
                 <button type="submit" class="dropdown-item">Log out</button>
             </form>
         </li>
