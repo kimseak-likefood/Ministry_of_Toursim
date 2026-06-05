@@ -2,7 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
-                <h5 class="mb-5 fs-6">Contact Us</h5>
+                <img src="/assets/images/logo.png" alt="Ministry of Tourism" style="width: 100px; height: auto; margin-bottom: 16px; display: block;">
+                <h5 class="mb-5 fs-6">Ministry of Tourism</h5>
                 <div class="flex-grow-1">
                     Customer Care<br>
                     <a href="tel:+11234567890" class="fs-5 theme-text-primary">+(1) 123 456 7890</a>
@@ -75,7 +76,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-3 mt-lg-5">
-                <p class="pt-2 mb-0 small theme-text-accent-one">&copy; <?php echo e(date('Y')); ?> RoundTours All rights reserved.</p>
+                <p class="pt-2 mb-0 small theme-text-accent-one">&copy; <?php echo e(date('Y')); ?> </p>
             </div>
             <div class="col-12 col-lg-6 mt-5">
                 <ul class="footer-link d-flex flex-row flex-wrap justify-content-lg-center align-items-center">

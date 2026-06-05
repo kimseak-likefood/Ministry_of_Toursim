@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="ThemesLay">
-    <title>@yield('title', 'RoundTours')</title>
-    <link rel="icon" type="image/png" sizes="80x80" href="/assets/images/favicon.png">
+    <title>@yield('title', 'Ministry of Tourism ក្រសួងទេសចរណ៍')</title>
+    <link rel="icon" type="image/png" sizes="80x80" href="/assets/images/MOT1-logo.png">
     <link href="/assets/css/main.css" rel="stylesheet">
     @stack('styles')
+
+    <style>
+        .profile-picture {
+          width: 100%;
+          height: auto;
+          border-radius: 50%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+      } 
+
+      .profile-card{
+        padding: 10rem 10rem;
+      }
+    </style>
 </head>
 <body>
     @yield('content')

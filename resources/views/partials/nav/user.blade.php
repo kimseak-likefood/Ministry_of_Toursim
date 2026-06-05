@@ -15,6 +15,7 @@
         <li>
             <form action="/logout" method="post">
                 @csrf
+                <a href="/profile" class="dropdown-item">Profile</a>
                 <button type="submit" class="dropdown-item">Log out</button>
             </form>
         </li>

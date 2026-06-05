@@ -1,9 +1,6 @@
-<?php echo $__env->make('partials.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
-
 <?php $__env->startSection('title', 'Tourism'); ?>
-
 <?php $__env->startSection('content'); ?>
-
+<?php echo $__env->make('partials.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
 <section style="
     background-image: url('/assets/images/section/banner-image.jpg');
@@ -78,7 +75,7 @@
     
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/activities/national-museum.jpg" alt="Culture" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/destinations/culture.jpg" alt="Culture" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Culture</h3>
@@ -89,7 +86,7 @@
    
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/activities/yeak-loam.jpg" alt="Nature" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/destinations/nature.jpg" alt="Nature" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Nature</h3>
@@ -100,7 +97,7 @@
     
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/activities/koh-ker.jpg" alt="Adventure" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/destinations/adventure.jpg" alt="Adventure" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Adventure</h3>

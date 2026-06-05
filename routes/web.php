@@ -47,3 +47,14 @@ Route::middleware('auth')->group(function () {
     Route::put('/blogposts/{post}', [PostController::class, 'update'])->name('posts.update');
     Route::delete('/blogposts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
 });
+
+//for profile page
+Route::get('/profile', function(){
+    return view('profile');
+});
+
+Route::post('/updateAvatar', [UserController::class, 'updateAvatar']);
+
+Route::post('/updateProfile', [UserController::class, 'updateProfile']);
+
+Route::post('/deleteAccount', [UserController::class, 'deleteAccount']);
