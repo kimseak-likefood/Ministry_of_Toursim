@@ -38,7 +38,7 @@ Route::get('/blogposts', function () { return view('posts.blogposts'); });
 
 //for posts
 Route::get('/blogposts', [PostController::class, 'index'])->name('posts.blogposts');
-Route::get('/blogposts/create', [PostController::class, 'create'])->name('posts.create'); // moved up
+Route::get('/blogposts/create', [PostController::class, 'create'])->name('posts.create'); 
 Route::get('/blogposts/{post}', [PostController::class, 'show'])->name('posts.viewposts');
 
 Route::middleware('auth')->group(function () {
