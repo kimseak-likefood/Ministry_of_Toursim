@@ -14,7 +14,7 @@
     @yield('content')
 
     @include('partials.footer')
-
+    
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     @stack('scripts')

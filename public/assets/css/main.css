@@ -12632,8 +12632,8 @@ a:hover {
 }
 
 .recommended {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 @media screen and (max-width: 575px) {
   .recommended {
@@ -12718,8 +12718,9 @@ a:hover {
 .special-offers {
   position: relative;
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 9rem;
 }
+
 .special-offers .box {
   position: relative;
   max-height: 450px;
@@ -12734,7 +12735,18 @@ a:hover {
   overflow: hidden;
   border-radius: 50px;
   padding-left: 3rem;
+
+  /* Hover Animation */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
+
+.special-offers .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
 .special-offers .box::after {
   content: "";
   position: absolute;
@@ -12743,9 +12755,14 @@ a:hover {
   top: 0;
   left: 0;
   background: #0393D2;
-  background: linear-gradient(180deg, rgba(3, 147, 210, 0.3281687675) 0%, rgba(0, 0, 0, 0.762342437) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(3, 147, 210, 0.3281687675) 0%,
+    rgba(0, 0, 0, 0.762342437) 100%
+  );
   z-index: 0;
 }
+
 .special-offers .box .content {
   display: flex;
   flex-direction: column;
@@ -12753,15 +12770,25 @@ a:hover {
   align-items: start;
   z-index: 1;
 }
+
 .special-offers .product01 {
-  background-image: url(/assets/images/section/product-banner01.png);
+  background-image: url(/assets/images/recommended/recommendedscreen1.jpg);
 }
+
 .special-offers .product02 {
-  background-image: url(/assets/images/section/product-banner02.png);
+  background-image: url(/assets/images/recommended/recommendedscreen2.jpg);
+}
+
+.special-offers .product03 {
+  background-image: url(/assets/images/recommended/recommendedscreen3.jpg);
+}
+
+.special-offers .product04 {
+  background-image: url(/assets/images/recommended/recommendedscreen4.jpg);
 }
 
 .destinations {
-  padding-top: 3rem;
+  padding-top: 5rem;
   padding-bottom: 5rem;
 }
 @media screen and (max-width: 575px) {
@@ -12882,3 +12909,4 @@ a:hover {
   right: 0;
   background-color: #DDDDDD;
 }
+

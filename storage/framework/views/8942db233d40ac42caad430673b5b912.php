@@ -13,7 +13,7 @@
                 <div class="blog-card row g-0">
                     <div class="overflow-hidden position-relative col-12 theme-border-radius">
                         <figure class="mb-0 img-effect">
-                            <img src="/assets/images/news/post01.png" class="img-fluid" alt="news articles">
+                            <img src="/assets/images/news/image.png" class="img-fluid" alt="news articles">
                         </figure>
                     </div>
                     <div class="col-12 mt-3">
@@ -33,7 +33,7 @@
                 <div class="blog-card row g-0">
                     <div class="overflow-hidden position-relative col-12 theme-border-radius">
                         <figure class="mb-0 img-effect">
-                            <img src="/assets/images/news/post02.png" class="img-fluid" alt="news articles">
+                            <img src="/assets/images/siem reap/preah_dak.png" class="img-fluid" alt="news articles">
                         </figure>
                     </div>
                     <div class="col-12 mt-3">
@@ -53,7 +53,7 @@
                 <div class="blog-card row g-0">
                     <div class="overflow-hidden position-relative col-12 theme-border-radius">
                         <figure class="mb-0 img-effect">
-                            <img src="/assets/images/news/post03.png" class="img-fluid" alt="news articles">
+                            <img src="/assets/images/siem reap/Khmouch_gate.jpg" class="img-fluid" alt="news articles">
                         </figure>
                     </div>
                     <div class="col-12 mt-3">
