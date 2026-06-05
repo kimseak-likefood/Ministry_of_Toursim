@@ -1,8 +1,7 @@
-@extends('layouts.app')
-@section('content') 
+<?php $__env->startSection('content'); ?> 
     <div class="container pt-3">
         <div class="d-flex align-items-center gap-4" style="padding-top: 10px">
-            <img src="{{ asset('assets/images/MOT1-logo.png') }}" alt="Logo" height="40">
+            <img src="<?php echo e(asset('assets/images/MOT1-logo.png')); ?>" alt="Logo" height="40">
               <div>
                   <p class="mb-0">ក្រសួងទេសចរណ៍</p>
                   <p class="mb-0">Ministry of Tourism</p>
@@ -15,17 +14,17 @@
         <div class="border rounded-3 p-4 shadow-sm bg-body">
           
           <form action="/register" method="post"> 
-            @csrf
+            <?php echo csrf_field(); ?>
 
-            @if ($errors->any())
+            <?php if($errors->any()): ?>
                 <div class="alert alert-danger">
                     <ul class="mb-0">
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
+                        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <li><?php echo e($error); ?></li>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </ul>
                 </div>
-            @endif
+            <?php endif; ?>
 
             <h2 class="mb-1">Create an account</h2>
             <p class="text-body-secondary mb-4">Visit Cambodia Today</p>
@@ -46,29 +45,29 @@
               <label class="form-label">Password</label>
               <input type="password" class="form-control" placeholder="Min. 6 characters" name = "password">
             </div>
-            @error('password')
-              <div class="text-danger small mt-1">{{ $message }}</div>
-            @enderror 
+            <?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+              <div class="text-danger small mt-1"><?php echo e($message); ?></div>
+            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?> 
             <div class="mb-3">
               <label class="form-label">Confirm password</label>
               <input type="password" class="form-control" placeholder="Confirm password" name = "password_confirmation">
             </div>
 
-            {{-- <div class="mb-4 form-check">
-              <input type="checkbox" class="form-check-input" id="terms">
-              <label class="form-check-label text-body-secondary small" for="terms">
-                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
-              </label>
-            </div> --}}
+            
 
             <button class="btn btn-dark w-100 mt-3" type="submit">Create account</button>
 
             <p class="text-center text-body-secondary small mt-3 mb-0">
               Already have an account? <a href="/login">Log in</a>
             </p>
-            {{-- <p class="text-center text-body-secondary small mt-3 mb-0">
-              Back to Home <a href="/">Home</a>
-            </p> --}}
+            
             <div class="text-center mt-3">
               <a href="/" class="btn btn-sm btn-primary">Back to Home</a>
             </div>
@@ -88,6 +87,7 @@
       <p class="mb-0"><a href="#">Back to top</a></p>
     </footer>
     
-@endsection
+<?php $__env->stopSection(); ?>
 
-@php($hideHeader = true)
+<?php ($hideHeader = true); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\Asus\Herd\MinistryOfTourism\resources\views/register.blade.php ENDPATH**/ ?>

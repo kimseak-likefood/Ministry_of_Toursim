@@ -1,7 +1,6 @@
-@extends('layouts.app')
-@section('title', 'Blog - Ministry of Tourism Cambodia')
+<?php $__env->startSection('title', 'Blog - Ministry of Tourism Cambodia'); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <section style="
     background-image: url('/assets/images/phnom penh/pp.jpg');
     background-size: cover;
@@ -30,72 +29,73 @@
 <section style="padding: 60px 40px; background: #f9f9f9;">
     <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Latest Posts</h2>
 
-    @auth
+    <?php if(auth()->guard()->check()): ?>
         <div style="text-align: center; margin-bottom: 40px;">
-            <a href="{{ route('posts.create') }}" style="background: #222; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-size: 15px;">+ New Post</a>
+            <a href="<?php echo e(route('posts.create')); ?>" style="background: #222; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-size: 15px;">+ New Post</a>
         </div>
-        @else
+        <?php else: ?>
             <div style="text-align: center; margin-bottom: 30px; padding: 16px;">
-                <p style="margin: 0; font-size: 15px; color: #666;">Want to share your experience? <a href="{{ route('register') }}" style="color: #222; font-weight: 600;">Register</a> or <a href="{{ route('login') }}" style="color: #222; font-weight: 600;">Log in</a> to post.</p>
+                <p style="margin: 0; font-size: 15px; color: #666;">Want to share your experience? <a href="<?php echo e(route('register')); ?>" style="color: #222; font-weight: 600;">Register</a> or <a href="<?php echo e(route('login')); ?>" style="color: #222; font-weight: 600;">Log in</a> to post.</p>
             </div>
-    @endauth
+    <?php endif; ?>
 
-   @forelse ($posts as $post)
+   <?php $__empty_1 = true; $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         
-    @if ($post->image)
+    <?php if($post->image): ?>
              <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-                <img src="{{ Storage::url($post->image) }}" alt="{{ $post->title }}"
+                <img src="<?php echo e(Storage::url($post->image)); ?>" alt="<?php echo e($post->title); ?>"
                 style="width: 300px; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             </div>
-    @else
+    <?php else: ?>
             <div style="width: 300px; height: 200px; border-radius: 15px; flex-shrink: 0; background: #f0ede8; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.08);">
             <span style="font-size: 48px;">No image</span>
             </div>
-    @endif
+    <?php endif; ?>
 
         <div>
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
                 <div style="width: 36px; height: 36px; border-radius: 50%; background: #c8a46e; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 14px;">
-                    {{ strtoupper(substr($post->user->name, 0, 1)) }}
+                    <?php echo e(strtoupper(substr($post->user->name, 0, 1))); ?>
+
                 </div>
                 <div>
-                    <div style="font-weight: 600; font-size: 14px;">{{ $post->user->name }}</div>
-                    <div style="font-size: 12px; color: #888;">{{ $post->created_at->format('F j, Y') }}</div>
+                    <div style="font-weight: 600; font-size: 14px;"><?php echo e($post->user->name); ?></div>
+                    <div style="font-size: 12px; color: #888;"><?php echo e($post->created_at->format('F j, Y')); ?></div>
                 </div>
             </div>
 
-            <h3 style="font-size: 34px; margin-bottom: 15px;">{{ $post->title }}</h3>
-            <p style="color: #666; font-size: 20px; line-height: 1.8;">{{ Str::limit($post->content, 200) }}</p>
+            <h3 style="font-size: 34px; margin-bottom: 15px;"><?php echo e($post->title); ?></h3>
+            <p style="color: #666; font-size: 20px; line-height: 1.8;"><?php echo e(Str::limit($post->content, 200)); ?></p>
 
             <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
-                <a href="{{ route('posts.viewposts', $post) }}" style="color: #222; font-size: 14px; font-weight: 600; text-decoration: underline;">Read more</a>
+                <a href="<?php echo e(route('posts.viewposts', $post)); ?>" style="color: #222; font-size: 14px; font-weight: 600; text-decoration: underline;">Read more</a>
 
-                @can('update', $post)
-                    <a href="{{ route('posts.edit', $post) }}" style="color: #222; font-size: 14px; font-weight: 600;">Edit</a>
-                @endcan
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('update', $post)): ?>
+                    <a href="<?php echo e(route('posts.edit', $post)); ?>" style="color: #222; font-size: 14px; font-weight: 600;">Edit</a>
+                <?php endif; ?>
 
-                @can('delete', $post)
-                    <form method="POST" action="{{ route('posts.destroy', $post) }}" style="display:contents;">
-                        @csrf @method('DELETE')
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('delete', $post)): ?>
+                    <form method="POST" action="<?php echo e(route('posts.destroy', $post)); ?>" style="display:contents;">
+                        <?php echo csrf_field(); ?> <?php echo method_field('DELETE'); ?>
                        <button type="submit" style="background: none; border: none; color: #222; font-size: 14px; font-weight: 600; cursor: pointer;">Delete</button>
                     </form>
-                @endcan
+                <?php endif; ?>
             </div>
         </div>
     </div>
 
-@empty
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
     <div style="text-align: center; padding: 60px 20px; color: #888;">
         <p style="font-size: 20px;">No posts yet.</p>
-        @auth
-            <a href="{{ route('posts.create') }}" style="color: #222; font-weight: 600;">Be the first to write one!</a>
-        @endauth
+        <?php if(auth()->guard()->check()): ?>
+            <a href="<?php echo e(route('posts.create')); ?>" style="color: #222; font-weight: 600;">Be the first to write one!</a>
+        <?php endif; ?>
     </div>
-@endforelse
+<?php endif; ?>
 
-    <div style="margin-top: 30px;">{{ $posts->links() }}</div>
+    <div style="margin-top: 30px;"><?php echo e($posts->links()); ?></div>
 </section>
  
  
@@ -164,4 +164,5 @@
         </a>
     </div>
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\Asus\Herd\MinistryOfTourism\resources\views/posts/blogposts.blade.php ENDPATH**/ ?>

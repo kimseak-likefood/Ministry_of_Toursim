@@ -1,16 +1,14 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', 'Ministry of Tourism Cambodia'); ?>
 
-@section('title', 'Ministry of Tourism Cambodia')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="pagewrap">
         <div class="head-wrapper">
-            @include('partials.search-engine')
+            <?php echo $__env->make('partials.search-engine', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
         </div>
     </div>
 
-    @include('sections.recommended')
-    @include('sections.special-offers')
+    <?php echo $__env->make('sections.recommended', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <?php echo $__env->make('sections.special-offers', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
     
 
     <div class="showcase-banner" style="
@@ -88,6 +86,7 @@
     </section>
 
     
-    @include('sections.blog')
-    @include('sections.newsletter')
-@endsection
+    <?php echo $__env->make('sections.blog', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <?php echo $__env->make('sections.newsletter', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\Asus\Herd\MinistryOfTourism\resources\views/home.blade.php ENDPATH**/ ?>

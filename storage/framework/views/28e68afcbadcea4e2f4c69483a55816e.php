@@ -1,11 +1,12 @@
-@extends('layouts.app')
-@section('title', 'Kampot')
+<?php $__env->startSection('title', 'Battambang'); ?>
 
-@section('content')
-   <section style="
-    background-image: url('/assets/images/destinations/kampot.jpg');
+<?php $__env->startSection('content'); ?>
+   
+ 
+<section style="
+    background-image: url('/assets/images/destinations/battambang.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     height: 500px;
     display: flex;
     align-items: center;
@@ -20,23 +21,22 @@
     "></div>
  
     <div style="position: relative; text-align: center; color: white;">
-        <p style="font-size: 16px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.85;">Cambodia &rsaquo; Riverside Escape</p>
-        <h1 style="font-size: 64px; font-weight: bold; margin: 0;">Kampot</h1>
-        <p style="font-size: 20px; margin-top: 14px; opacity: 0.9;">Cambodia's most relaxed riverside town — where pepper farms, cave temples, and sunset views await.</p>
+        <p style="font-size: 16px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.85;">Cambodia &rsaquo; Colonial River Town</p>
+        <h1 style="font-size: 64px; font-weight: bold; margin: 0;">Battambang</h1>
+        <p style="font-size: 20px; margin-top: 14px; opacity: 0.9;">Cambodia's most charming province — where French heritage, rice fields, and art come alive.</p>
     </div>
 </section>
  
  
 <section style="padding: 60px 40px; background: #f9f9f9;">
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 32px; margin-bottom: 20px;">About Kampot</h2>
+        <h2 style="font-size: 32px; margin-bottom: 20px;">About Battambang</h2>
         <p style="font-size: 18px; color: #555; line-height: 1.9;">
-            Kampot is a sleepy riverside town in southern Cambodia, cradled between the Kampot River and the 
-            dramatic peaks of Bokor Mountain. Famous worldwide for its prized Kampot pepper — considered among 
-            the finest in the world — the town captivates visitors with its well-preserved French colonial 
-            streetscapes, lantern-lit waterfront, and effortlessly laid-back pace of life. 
-            From cave pagodas and pepper farm tours to kayaking at sunset and fresh seafood by the river, 
-            Kampot offers a perfect blend of culture, nature, and slow travel charm.
+            Battambang is Cambodia's second-largest city and one of its best-preserved examples of French colonial architecture. 
+            Situated along the Sangker River in the northwest, the city is the heart of Cambodia's rice basket — 
+            surrounded by golden paddies, ancient hilltop temples, and rural villages where traditional Khmer life 
+            continues at a gentle pace. Known for its thriving arts scene, beloved bamboo train, and legendary 
+            circus school, Battambang rewards slow travellers with an authentic, unhurried charm that few Cambodian cities can match.
         </p>
     </div>
 </section>
@@ -48,45 +48,45 @@
     <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/Bokor.jpg" alt="Bokor Mountain"
+            <img src="/assets/images/battambang/Bamboo-Train.jpg" alt="Bamboo Train"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Bokor Mountain</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Bamboo Train</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/pepper.jpg" alt="Kampot Pepper Farm"
+            <img src="/assets/images/battambang/phare-battambang-circus.jpg" alt="Phare Ponleu Selpak Circus"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kampot Pepper Farm</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Phare Ponleu Selpak Circus</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/Chhngok-Cave-Temple-.jpg" alt="Phnom Chhngok Cave Temple"
+            <img src="/assets/images/battambang/banan.jpg" alt="Wat Banan Temple"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Phnom Chhngok Cave Temple</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Wat Banan Temple</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/kp_river.jpg" alt="Kampot River"
+            <img src="/assets/images/battambang/French-Colonial-architecture.jpg" alt="French Colonial Architecture"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kampot River</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">French Colonial Architecture</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/French-Colonial-architecture-Kampot-Old-Quarter.jpg" alt="Colonial Old Town"
+            <img src="/assets/images/battambang/bat_cave.jpg" alt="Phnom Sampeau Bat Caves"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Colonial Old Town</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Phnom Sampeau Bat Caves</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/kep-beach.jpg" alt="Kep Beach (Nearby)"
+            <img src="/assets/images/battambang/sangker.jpg" alt="Sangker River"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kep Beach (Nearby)</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Sangker River</p>
         </div>
  
     </div>
@@ -94,52 +94,52 @@
  
  
 <section style="padding: 60px 40px; background: #f9f9f9;">
-    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Experiences in Kampot</h2>
+    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Experiences in Battambang</h2>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/kampot/Kayaking-Kampot.jpg" alt="River & Kayaking"
+            <img src="/assets/images/battambang/rural_life.jpg" alt="Rural Village & Farm Life"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">River & Kayaking</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">Rural Village & Farm Life</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Drift along the Kampot River at golden hour by kayak or boat, watching the sun melt behind 
-                Bokor Mountain. Evening boat cruises pass firefly-lit mangroves and riverside restaurants, 
-                making sunset on the water one of Kampot's most memorable experiences.
+                Cycle through golden rice paddies and riverside villages where traditional Khmer rural life unfolds 
+                at its own pace — visit local fish paste factories, rice wine distilleries, and handcraft workshops 
+                that have been passed down through generations.
             </p>
         </div>
     </div>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/kampot/Farm-4.png" alt="Pepper Farm Tours"
+            <img src="/assets/images/battambang/art_circus.jpg" alt="Arts & Circus"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">Pepper Farm Tours</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">Arts & Circus</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Explore the world-famous Kampot pepper plantations where black, red, and white peppercorns 
-                grow on vine-covered trellises. Guided farm tours offer a fascinating insight into the 
-                cultivation and harvest of one of Cambodia's most celebrated culinary exports.
+                Battambang is Cambodia's arts capital. Watch a world-renowned performance at Phare Ponleu Selpak — 
+                the celebrated circus school that has transformed the lives of thousands of Cambodian youth through 
+                visual arts, music, and breathtaking acrobatics.
             </p>
         </div>
     </div>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/kampot/Bokor-Hill-Station.png" alt="Bokor Hill Station"
+            <img src="/assets/images/battambang/Banan-stairs.jpg" alt="Temple Hilltops"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">Bokor Hill Station</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">Temple Hilltops</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Ascend the misty Bokor Mountain to discover the haunting ruins of a French colonial hill station, 
-                an old church perched at the cliff's edge, and sweeping panoramic views over the Gulf of Thailand 
-                on clear days — a truly atmospheric and unforgettable excursion.
+                Climb the stone steps of Wat Banan for sweeping views over the plains, or witness the 
+                breathtaking evening exodus of millions of bats streaming out of Phnom Sampeau's caves 
+                at dusk — one of Cambodia's most unforgettable natural spectacles.
             </p>
         </div>
     </div>
@@ -155,25 +155,25 @@
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Getting There</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">Kampot is approximately 3–4 hours by bus from Phnom Penh and about 1 hour from Sihanoukville. Regular bus and minivan services run daily from both cities directly into Kampot town.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Battambang is accessible by bus from Phnom Penh (4–5 hours) or Siem Reap (3–4 hours). A scenic boat ride from Siem Reap along Tonlé Sap Lake is also a popular option during the wet season.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Best Time to Visit</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">November to April is the dry season — warm, sunny days ideal for river trips, farm tours, and Bokor visits. The wet season (May–October) is lush and green, with fewer tourists and cooler evenings.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">November to February is ideal — cool and dry with lush countryside. Harvest season (November–December) is especially beautiful when the rice fields turn golden across the province.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Getting Around</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">Bicycles and motorbike rentals are the most popular ways to explore Kampot at leisure. Tuk-tuks are widely available for longer trips to Bokor Mountain, cave temples, and pepper farms.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Bicycles and tuk-tuks are the best ways to explore the city and surrounding villages. Many guesthouses rent bicycles cheaply, making the rice fields and temples easy to reach at your own pace.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Local Tips</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">Try fresh crab with Kampot pepper at a riverside restaurant — it's the signature dish of the region. Don't leave without buying a bag of authentic Kampot pepper directly from a certified farm.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Don't miss the famous Battambang fruit — the province is known for its oranges, pomelos, and longans. Book Phare Circus tickets in advance, and visit Phnom Sampeau at 5:30 PM for the bat exodus.</p>
         </div>
  
     </div>
@@ -181,7 +181,7 @@
  
  
 <section style="
-    background-image: url('/assets/images/kampot/kampot_sunset.jpg');
+    background-image: url('/assets/images/battambang/Bat-Cave.jpg');
     background-size: cover;
     background-position: center;
     padding: 80px 40px;
@@ -195,8 +195,8 @@
         background: rgba(0,0,0,0.55);
     "></div>
     <div style="position: relative; color: white;">
-        <h2 style="font-size: 40px; font-weight: bold; margin-bottom: 16px;">Ready to Explore Kampot?</h2>
-        <p style="font-size: 18px; opacity: 0.9; margin-bottom: 30px;">Start planning your journey to Cambodia's most relaxed and charming riverside escape.</p>
+        <h2 style="font-size: 40px; font-weight: bold; margin-bottom: 16px;">Ready to Explore Battambang?</h2>
+        <p style="font-size: 18px; opacity: 0.9; margin-bottom: 30px;">Start planning your journey to Cambodia's most charming riverside city.</p>
         <a href="/plan-your-trip" style="
             display: inline-block;
             background: white;
@@ -212,4 +212,8 @@
         </a>
     </div>
 </section>
-@endsection
+ 
+ 
+<?php $__env->stopSection(); ?>
+ 
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\Asus\Herd\MinistryOfTourism\resources\views/pages/battambang.blade.php ENDPATH**/ ?>

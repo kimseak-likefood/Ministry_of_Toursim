@@ -1,8 +1,6 @@
-@extends('layouts.app')
-
-@section('title', 'Activity - Ministry of Tourism Cambodia')
-@section('content')
-@section('content')
+<?php $__env->startSection('title', 'Activity - Ministry of Tourism Cambodia'); ?>
+<?php $__env->startSection('content'); ?>
+<?php $__env->startSection('content'); ?>
 
 <section style="
     background-image: url('/assets/images/section/banner-image.jpg');
@@ -209,5 +207,6 @@
 
         </div>
     </div>
-    @include('sections.newsletter')
-@endsection
+    <?php echo $__env->make('sections.newsletter', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\Asus\Herd\MinistryOfTourism\resources\views/pages/activies.blade.php ENDPATH**/ ?>

@@ -1,4 +1,3 @@
-@include('partials.header')
 @extends('layouts.app')
 @section('title', 'Koh Kong')
 

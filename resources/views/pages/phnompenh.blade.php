@@ -1,6 +1,5 @@
-@include('partials.header')
 @extends('layouts.app')
-@section('title', 'PhnomPenh')
+@section('title', 'Phnom Penh')
 
 
  

@@ -1,7 +1,6 @@
-@extends('layouts.app')
-@section('title', 'Kampot')
+<?php $__env->startSection('title', 'Kampot'); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
    <section style="
     background-image: url('/assets/images/destinations/kampot.jpg');
     background-size: cover;
@@ -212,4 +211,5 @@
         </a>
     </div>
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\Asus\Herd\MinistryOfTourism\resources\views/pages/kampot.blade.php ENDPATH**/ ?>

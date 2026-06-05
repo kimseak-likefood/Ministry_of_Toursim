@@ -1,8 +1,6 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', 'Statistics - Ministry of Tourism Cambodia'); ?>
 
-@section('title', 'Statistics - Ministry of Tourism Cambodia')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <section style="
     background-image: url('/assets/images/section/banner-image.jpg');
@@ -110,4 +108,6 @@
 
 </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\Asus\Herd\MinistryOfTourism\resources\views/pages/statistics.blade.php ENDPATH**/ ?>

@@ -1,9 +1,8 @@
-@extends('layouts.app')
-@section('title', 'Kampot')
+<?php $__env->startSection('title', 'Koh Kong'); ?>
 
-@section('content')
-   <section style="
-    background-image: url('/assets/images/destinations/kampot.jpg');
+<?php $__env->startSection('content'); ?>
+    <section style="
+    background-image: url('/assets/images/destinations/kohkong.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -20,23 +19,23 @@
     "></div>
  
     <div style="position: relative; text-align: center; color: white;">
-        <p style="font-size: 16px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.85;">Cambodia &rsaquo; Riverside Escape</p>
-        <h1 style="font-size: 64px; font-weight: bold; margin: 0;">Kampot</h1>
-        <p style="font-size: 20px; margin-top: 14px; opacity: 0.9;">Cambodia's most relaxed riverside town — where pepper farms, cave temples, and sunset views await.</p>
+        <p style="font-size: 16px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.85;">Cambodia &rsaquo; Coastal Wilderness</p>
+        <h1 style="font-size: 64px; font-weight: bold; margin: 0;">Koh Kong</h1>
+        <p style="font-size: 20px; margin-top: 14px; opacity: 0.9;">Cambodia's last wild frontier — where jungle rivers, mangroves, and pristine islands meet the sea.</p>
     </div>
 </section>
  
  
 <section style="padding: 60px 40px; background: #f9f9f9;">
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 32px; margin-bottom: 20px;">About Kampot</h2>
+        <h2 style="font-size: 32px; margin-bottom: 20px;">About Koh Kong</h2>
         <p style="font-size: 18px; color: #555; line-height: 1.9;">
-            Kampot is a sleepy riverside town in southern Cambodia, cradled between the Kampot River and the 
-            dramatic peaks of Bokor Mountain. Famous worldwide for its prized Kampot pepper — considered among 
-            the finest in the world — the town captivates visitors with its well-preserved French colonial 
-            streetscapes, lantern-lit waterfront, and effortlessly laid-back pace of life. 
-            From cave pagodas and pepper farm tours to kayaking at sunset and fresh seafood by the river, 
-            Kampot offers a perfect blend of culture, nature, and slow travel charm.
+            Koh Kong is Cambodia's largest province and one of its most ecologically rich — 
+            a vast, unspoiled landscape where the Cardamom Mountains tumble down to meet the Gulf of Thailand. 
+            Crisscrossed by jungle rivers, draped in ancient rainforest, and fringed by mangrove coastlines and 
+            remote island archipelagos, Koh Kong remains one of Southeast Asia's great undiscovered nature destinations. 
+            Whether you're kayaking through flooded forests, snorkelling over coral reefs, or trekking into the Cardamoms, 
+            Koh Kong offers adventure and wilderness in its purest form.
         </p>
     </div>
 </section>
@@ -48,45 +47,45 @@
     <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/Bokor.jpg" alt="Bokor Mountain"
+            <img src="/assets/images/koh kong/Cardamom.jpg" alt="Cardamom Mountains"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Bokor Mountain</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Cardamom Mountains</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/pepper.jpg" alt="Kampot Pepper Farm"
+            <img src="/assets/images/koh kong/island.jpg" alt="Koh Kong Island"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kampot Pepper Farm</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Koh Kong Island</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/Chhngok-Cave-Temple-.jpg" alt="Phnom Chhngok Cave Temple"
+            <img src="/assets/images/koh kong/tatai-waterfall.jpg" alt="Tatai Waterfall"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Phnom Chhngok Cave Temple</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Tatai Waterfall</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/kp_river.jpg" alt="Kampot River"
+            <img src="/assets/images/koh kong/koh_kang.jpg" alt="Prey Kong Kang ព្រៃកោងកាង"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kampot River</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Prey Kong Kang ព្រៃកោងកាង</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/French-Colonial-architecture-Kampot-Old-Quarter.jpg" alt="Colonial Old Town"
+            <img src="/assets/images/koh kong/PEAM.jpg" alt="Peam Krasop Wildlife Sanctuary"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Colonial Old Town</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Peam Krasop Wildlife Sanctuary</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/kampot/kep-beach.jpg" alt="Kep Beach (Nearby)"
+            <img src="/assets/images/koh kong/river.jpg" alt="Tatai River"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kep Beach (Nearby)</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Tatai River</p>
         </div>
  
     </div>
@@ -94,52 +93,52 @@
  
  
 <section style="padding: 60px 40px; background: #f9f9f9;">
-    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Experiences in Kampot</h2>
+    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Experiences in Koh Kong</h2>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/kampot/Kayaking-Kampot.jpg" alt="River & Kayaking"
+            <img src="/assets/images/koh kong/kayak.jpg" alt="River Kayaking"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">River & Kayaking</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">River Kayaking</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Drift along the Kampot River at golden hour by kayak or boat, watching the sun melt behind 
-                Bokor Mountain. Evening boat cruises pass firefly-lit mangroves and riverside restaurants, 
-                making sunset on the water one of Kampot's most memorable experiences.
+                Paddle through the winding channels of the Tatai River and into the heart of the mangrove forest — 
+                gliding past firefly-lit trees at dusk, spotting kingfishers and monitor lizards along the 
+                jungle-draped riverbanks in complete serenity.
             </p>
         </div>
     </div>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/kampot/Farm-4.png" alt="Pepper Farm Tours"
+            <img src="/assets/images/koh kong/14.jpg" alt="Island & Snorkelling"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">Pepper Farm Tours</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">Island & Snorkelling</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Explore the world-famous Kampot pepper plantations where black, red, and white peppercorns 
-                grow on vine-covered trellises. Guided farm tours offer a fascinating insight into the 
-                cultivation and harvest of one of Cambodia's most celebrated culinary exports.
+                Take a boat to Koh Kong Island — one of Cambodia's largest and least developed islands — 
+                and discover its deserted white-sand beaches, crystal-clear waters, and colourful coral reefs 
+                teeming with tropical marine life just beneath the surface.
             </p>
         </div>
     </div>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/kampot/Bokor-Hill-Station.png" alt="Bokor Hill Station"
+            <img src="/assets/images/koh kong/trekking_koh_kong.jpg" alt="Cardamom Trekking"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">Bokor Hill Station</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">Cardamom Trekking</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Ascend the misty Bokor Mountain to discover the haunting ruins of a French colonial hill station, 
-                an old church perched at the cliff's edge, and sweeping panoramic views over the Gulf of Thailand 
-                on clear days — a truly atmospheric and unforgettable excursion.
+                Venture deep into the Cardamom Mountains — one of Southeast Asia's largest remaining 
+                rainforest wildernesses — on guided multi-day treks through dense jungle, past thundering 
+                waterfalls, and across rivers home to rare wildlife including sun bears, pangolins, and gibbons.
             </p>
         </div>
     </div>
@@ -155,25 +154,25 @@
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Getting There</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">Kampot is approximately 3–4 hours by bus from Phnom Penh and about 1 hour from Sihanoukville. Regular bus and minivan services run daily from both cities directly into Kampot town.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Koh Kong town is reachable by bus from Phnom Penh in approximately 4–5 hours via National Road 48. It also sits at the Thai border crossing at Hat Lek, making it a popular overland entry point.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Best Time to Visit</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">November to April is the dry season — warm, sunny days ideal for river trips, farm tours, and Bokor visits. The wet season (May–October) is lush and green, with fewer tourists and cooler evenings.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">November to April offers dry, sunny weather perfect for island trips and river kayaking. The wet season (May–October) brings lush greenery and fuller waterfalls, though some roads and boat routes may be affected.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Getting Around</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">Bicycles and motorbike rentals are the most popular ways to explore Kampot at leisure. Tuk-tuks are widely available for longer trips to Bokor Mountain, cave temples, and pepper farms.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Boats are essential for reaching islands and river camps. Motorbike taxis and tuk-tuks serve the town area. Most eco-lodges along the Tatai River organise kayaks, longtail boats, and guided tours directly.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
-            <h4 style="font-size: 18px; margin-bottom: 10px;">Local Tips</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">Try fresh crab with Kampot pepper at a riverside restaurant — it's the signature dish of the region. Don't leave without buying a bag of authentic Kampot pepper directly from a certified farm.</p>
+            <h4 style="font-size: 18px; margin-bottom: 10px;">Eco Tips</h4>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Koh Kong's ecosystems are fragile. Choose eco-certified lodges, avoid single-use plastics on the water, and book treks through responsible operators who support local conservation efforts in the Cardamoms.</p>
         </div>
  
     </div>
@@ -181,7 +180,7 @@
  
  
 <section style="
-    background-image: url('/assets/images/kampot/kampot_sunset.jpg');
+    background-image: url('/assets/images/koh kong/sunset.jpg');
     background-size: cover;
     background-position: center;
     padding: 80px 40px;
@@ -195,8 +194,8 @@
         background: rgba(0,0,0,0.55);
     "></div>
     <div style="position: relative; color: white;">
-        <h2 style="font-size: 40px; font-weight: bold; margin-bottom: 16px;">Ready to Explore Kampot?</h2>
-        <p style="font-size: 18px; opacity: 0.9; margin-bottom: 30px;">Start planning your journey to Cambodia's most relaxed and charming riverside escape.</p>
+        <h2 style="font-size: 40px; font-weight: bold; margin-bottom: 16px;">Ready to Explore Koh Kong?</h2>
+        <p style="font-size: 18px; opacity: 0.9; margin-bottom: 30px;">Start planning your journey into Cambodia's untouched coastal wilderness.</p>
         <a href="/plan-your-trip" style="
             display: inline-block;
             background: white;
@@ -212,4 +211,6 @@
         </a>
     </div>
 </section>
-@endsection
+ 
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\Asus\Herd\MinistryOfTourism\resources\views/pages/kohkong.blade.php ENDPATH**/ ?>
