@@ -70,7 +70,7 @@
               Back to Home <a href="/">Home</a>
             </p> --}}
             <div class="text-center mt-3">
-              <button class="btn btn-sm btn-primary">Back to Home</button>
+              <a href="/" class="btn btn-sm btn-primary">Back to Home</a>
             </div>
             
           </form>

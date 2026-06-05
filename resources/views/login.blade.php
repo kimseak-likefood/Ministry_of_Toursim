@@ -58,7 +58,7 @@
         </form>
          
         <div class="text-center mt-3">
-          <button class="btn btn-sm btn-primary">Back Home</button>
+          <a href="/" class="btn btn-sm btn-primary">Back Home</a>
         </div>
 
       </div>
