@@ -1,14 +1,11 @@
 <?php echo $__env->make('partials.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
-<?php $__env->startSection('title', 'PhnomPenh'); ?>
+<?php $__env->startSection('title', 'Mondulkiri'); ?>
 
-
- 
 <?php $__env->startSection('content'); ?>
  
- 
 <section style="
-    background-image: url('/assets/images/destinations/phnompenh.jpg');
+    background-image: url('/assets/images/destinations/mondulkiri.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -25,21 +22,22 @@
     "></div>
  
     <div style="position: relative; text-align: center; color: white;">
-        <p style="font-size: 16px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.85;">Cambodia &rsaquo; Capital City</p>
-        <h1 style="font-size: 64px; font-weight: bold; margin: 0;">Phnom Penh</h1>
-        <p style="font-size: 20px; margin-top: 14px; opacity: 0.9;">The vibrant heart of Cambodia — where history, culture, and modern life meet.</p>
+        <p style="font-size: 16px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.85;">Cambodia &rsaquo; Highland Province</p>
+        <h1 style="font-size: 64px; font-weight: bold; margin: 0;">Mondulkiri</h1>
+        <p style="font-size: 20px; margin-top: 14px; opacity: 0.9;">Cambodia's wild highland escape — where rolling hills, waterfalls, and elephants await.</p>
     </div>
 </section>
  
  
 <section style="padding: 60px 40px; background: #f9f9f9;">
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 32px; margin-bottom: 20px;">About Phnom Penh</h2>
+        <h2 style="font-size: 32px; margin-bottom: 20px;">About Mondulkiri</h2>
         <p style="font-size: 18px; color: #555; line-height: 1.9;">
-            Phnom Penh, the capital and largest city of Cambodia, sits at the confluence of the Mekong, Tonlé Sap, and Bassac rivers. 
-            A city of resilience and beauty, it blends French colonial architecture with traditional Khmer design, 
-            bustling riverside markets, world-class museums, and a thriving food and arts scene. 
-            Whether you're exploring its rich history or soaking in its energy, Phnom Penh always leaves a lasting impression.
+            Mondulkiri is Cambodia's largest and most sparsely populated province, nestled in the northeastern highlands 
+            bordering Vietnam. A world apart from the lowland plains, it captivates visitors with its cool misty mornings, 
+            pine-covered hills, dramatic waterfalls, and dense tropical forests. Home to the indigenous Bunong people 
+            and free-roaming elephants, Mondulkiri offers an authentic eco-tourism experience unlike anywhere else in Cambodia — 
+            a destination for those who seek nature, adventure, and cultural connection.
         </p>
     </div>
 </section>
@@ -51,45 +49,45 @@
     <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/Cambodia-Royal-Palace-Phnom-Penh.jpg" alt="Royal Palace"
+            <img src="/assets/images/mondulkiri/Bou-Sra-Waterfall.jpg" alt="Bou Sra Waterfall"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Royal Palace</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Bou Sra Waterfall</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/cambodian-national-museum.jpg" alt="National Museum"
+            <img src="/assets/images/mondulkiri/Three-Elephant.jpg" alt="Elephant Valley Project"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">National Museum</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Elephant Valley Project</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/Riverside-1.jpg" alt="Riverside Promenade"
+            <img src="/assets/images/mondulkiri/Sen-Monorom-2.jpg" alt="Sen Monorom Town"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Riverside Promenade</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Sen Monorom Town</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/wp.jpg" alt="Wat Phnom"
+            <img src="/assets/images/mondulkiri/Bunong.jpg" alt="Bunong Indigenous Village"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Wat Phnom</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Bunong Indigenous Village</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/psar_tmey.png" alt="Central Market"
+            <img src="/assets/images/mondulkiri/Viland.jpg" alt="Rolling Pine Hills"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Central Market</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Rolling Pine Hills</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/toul_sleng.jpg" alt="Tuol Sleng Museum"
+            <img src="/assets/images/mondulkiri/dak_dam.jpg" alt="Dak Dam Waterfall"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Tuol Sleng Museum</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Dak Dam Waterfall</p>
         </div>
  
     </div>
@@ -97,46 +95,52 @@
  
  
 <section style="padding: 60px 40px; background: #f9f9f9;">
-    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Experiences in Phnom Penh</h2>
+    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Experiences in Mondulkiri</h2>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/phnom penh/Royal-Palace-Art.jpg" alt="History"
+            <img src="/assets/images/mondulkiri/Mondulkiri-Elephant-2.png" alt="Elephant Sanctuary"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">History</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">Elephant Sanctuary</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Walk through centuries of Khmer history — from the golden era of the Royal Palace to the sobering legacy preserved at Tuol Sleng and the Killing Fields Memorial.
+                Walk alongside rescued elephants in their natural forest habitat at the Elephant Valley Project — 
+                an ethical sanctuary where you observe these gentle giants roaming free, bathing in rivers, 
+                and living as nature intended.
             </p>
         </div>
     </div>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/phnom penh/Traditional-Cambodian-Dishes-To-Eat-Amok.jpg" alt="Food & Cuisine"
+            <img src="/assets/images/mondulkiri/trekking.jpg" alt="Jungle Trekking"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">Food & Cuisine</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">Jungle Trekking</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Indulge in Cambodia's culinary delights — from street-side amok and bai sach chrouk at the local markets to fine riverside dining and French-inspired cafes.
+                Trek through dense jungle trails to hidden waterfalls and remote hilltop viewpoints. 
+                Guided hikes led by Bunong locals take you deep into forests teeming with wildlife, 
+                rare birds, and ancient trees far off the beaten path.
             </p>
         </div>
     </div>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/phnom penh/Panorama-Phnom-Penh.png" alt="Nightlife & Arts"
+            <img src="/assets/images/mondulkiri/culture.jpg" alt="Indigenous Culture"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">Nightlife & Arts</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">Indigenous Culture</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Experience the city after dark along the Riverside, or explore a growing arts scene of galleries, classical Khmer dance performances, and live music venues.
+                Discover the traditions of the Bunong people — Cambodia's indigenous highland community. 
+                Visit their villages, learn about their animist spiritual practices, traditional weaving, 
+                and centuries-old connection to the forest and land.
             </p>
         </div>
     </div>
@@ -152,25 +156,25 @@
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Getting There</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">Fly into Phnom Penh International Airport (PNH), with direct connections from Bangkok, Singapore, Kuala Lumpur, and Ho Chi Minh City.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Travel by bus or private taxi from Phnom Penh to Sen Monorom — the provincial capital. The journey takes approximately 6–7 hours by road through scenic countryside.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Best Time to Visit</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">November to February offers the most comfortable weather — cool, dry, and perfect for sightseeing. Avoid peak monsoon season (June–October).</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">November to April offers the best conditions — dry roads, clear skies, and lush green hills. The wet season (May–October) makes dirt roads difficult but fills the waterfalls.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Getting Around</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">Tuk-tuks, motodops, and ride-hailing apps like PassApp and Grab are the most popular ways to get around the city affordably.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Motorbike rentals are the most popular way to explore Mondulkiri's winding highland roads. Local guides with 4WD vehicles are recommended for deeper jungle routes.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
-            <h4 style="font-size: 18px; margin-bottom: 10px;">Currency</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">The Cambodian Riel (KHR) is the local currency, but US Dollars are widely accepted across hotels, restaurants, and shops.</p>
+            <h4 style="font-size: 18px; margin-bottom: 10px;">Eco Tips</h4>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Choose ethical elephant experiences that do not use riding or chains. Support Bunong-run tours and guesthouses to ensure your visit benefits the local indigenous community directly.</p>
         </div>
  
     </div>
@@ -178,7 +182,7 @@
  
  
 <section style="
-    background-image: url('/assets/images/phnom penh/mekong-river-sunset.jpg');
+    background-image: url('/assets/images/mondulkiri/cold-weather.jpg');
     background-size: cover;
     background-position: center;
     padding: 80px 40px;
@@ -192,8 +196,8 @@
         background: rgba(0,0,0,0.55);
     "></div>
     <div style="position: relative; color: white;">
-        <h2 style="font-size: 40px; font-weight: bold; margin-bottom: 16px;">Ready to Explore Phnom Penh?</h2>
-        <p style="font-size: 18px; opacity: 0.9; margin-bottom: 30px;">Start planning your journey to Cambodia's vibrant capital city today.</p>
+        <h2 style="font-size: 40px; font-weight: bold; margin-bottom: 16px;">Ready to Explore Mondulkiri?</h2>
+        <p style="font-size: 18px; opacity: 0.9; margin-bottom: 30px;">Start planning your journey into Cambodia's untamed highland wilderness.</p>
         <a href="/plan-your-trip" style="
             display: inline-block;
             background: white;
@@ -212,4 +216,4 @@
  
  
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\User\Herd\Ministry_of_Toursim-main\resources\views/pages/phnompenh.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\User\Herd\Ministry_of_Toursim-main\resources\views/pages/mondulkiri.blade.php ENDPATH**/ ?>

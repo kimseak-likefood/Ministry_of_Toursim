@@ -88,11 +88,7 @@
         </div>
     </section>
 
-    <div style="margin-bottom: 9rem;">
-        @include('sections.experience')
-    </div>
-
-    @include('sections.testimonials')
+    
     @include('sections.blog')
     @include('sections.newsletter')
 @endsection

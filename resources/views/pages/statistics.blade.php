@@ -6,7 +6,7 @@
 @section('content')
 
 <section style="
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/images/section/statistic.jpg');
+    background-image: url('/assets/images/section/banner-image.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -14,14 +14,20 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    color: white;
-    text-align: center;
 ">
+
+    <div style="
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5);
+    "></div>
+
+    
     <div style="position: relative; text-align: center; color: white;">
         <h1 style="font-size: 60px; font-weight: bold;">Tourism Statistics</h1>
         <p style="font-size: 20px; margin-top: 10px;">Cambodia Tourism Data and Performance Overview 2025</p>
     </div>
-</section>
 </section>
 
 <section style="padding:40px 20px; background:#f5f5f5; text-align:center;">
@@ -59,7 +65,6 @@
     <ul style="max-width:400px; margin:20px auto; font-size:18px;">
         <li>Vietnam – 1,222,101</li>
         <li>China – 1,201,681</li>
-        <li>Thailand – 1,022,743</li>
         <li>USA – 206,791</li>
         <li>South Korea – 152,598</li>
     </ul>
