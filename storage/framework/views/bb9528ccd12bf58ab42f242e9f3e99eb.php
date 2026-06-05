@@ -7,24 +7,54 @@
         </button>
         <div class="dropdown-menu" aria-labelledby="<?php echo e($buttonId); ?>">
             <ul class="drop-rest">
-                <?php $__currentLoopData = ['Adults' => 'onewayAdult', 'Child' => 'onewayChild', 'Infants' => 'onewayInfant']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $label => $field): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <li>
-                    <div class="d-flex small"><?php echo e($label); ?></div>
+                    <div class="d-flex small">Adults</div>
                     <div class="ms-auto input-group plus-minus-input">
                         <div class="input-group-button">
-                            <button type="button" class="circle" data-quantity="minus" data-field="<?php echo e($field); ?>">
+                            <button type="button" class="circle" data-quantity="minus" data-field="onewayAdult">
                                 <i class="bi bi-dash"></i>
                             </button>
                         </div>
-                        <input class="input-group-field" type="number" name="<?php echo e($field); ?>" value="0">
+                        <input class="input-group-field" type="number" name="onewayAdult" value="0">
                         <div class="input-group-button">
-                            <button type="button" class="circle" data-quantity="plus" data-field="<?php echo e($field); ?>">
+                            <button type="button" class="circle" data-quantity="plus" data-field="onewayAdult">
                                 <i class="bi bi-plus"></i>
                             </button>
                         </div>
                     </div>
                 </li>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <li>
+                    <div class="d-flex small">Child</div>
+                    <div class="ms-auto input-group plus-minus-input">
+                        <div class="input-group-button">
+                            <button type="button" class="circle" data-quantity="minus" data-field="onewayChild">
+                                <i class="bi bi-dash"></i>
+                            </button>
+                        </div>
+                        <input class="input-group-field" type="number" name="onewayChild" value="0">
+                        <div class="input-group-button">
+                            <button type="button" class="circle" data-quantity="plus" data-field="onewayChild">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="d-flex small">Infants</div>
+                    <div class="ms-auto input-group plus-minus-input">
+                        <div class="input-group-button">
+                            <button type="button" class="circle" data-quantity="minus" data-field="onewayInfant">
+                                <i class="bi bi-dash"></i>
+                            </button>
+                        </div>
+                        <input class="input-group-field" type="number" name="onewayInfant" value="0">
+                        <div class="input-group-button">
+                            <button type="button" class="circle" data-quantity="plus" data-field="onewayInfant">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

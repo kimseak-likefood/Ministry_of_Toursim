@@ -6,7 +6,7 @@
         </span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end sub-menu" aria-labelledby="navbarDropdown3">
-        <li><a class="dropdown-item" href="<?php echo e(route('login')); ?>">Login</a></li>
+        <li><a class="dropdown-item" href="<?php echo e(route('login')); ?>">Sign in</a></li>
         <li><a class="dropdown-item" href="<?php echo e(route('register')); ?>">Register</a></li>
     </ul>
 </li>

@@ -17,7 +17,7 @@ class UserController extends Controller
 
     public function register(Request $request){
         
-        $request->validate([
+        $incomingFields = $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6' ],
@@ -25,7 +25,6 @@ class UserController extends Controller
             'email.unique' => 'This email is already registered.',
             'password.min' => 'Password must be at least 6 characters.',
             'name.required' => 'Please enter your name.',
-
             
         ]);
         

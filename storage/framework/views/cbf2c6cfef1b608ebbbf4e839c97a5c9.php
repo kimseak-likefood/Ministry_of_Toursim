@@ -4,7 +4,7 @@
         <i class="bi bi-globe me-2"></i>Eng
     </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-        <li><a class="dropdown-item" href="#">Russian</a></li>
+        <li><a class="dropdown-item" href="#">Khmer</a></li>
         <li><a class="dropdown-item" href="#">French</a></li>
     </ul>
 </li>
