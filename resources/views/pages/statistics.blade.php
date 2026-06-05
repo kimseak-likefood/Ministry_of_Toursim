@@ -1,9 +1,7 @@
-@include('partials.header')
 @extends('layouts.app')
-
 @section('title', 'Statistics')
-
 @section('content')
+@include('partials.header')
 
 <section style="
     background-image: url('/assets/images/section/banner-image.jpg');

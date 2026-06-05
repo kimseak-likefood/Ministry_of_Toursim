@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'RoundTours - Tours and Travel Landing Page'); ?>
+<?php $__env->startSection('title', 'ក្រសួងទេសចរណ៍ - Ministry of Tourism'); ?>
 
 <?php $__env->startSection('content'); ?>
     <div class="pagewrap">
@@ -86,11 +86,7 @@
         </div>
     </section>
 
-    <div style="margin-bottom: 9rem;">
-        <?php echo $__env->make('sections.experience', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
-    </div>
-
-    <?php echo $__env->make('sections.testimonials', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    
     <?php echo $__env->make('sections.blog', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
     <?php echo $__env->make('sections.newsletter', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 <?php $__env->stopSection(); ?>

@@ -76,7 +76,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-3 mt-lg-5">
-                <p class="pt-2 mb-0 small theme-text-accent-one">&copy; {{ date('Y') }} RoundTours All rights reserved.</p>
+                <p class="pt-2 mb-0 small theme-text-accent-one">&copy; {{ date('Y') }} </p>
             </div>
             <div class="col-12 col-lg-6 mt-5">
                 <ul class="footer-link d-flex flex-row flex-wrap justify-content-lg-center align-items-center">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'RoundTours - Tours and Travel Landing Page')
+@section('title', 'Activities')
 @section('content')
 @section('content')
     <div class="pagewrap">

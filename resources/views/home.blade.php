@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'RoundTours - Tours and Travel Landing Page')
+@section('title', 'ក្រសួងទេសចរណ៍ - Ministry of Tourism')
 
 @section('content')
     <div class="pagewrap">

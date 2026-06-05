@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
@@ -56,6 +58,40 @@ class UserController extends Controller
 
     public function logout(){
         Auth::logout();
+        return redirect('/');
+    }
+
+    public function updateAvatar(Request $request){
+            $request->validate([
+                'avatar' => ['required', 'image', 'max:5120'],
+            ]);
+
+            if(auth()->user()->avatar){
+                Storage::delete('public/' . auth()->user()->avatar);
+            }
+
+            $path = $request->file('avatar')->store('avatars', 'public');
+            auth()->user()->update(['avatar' => $path]);
+            return back();
+    }
+
+    public function updateProfile(Request $request){
+        $incomingFields = $request->validate([
+            'name' => ['sometimes','required', 'min:3', 'max:50', 'different:current_name',Rule::unique('users', 'name')],
+            'email' => ['sometimes','required', 'different:current_email', Rule::unique('users', 'email')],
+            'phone' => ['sometimes', 'nullable', 'different:current_phone'],
+            'bio' => ['sometimes', 'nullable'],
+            'location' => ['sometimes', 'nullable']
+        ]);
+
+        auth()->user()->update($incomingFields);
+        return back()->with('success', 'Profile updated.');
+    }
+
+    public function deleteAccount(){
+        $user = auth()->user();
+        auth()->logout();
+        $user->delete();
         return redirect('/');
     }
 }

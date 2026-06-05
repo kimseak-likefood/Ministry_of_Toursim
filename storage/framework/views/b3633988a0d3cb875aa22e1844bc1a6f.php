@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'RoundTours - Tours and Travel Landing Page'); ?>
+<?php $__env->startSection('title', 'Activities'); ?>
 <?php $__env->startSection('content'); ?>
 <?php $__env->startSection('content'); ?>
     <div class="pagewrap">
@@ -51,7 +51,7 @@
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
                 <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/yeak-loam.jpg" alt="Rattanakiri - EcoTourism" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/assets/images/destinations/geography.jpg" alt="Rattanakiri - EcoTourism" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
                 </div>
             </div>
             <div class="col-md-6">
@@ -68,7 +68,7 @@
         <div class="row align-items-center flex-md-row-reverse">
             <div class="col-md-6 mb-4 mb-md-0">
                 <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/koh-ker.jpg" alt="Ancient stone temple ruins surrounded by trees and moss at Koh Ker archaeological site" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/assets/images/destinations/history.jpg" alt="Ancient stone temple ruins surrounded by trees and moss at Koh Ker archaeological site" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
                 </div>
             </div>
             <div class="col-md-6">
@@ -85,7 +85,7 @@
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
                 <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/national-museum.jpg" alt="Phnom Penh - Minority" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/assets/images/destinations/peopleandculture.jpg" alt="Phnom Penh - Minority" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
                 </div>
             </div>
             <div class="col-md-6">
@@ -102,7 +102,7 @@
         <div class="row align-items-center flex-md-row-reverse">
             <div class="col-md-6 mb-4 mb-md-0">
                 <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/dong-te.jpg" alt="Wooden river boats moored on calm water at Kampot Dong Te with green banks and distant limestone hills" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="/assets/images/destinations/climate.jpg" alt="Wooden river boats moored on calm water at Kampot Dong Te with green banks and distant limestone hills" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
                 </div>
             </div>
             <div class="col-md-6">
