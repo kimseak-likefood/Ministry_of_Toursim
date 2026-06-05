@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'RoundTours - Tours and Travel Landing Page'); ?>
+<?php $__env->startSection('title', 'Activities'); ?>
 <?php $__env->startSection('content'); ?>
 <?php $__env->startSection('content'); ?>
     <div class="pagewrap">

@@ -16,5 +16,6 @@ class User extends Authenticatable {
         'avatar',
         'phone',
         'location',
+        'bio',
     ];
 }

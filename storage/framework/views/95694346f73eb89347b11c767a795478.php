@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="ThemesLay">
-    <title><?php echo $__env->yieldContent('title', 'RoundTours'); ?></title>
-    <link rel="icon" type="image/png" sizes="80x80" href="/assets/images/favicon.png">
+    <title><?php echo $__env->yieldContent('title', 'Ministry of Tourism ក្រសួងទេសចរណ៍'); ?></title>
+    <link rel="icon" type="image/png" sizes="80x80" href="/assets/images/MOT1-logo.png">
     <link href="/assets/css/main.css" rel="stylesheet">
     <?php echo $__env->yieldPushContent('styles'); ?>
 

@@ -1,8 +1,7 @@
-@include('partials.header')
 @extends('layouts.app')
-@section('title', 'Blog')
-
+@section('title', 'Blog Posts')
 @section('content')
+@include('partials.header')
 <section style="
     background-image: url('/assets/images/phnom penh/pp.jpg');
     background-size: cover;

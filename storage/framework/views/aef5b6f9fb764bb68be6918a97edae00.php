@@ -1,9 +1,6 @@
-<?php echo $__env->make('partials.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
-
 <?php $__env->startSection('title', 'Tourism'); ?>
-
 <?php $__env->startSection('content'); ?>
-
+<?php echo $__env->make('partials.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
 <section style="
     background-image: url('/assets/images/section/banner-image.jpg');
