@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () { return view('home'); });
 
@@ -33,3 +34,16 @@ Route::get('/holidays&events', function () { return view('pages.holidays&events'
 Route::get('/laws&regulations', function () { return view('pages.laws&regulations'); });
 Route::get('/statistics', function () { return view('pages.statistics'); });
 Route::get('/tourism', function () { return view('pages.tourism'); });
+Route::get('/blogposts', function () { return view('posts.blogposts'); });
+
+//for posts
+Route::get('/blogposts', [PostController::class, 'index'])->name('posts.blogposts');
+Route::get('/blogposts/create', [PostController::class, 'create'])->name('posts.create'); // moved up
+Route::get('/blogposts/{post}', [PostController::class, 'show'])->name('posts.viewposts');
+
+Route::middleware('auth')->group(function () {
+    Route::post('/blogposts', [PostController::class, 'store'])->name('posts.store');
+    Route::get('/blogposts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
+    Route::put('/blogposts/{post}', [PostController::class, 'update'])->name('posts.update');
+    Route::delete('/blogposts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
+});

@@ -1,8 +1,12 @@
 <header class="header theme-bg-white">
     <div class="container">
         <nav class="navbar navbar-expand-lg py-3 py-lg-0 px-0">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="/">
                 <img src="/assets/images/logo.png" alt="Brand Logo" title="Brand Logo" class="logo.png"style="width: 50px; height: auto;">
+                <div>
+                  <p class="mb-0" style="font-size: 15px;">ក្រសួងទេសចរណ៍</p>
+                  <p class="mb-0" style="font-size: 15px;">Ministry of Tourism</p>
+                </div>
             </a>
             <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -28,6 +32,7 @@
                     <li class="nav-item"><a class="nav-link pe-5" href="{{ url('tourism') }}">Tourism</a></li>
                     <li class="nav-item"><a class="nav-link pe-5" href="{{ url('statistics') }}">Statistics</a></li>
                     <li class="nav-item"><a class="nav-link pe-5" href="{{ url('laws&regulations') }}">Regulations</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('blogposts') }}">Blog</a></li>
                 </ul>
                 <ul class="navbar-nav page-menu mb-3 mb-lg-0">
                     @include('partials.nav.language')

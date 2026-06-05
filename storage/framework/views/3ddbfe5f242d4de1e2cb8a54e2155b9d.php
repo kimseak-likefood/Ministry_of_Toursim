@@ -1,10 +1,20 @@
 <?php $__env->startSection('content'); ?>
 
+<div class="container pt-3">
+        <div class="d-flex align-items-center gap-4" style="padding-top: 10px">
+            <img src="<?php echo e(asset('assets/images/MOT1-logo.png')); ?>" alt="Logo" height="40">
+              <div>
+                  <p class="mb-0">ក្រសួងទេសចរណ៍</p>
+                  <p class="mb-0">Ministry of Tourism</p>
+              </div>
+          </div>
+    </div>
+
 <main class="container">
-  <div class="row justify-content-center py-5">
+  <div class="row justify-content-center py-4 mb-5">
     <div class="col-md-6 col-lg-5">
       <div class="border rounded-3 p-4 shadow-sm bg-body">
-        <h2 class="mb-1">Welcome back</h2>
+        <h2 class="mb-1">Welcome back!</h2>
         <p class="text-body-secondary mb-4">Sign in to your account</p>
 
         <form action="/login" method="post">
@@ -59,9 +69,10 @@ unset($__errorArgs, $__bag); ?>
             Don't have an account? <a href="/register">Sign up</a>
           </p>
         </form>
-         <p class="text-center text-body-secondary small mt-3 mb-0">
-              Back to Home <a href="/">Home</a>
-            </p>
+         
+        <div class="text-center mt-3">
+          <a href="/" class="btn btn-sm btn-primary">Back Home</a>
+        </div>
 
       </div>
     </div>
