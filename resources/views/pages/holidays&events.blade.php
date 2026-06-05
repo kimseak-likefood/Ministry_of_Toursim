@@ -82,7 +82,7 @@
 
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/celebration/425.jpg" alt="Khmer New Year" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/kny_1.jpg" alt="Khmer New Year" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
             <h3 style="font-size: 28px; margin-bottom: 15px;">Khmer New Year</h3>
@@ -102,7 +102,7 @@
 
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/celebration/Water_Festival_002.jpg" alt="Water Festival" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/om_tuk.jpg" alt="Water Festival" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
             <h3 style="font-size: 28px; margin-bottom: 15px;">Water Festival</h3>
