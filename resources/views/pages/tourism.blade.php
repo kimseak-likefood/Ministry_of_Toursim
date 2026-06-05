@@ -37,33 +37,33 @@
 
     <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
 
-        <div style="text-align: center;">
-            <img src="/assets/images/destinations/phnompenh.jpg" alt="Phnom Penh" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
+            <img src="/assets/images/destinations/phnompenh.jpg" alt="Phnom Penh" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Phnom Penh</p>
         </div>
 
-        <div style="text-align: center;">
-            <img src="/assets/images/destinations/sieamreap.jpg" alt="Siem Reap" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
+            <img src="/assets/images/destinations/sieamreap.jpg" alt="Siem Reap" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Siem Reap</p>
         </div>
 
-        <div style="text-align: center;">
-            <img src="/assets/images/destinations/kampot.jpg" alt="Kampot" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
+            <img src="/assets/images/destinations/kampot.jpg" alt="Kampot" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kampot</p>
         </div>
 
-        <div style="text-align: center;">
-            <img src="/assets/images/destinations/mondulkiri.jpg" alt="Mondulkiri" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
+            <img src="/assets/images/destinations/mondulkiri.jpg" alt="Mondulkiri" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Mondulkiri</p>
         </div>
 
-        <div style="text-align: center;">
-            <img src="/assets/images/destinations/kohkong.jpg" alt="Koh Kong" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
+            <img src="/assets/images/destinations/kohkong.jpg" alt="Koh Kong" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Koh Kong</p>
         </div>
 
-        <div style="text-align: center;">
-            <img src="/assets/images/destinations/battambang.jpg" alt="Battambang" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); object-position: center top;">
+        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
+            <img src="/assets/images/destinations/battambang.jpg" alt="Battambang" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); object-position: center top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Battambang</p>
         </div>
 
@@ -77,7 +77,9 @@
 
     
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
-        <img src="/assets/images/activities/national-museum.jpg" alt="Culture" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+        <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
+            <img src="/assets/images/activities/national-museum.jpg" alt="Culture" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Culture</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">Explore ancient temples, royal palaces, and world-class museums that tell Cambodia's remarkable story.</p>
@@ -86,7 +88,9 @@
 
    
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
-        <img src="/assets/images/activities/yeak-loam.jpg" alt="Nature" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+        <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
+            <img src="/assets/images/activities/yeak-loam.jpg" alt="Nature" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Nature</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">Trek through lush forests, swim in volcanic lakes, and discover stunning waterfalls across the countryside.</p>
@@ -95,7 +99,9 @@
 
     
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
-        <img src="/assets/images/activities/koh-ker.jpg" alt="Adventure" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15);">
+        <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
+            <img src="/assets/images/activities/koh-ker.jpg" alt="Adventure" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Adventure</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">Climb ancient pyramid temples, go off-road through remote provinces, and experience real adventure.</p>
