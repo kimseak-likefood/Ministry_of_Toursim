@@ -36,37 +36,37 @@
     <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
 
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/activities/dong-te.jpg" alt="Khmer New Year" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/kny.jpg" alt="Khmer New Year" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Khmer New Year</p>
             <p style="color: #9ca3af; font-size: 14px; margin: 0;">14–16 Apr 2026</p>
         </div>
 
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/activities/yeak-loam.jpg" alt="Pchum Ben" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/pchum_ben.jpg" alt="Pchum Ben" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Pchum Ben</p>
             <p style="color: #9ca3af; font-size: 14px; margin: 0;">10–12 Oct 2026</p>
         </div>
 
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/activities/koh-ker.jpg" alt="Water Festival" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/water-festival-1.jpg" alt="Water Festival" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Water Festival</p>
             <p style="color: #9ca3af; font-size: 14px; margin: 0;">23–25 Nov 2026</p>
         </div>
 
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/activities/national-museum.jpg" alt="Royal Ploughing Ceremony" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/sdach-meak.jpg" alt="Royal Ploughing Ceremony" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Royal Ploughing Ceremony</p>
             <p style="color: #9ca3af; font-size: 14px; margin: 0;">05 May 2026</p>
         </div>
 
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/activities/ttp.jpg" alt="King's Birthday" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/king_sihamoni.jpg" alt="King's Birthday" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">King Sihamoni's Birthday</p>
             <p style="color: #9ca3af; font-size: 14px; margin: 0;">14 May 2026</p>
         </div>
 
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/activities/part-of-the-large-external.jpg" alt="Independence Day" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/09_11.jpg" alt="Independence Day" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
             <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">National Independence Day</p>
             <p style="color: #9ca3af; font-size: 14px; margin: 0;">09 Nov 2026</p>
         </div>
@@ -80,7 +80,7 @@
 
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/activities/dong-te.jpg" alt="Khmer New Year" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/425.jpg" alt="Khmer New Year" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
             <h3 style="font-size: 28px; margin-bottom: 15px;">Khmer New Year</h3>
@@ -90,7 +90,7 @@
 
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px; flex-direction: row-reverse;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/activities/yeak-loam.jpg" alt="Pchum Ben" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/pchum.jpeg" alt="Pchum Ben" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
             <h3 style="font-size: 28px; margin-bottom: 15px;">Pchum Ben</h3>
@@ -100,7 +100,7 @@
 
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/activities/koh-ker.jpg" alt="Water Festival" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/images/celebration/Water_Festival_002.jpg" alt="Water Festival" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
             <h3 style="font-size: 28px; margin-bottom: 15px;">Water Festival</h3>
