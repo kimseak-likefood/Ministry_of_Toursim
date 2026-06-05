@@ -1,14 +1,10 @@
-@include('partials.header')
-@extends('layouts.app')
-@section('title', 'PhnomPenh')
+<?php echo $__env->make('partials.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
+<?php $__env->startSection('title', 'Kampot'); ?>
 
- 
-@section('content')
- 
- 
-<section style="
-    background-image: url('/assets/images/destinations/phnompenh.jpg');
+<?php $__env->startSection('content'); ?>
+   <section style="
+    background-image: url('/assets/images/destinations/kampot.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -25,21 +21,23 @@
     "></div>
  
     <div style="position: relative; text-align: center; color: white;">
-        <p style="font-size: 16px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.85;">Cambodia &rsaquo; Capital City</p>
-        <h1 style="font-size: 64px; font-weight: bold; margin: 0;">Phnom Penh</h1>
-        <p style="font-size: 20px; margin-top: 14px; opacity: 0.9;">The vibrant heart of Cambodia — where history, culture, and modern life meet.</p>
+        <p style="font-size: 16px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.85;">Cambodia &rsaquo; Riverside Escape</p>
+        <h1 style="font-size: 64px; font-weight: bold; margin: 0;">Kampot</h1>
+        <p style="font-size: 20px; margin-top: 14px; opacity: 0.9;">Cambodia's most relaxed riverside town — where pepper farms, cave temples, and sunset views await.</p>
     </div>
 </section>
  
  
 <section style="padding: 60px 40px; background: #f9f9f9;">
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 32px; margin-bottom: 20px;">About Phnom Penh</h2>
+        <h2 style="font-size: 32px; margin-bottom: 20px;">About Kampot</h2>
         <p style="font-size: 18px; color: #555; line-height: 1.9;">
-            Phnom Penh, the capital and largest city of Cambodia, sits at the confluence of the Mekong, Tonlé Sap, and Bassac rivers. 
-            A city of resilience and beauty, it blends French colonial architecture with traditional Khmer design, 
-            bustling riverside markets, world-class museums, and a thriving food and arts scene. 
-            Whether you're exploring its rich history or soaking in its energy, Phnom Penh always leaves a lasting impression.
+            Kampot is a sleepy riverside town in southern Cambodia, cradled between the Kampot River and the 
+            dramatic peaks of Bokor Mountain. Famous worldwide for its prized Kampot pepper — considered among 
+            the finest in the world — the town captivates visitors with its well-preserved French colonial 
+            streetscapes, lantern-lit waterfront, and effortlessly laid-back pace of life. 
+            From cave pagodas and pepper farm tours to kayaking at sunset and fresh seafood by the river, 
+            Kampot offers a perfect blend of culture, nature, and slow travel charm.
         </p>
     </div>
 </section>
@@ -51,45 +49,45 @@
     <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/Cambodia-Royal-Palace-Phnom-Penh.jpg" alt="Royal Palace"
+            <img src="/assets/images/kampot/Bokor.jpg" alt="Bokor Mountain"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Royal Palace</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Bokor Mountain</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/cambodian-national-museum.jpg" alt="National Museum"
+            <img src="/assets/images/kampot/pepper.jpg" alt="Kampot Pepper Farm"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">National Museum</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kampot Pepper Farm</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/Riverside-1.jpg" alt="Riverside Promenade"
+            <img src="/assets/images/kampot/Chhngok-Cave-Temple-.jpg" alt="Phnom Chhngok Cave Temple"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Riverside Promenade</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Phnom Chhngok Cave Temple</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/wp.jpg" alt="Wat Phnom"
+            <img src="/assets/images/kampot/kp_river.jpg" alt="Kampot River"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Wat Phnom</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kampot River</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/psar_tmey.png" alt="Central Market"
+            <img src="/assets/images/kampot/French-Colonial-architecture-Kampot-Old-Quarter.jpg" alt="Colonial Old Town"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Central Market</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Colonial Old Town</p>
         </div>
  
         <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/phnom penh/toul_sleng.jpg" alt="Tuol Sleng Museum"
+            <img src="/assets/images/kampot/kep-beach.jpg" alt="Kep Beach (Nearby)"
                 style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Tuol Sleng Museum</p>
+            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kep Beach (Nearby)</p>
         </div>
  
     </div>
@@ -97,46 +95,52 @@
  
  
 <section style="padding: 60px 40px; background: #f9f9f9;">
-    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Experiences in Phnom Penh</h2>
+    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Experiences in Kampot</h2>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/phnom penh/Royal-Palace-Art.jpg" alt="History"
+            <img src="/assets/images/kampot/Kayaking-Kampot.jpg" alt="River & Kayaking"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">History</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">River & Kayaking</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Walk through centuries of Khmer history — from the golden era of the Royal Palace to the sobering legacy preserved at Tuol Sleng and the Killing Fields Memorial.
+                Drift along the Kampot River at golden hour by kayak or boat, watching the sun melt behind 
+                Bokor Mountain. Evening boat cruises pass firefly-lit mangroves and riverside restaurants, 
+                making sunset on the water one of Kampot's most memorable experiences.
             </p>
         </div>
     </div>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/phnom penh/Traditional-Cambodian-Dishes-To-Eat-Amok.jpg" alt="Food & Cuisine"
+            <img src="/assets/images/kampot/Farm-4.png" alt="Pepper Farm Tours"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">Food & Cuisine</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">Pepper Farm Tours</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Indulge in Cambodia's culinary delights — from street-side amok and bai sach chrouk at the local markets to fine riverside dining and French-inspired cafes.
+                Explore the world-famous Kampot pepper plantations where black, red, and white peppercorns 
+                grow on vine-covered trellises. Guided farm tours offer a fascinating insight into the 
+                cultivation and harvest of one of Cambodia's most celebrated culinary exports.
             </p>
         </div>
     </div>
  
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
         <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/phnom penh/Panorama-Phnom-Penh.png" alt="Nightlife & Arts"
+            <img src="/assets/images/kampot/Bokor-Hill-Station.png" alt="Bokor Hill Station"
                 style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;"
                 onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
         </div>
         <div>
-            <h3 style="font-size: 34px; margin-bottom: 15px;">Nightlife & Arts</h3>
+            <h3 style="font-size: 34px; margin-bottom: 15px;">Bokor Hill Station</h3>
             <p style="color: #666; font-size: 20px; line-height: 1.8;">
-                Experience the city after dark along the Riverside, or explore a growing arts scene of galleries, classical Khmer dance performances, and live music venues.
+                Ascend the misty Bokor Mountain to discover the haunting ruins of a French colonial hill station, 
+                an old church perched at the cliff's edge, and sweeping panoramic views over the Gulf of Thailand 
+                on clear days — a truly atmospheric and unforgettable excursion.
             </p>
         </div>
     </div>
@@ -152,25 +156,25 @@
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Getting There</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">Fly into Phnom Penh International Airport (PNH), with direct connections from Bangkok, Singapore, Kuala Lumpur, and Ho Chi Minh City.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Kampot is approximately 3–4 hours by bus from Phnom Penh and about 1 hour from Sihanoukville. Regular bus and minivan services run daily from both cities directly into Kampot town.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Best Time to Visit</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">November to February offers the most comfortable weather — cool, dry, and perfect for sightseeing. Avoid peak monsoon season (June–October).</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">November to April is the dry season — warm, sunny days ideal for river trips, farm tours, and Bokor visits. The wet season (May–October) is lush and green, with fewer tourists and cooler evenings.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
             <h4 style="font-size: 18px; margin-bottom: 10px;">Getting Around</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">Tuk-tuks, motodops, and ride-hailing apps like PassApp and Grab are the most popular ways to get around the city affordably.</p>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Bicycles and motorbike rentals are the most popular ways to explore Kampot at leisure. Tuk-tuks are widely available for longer trips to Bokor Mountain, cave temples, and pepper farms.</p>
         </div>
  
         <div style="background: #f9f9f9; border-radius: 15px; padding: 30px; width: 260px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
             <div style="font-size: 40px; margin-bottom: 12px;"></div>
-            <h4 style="font-size: 18px; margin-bottom: 10px;">Currency</h4>
-            <p style="color: #666; font-size: 15px; line-height: 1.7;">The Cambodian Riel (KHR) is the local currency, but US Dollars are widely accepted across hotels, restaurants, and shops.</p>
+            <h4 style="font-size: 18px; margin-bottom: 10px;">Local Tips</h4>
+            <p style="color: #666; font-size: 15px; line-height: 1.7;">Try fresh crab with Kampot pepper at a riverside restaurant — it's the signature dish of the region. Don't leave without buying a bag of authentic Kampot pepper directly from a certified farm.</p>
         </div>
  
     </div>
@@ -178,7 +182,7 @@
  
  
 <section style="
-    background-image: url('/assets/images/phnom penh/mekong-river-sunset.jpg');
+    background-image: url('/assets/images/kampot/kampot_sunset.jpg');
     background-size: cover;
     background-position: center;
     padding: 80px 40px;
@@ -192,8 +196,8 @@
         background: rgba(0,0,0,0.55);
     "></div>
     <div style="position: relative; color: white;">
-        <h2 style="font-size: 40px; font-weight: bold; margin-bottom: 16px;">Ready to Explore Phnom Penh?</h2>
-        <p style="font-size: 18px; opacity: 0.9; margin-bottom: 30px;">Start planning your journey to Cambodia's vibrant capital city today.</p>
+        <h2 style="font-size: 40px; font-weight: bold; margin-bottom: 16px;">Ready to Explore Kampot?</h2>
+        <p style="font-size: 18px; opacity: 0.9; margin-bottom: 30px;">Start planning your journey to Cambodia's most relaxed and charming riverside escape.</p>
         <a href="/plan-your-trip" style="
             display: inline-block;
             background: white;
@@ -209,6 +213,5 @@
         </a>
     </div>
 </section>
- 
- 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\USER\Herd\Ministry_of_Toursim\resources\views/pages/kampot.blade.php ENDPATH**/ ?>
