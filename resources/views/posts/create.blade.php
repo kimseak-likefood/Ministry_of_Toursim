@@ -48,10 +48,26 @@
         </div>
 
         <div style="margin-bottom: 20px;">
-            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Image (optional)</label>
-            <input type="file" name="image" accept="image/*">
-            @error('image') <p style="color: red; margin-top: 6px;">{{ $message }}</p> @enderror
-        </div>
+    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Image (optional)</label>
+    <img id="imagePreview" src="" style="width: 200px; border-radius: 8px; margin-bottom: 10px; display: none;">
+    <input type="file" name="image" accept="image/*" id="imageInput">
+    @error('image') <p style="color: red; margin-top: 6px;">{{ $message }}</p> @enderror
+</div>
+
+<script>
+    document.getElementById('imageInput').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const preview = document.getElementById('imagePreview');
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
 
         <button type="submit" style="background: #222; color: white; padding: 12px 30px; border: none; border-radius: 50px; font-size: 15px; cursor: pointer;">Publish Post</button>
     </form>

@@ -50,7 +50,7 @@ class PostController extends Controller
             'image'   => $imagePath,
         ]);
 
-        return redirect()->route('posts.blogposts')->with('success', 'Post created!');
+        return redirect()->route('blogposts')->with('success', 'Post created!');
     }
 
     /**
@@ -103,6 +103,6 @@ class PostController extends Controller
         if ($post->image) Storage::disk('public')->delete($post->image);
         $post->delete();
 
-        return redirect()->route('posts.blogposts')->with('success', 'Post deleted!');
+        return redirect()->route('blogposts')->with('success', 'Post deleted!');
     }
 }

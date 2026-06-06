@@ -57,11 +57,15 @@
 
         <div>
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-                <div style="width: 36px; height: 36px; border-radius: 50%; background: #c8a46e; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 14px;">
-                    {{ strtoupper(substr($post->user->name, 0, 1)) }}
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: #c8a46e; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 14px; overflow: hidden;">
+                    @if($post->user && $post->user->avatar)
+                        <img src="{{ asset('storage/' . $post->user->avatar) }}" style="width: 100%; height: 100%; object-fit: cover;">
+                    @else
+                    {{ strtoupper(substr($post->user->name ?? 'D', 0, 1)) }}
+                     @endif
                 </div>
                 <div>
-                    <div style="font-weight: 600; font-size: 14px;">{{ $post->user->name }}</div>
+                    <div style="font-weight: 600; font-size: 14px;">{{ $post->user->name ?? 'Deleted User' }}</div>
                     <div style="font-size: 12px; color: #888;">{{ $post->created_at->format('F j, Y') }}</div>
                 </div>
             </div>

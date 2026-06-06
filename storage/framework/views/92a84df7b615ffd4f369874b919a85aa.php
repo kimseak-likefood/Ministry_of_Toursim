@@ -1,4 +1,3 @@
-
 <?php echo $__env->make('partials.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 <?php $__env->startSection('title', 'Create Post'); ?>
 
@@ -62,9 +61,10 @@ unset($__errorArgs, $__bag); ?>
         </div>
 
         <div style="margin-bottom: 20px;">
-            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Image (optional)</label>
-            <input type="file" name="image" accept="image/*">
-            <?php $__errorArgs = ['image'];
+    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Image (optional)</label>
+    <img id="imagePreview" src="" style="width: 200px; border-radius: 8px; margin-bottom: 10px; display: none;">
+    <input type="file" name="image" accept="image/*" id="imageInput">
+    <?php $__errorArgs = ['image'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -72,7 +72,22 @@ $message = $__bag->first($__errorArgs[0]); ?> <p style="color: red; margin-top: 
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-        </div>
+</div>
+
+<script>
+    document.getElementById('imageInput').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const preview = document.getElementById('imagePreview');
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
 
         <button type="submit" style="background: #222; color: white; padding: 12px 30px; border: none; border-radius: 50px; font-size: 15px; cursor: pointer;">Publish Post</button>
     </form>

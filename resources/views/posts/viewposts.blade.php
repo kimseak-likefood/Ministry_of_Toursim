@@ -36,11 +36,15 @@
     @endif
 
     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-        <div style="width: 36px; height: 36px; border-radius: 50%; background: #c8a46e; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
-            {{ strtoupper(substr($post->user->name, 0, 1)) }}
-        </div>
+        <div style="width: 36px; height: 36px; border-radius: 50%; background: #c8a46e; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; overflow: hidden;">
+    @if($post->user && $post->user->avatar)
+        <img src="{{ asset('storage/' . $post->user->avatar) }}" style="width: 100%; height: 100%; object-fit: cover;">
+    @else
+        {{ strtoupper(substr($post->user->name ?? 'D', 0, 1)) }}
+    @endif
+</div>
         <div>
-            <div style="font-weight: 600; font-size: 14px;">{{ $post->user->name }}</div>
+            {{ $post->user->name ?? 'Deleted User' }}
             <div style="font-size: 12px; color: #888;">{{ $post->created_at->format('F j, Y') }}</div>
         </div>
     </div>
@@ -49,7 +53,7 @@
     <p style="font-size: 18px; line-height: 1.9; color: #444;">{{ $post->content }}</p>
 
     <div style="margin-top: 30px; display: flex; gap: 12px;">
-        <a href="{{ route('posts.blogposts') }}" style="color: #888; font-size: 14px;">← Back to posts</a>
+        <a href="{{ route('blogposts') }}" style="color: #888; font-size: 14px;">← Back to posts</a>
 
         @can('update', $post)
             <a href="{{ route('posts.edit', $post) }}" style="color: #222; font-size: 14px; font-weight: 600;">Edit</a>
