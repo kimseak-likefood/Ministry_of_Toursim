@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     { 
         
         Gate::policy(Post::class, PostPolicy::class);
+        Schema::defaultStringLength(191); 
         
     }
 }

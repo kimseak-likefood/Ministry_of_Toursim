@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-            $table->string('bio')->nullable();
-        });
+         Schema::create('posts_events', function (Blueprint $table) {
+        $table->id();
+        $table->string('name');
+        $table->date('date');
+        $table->string('image')->nullable();
+        $table->text('description')->nullable();
+        $table->timestamps();
+    });
     }
 
     /**
@@ -22,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('events');
     }
 };

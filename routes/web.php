@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\EventController;
 
 Route::get('/', function () { return view('home'); });
 
@@ -37,8 +38,8 @@ Route::get('/tourism', function () { return view('pages.tourism'); });
 Route::get('/blogposts', function () { return view('posts.blogposts'); });
 
 //for posts
-Route::get('/blogposts', [PostController::class, 'index'])->name('posts.blogposts');
-Route::get('/blogposts/create', [PostController::class, 'create'])->name('posts.create'); // moved up
+Route::get('/blogposts', [PostController::class, 'index'])->name('blogposts');
+Route::get('/blogposts/create', [PostController::class, 'create'])->name('posts.create');
 Route::get('/blogposts/{post}', [PostController::class, 'show'])->name('posts.viewposts');
 
 Route::middleware('auth')->group(function () {
@@ -51,10 +52,24 @@ Route::middleware('auth')->group(function () {
 //for profile page
 Route::get('/profile', function(){
     return view('profile');
-});
+})->middleware('auth')->name('profile');
 
 Route::post('/updateAvatar', [UserController::class, 'updateAvatar']);
 
 Route::post('/updateProfile', [UserController::class, 'updateProfile']);
 
 Route::post('/deleteAccount', [UserController::class, 'deleteAccount']);
+
+
+//for events posting by admin
+Route::get('/holidays&events', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create'])->name('posts.create_events');
+Route::get('/events/{event}', [EventController::class, 'show'])->name('posts.viewevents');
+
+Route::middleware(['auth'])->group(function () {
+    Route::post('/events', [EventController::class, 'store'])->name('events.store');
+    Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('posts.edit_events');
+    Route::put('/events/{event}', [EventController::class, 'update'])->name('events.update');
+    Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('events.destroy');
+});
+

@@ -1,4 +1,3 @@
-
 <?php echo $__env->make('partials.header', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 <?php $__env->startSection('title', 'Edit Post'); ?>
 
@@ -63,15 +62,31 @@ unset($__errorArgs, $__bag); ?>
         </div>
 
         <div style="margin-bottom: 20px;">
-            <label style="display: block; margin-bottom: 8px; font-weight: 600;">Image (optional)</label>
-            <?php if($post->image): ?>
-                <img src="<?php echo e(Storage::url($post->image)); ?>" style="width: 200px; border-radius: 8px; margin-bottom: 10px; display: block;">
-            <?php endif; ?>
-            <input type="file" name="image" accept="image/*">
-        </div>
+    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Image (optional)</label>
+    <?php if($post->image): ?>
+        <img id="imagePreview" src="<?php echo e(Storage::url($post->image)); ?>" style="width: 200px; border-radius: 8px; margin-bottom: 10px; display: block;">
+    <?php else: ?>
+        <img id="imagePreview" src="" style="width: 200px; border-radius: 8px; margin-bottom: 10px; display: none;">
+    <?php endif; ?>
+    <input type="file" name="image" accept="image/*" id="imageInput">
+</div>
 
         <button type="submit" style="background: #222; color: white; padding: 12px 30px; border: none; border-radius: 50px; font-size: 15px; cursor: pointer;">Update Post</button>
     </form>
 </section>
+<script>
+    document.getElementById('imageInput').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const preview = document.getElementById('imagePreview');
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\MSILMC\Ministry_of_Toursim\resources\views/posts/edit.blade.php ENDPATH**/ ?>

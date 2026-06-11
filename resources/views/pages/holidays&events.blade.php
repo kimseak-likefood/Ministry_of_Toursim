@@ -35,45 +35,42 @@
 <section style="padding: 60px 40px; background: #f9f9f9;">
     <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Major Celebrations</h2>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/celebration/kny.jpg" alt="Khmer New Year" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Khmer New Year</p>
-            <p style="color: #9ca3af; font-size: 14px; margin: 0;">14–16 Apr 2026</p>
+    @auth
+    @if(auth()->user()->is_admin)
+        <div style="text-align: center; margin-bottom: 45px;">
+            <a href="{{ route('posts.create_events') }}" style="background: #222; color: white; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-size: 14px;">+ Add Event</a>
         </div>
+    @endif
+@endauth
 
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/celebration/pchum_ben.jpg" alt="Pchum Ben" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Pchum Ben</p>
-            <p style="color: #9ca3af; font-size: 14px; margin: 0;">10–12 Oct 2026</p>
-        </div>
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/celebration/water-festival-1.jpg" alt="Water Festival" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Water Festival</p>
-            <p style="color: #9ca3af; font-size: 14px; margin: 0;">23–25 Nov 2026</p>
-        </div>
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/celebration/sdach-meak.jpg" alt="Royal Ploughing Ceremony" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Royal Ploughing Ceremony</p>
-            <p style="color: #9ca3af; font-size: 14px; margin: 0;">05 May 2026</p>
-        </div>
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/celebration/king_sihamoni.jpg" alt="King's Birthday" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">King Sihamoni's Birthday</p>
-            <p style="color: #9ca3af; font-size: 14px; margin: 0;">14 May 2026</p>
-        </div>
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/celebration/09_11.jpg" alt="Independence Day" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">National Independence Day</p>
-            <p style="color: #9ca3af; font-size: 14px; margin: 0;">09 Nov 2026</p>
-        </div>
-
+<div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
+    @foreach($featured as $event)
+    <a href="{{ route('posts.viewevents', $event) }}" style="text-decoration: none; color: inherit;">
+    <div style="text-align: center; overflow: hidden; border-radius: 15px;">
+        @if($event->image)
+            <img src="{{ asset('storage/' . $event->image) }}" alt="{{ $event->name }}" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+        @else
+    <div style="width: 350px; height: 250px; border-radius: 15px; background: #f0ede8; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0,0,0,0.08);">
+        <span style="font-size: 48px;">no image</span>
     </div>
+@endif
+        <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">{{ $event->name }}</p>
+        <p style="color: #9ca3af; font-size: 14px; margin: 0;">{{ $event->date->format('d M Y') }}</p>
+        @auth
+            @if(auth()->user()->is_admin)
+                <div style="margin-top: 8px; display: flex; gap: 8px; justify-content: center;">
+                    <a href="{{ route('posts.edit_events', $event) }}" style="font-size: 13px; color: #222;">Edit</a>
+                    <form method="POST" action="{{ route('events.destroy', $event) }}" style="display:contents;">
+                        @csrf @method('DELETE')
+                        <button type="submit" onclick="return confirm('Delete this event?')" style="background: none; border: none; font-size: 13px; color: #888; cursor: pointer;">Delete</button>
+                    </form>
+                </div>
+            @endif
+        @endauth
+    </div>
+</a>
+    @endforeach
+</div>
 </section>
 
 <!-- Holiday Stories -->
@@ -113,88 +110,29 @@
 </section>
 
 <!-- Full Holiday List -->
-<section style="padding: 60px 40px; background: #f9f9f9;">
+<section style="padding: 60px 0; background: #f9f9f9;">
     <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Complete Holiday Calendar</h2>
-
-    <div style="max-width:800px; margin:0 auto;">
-
+    <div style="max-width: 800px; margin: 0 auto; padding: 0 40px;">
         <table style="width:100%; border-collapse:collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <table style="width:100%; border-collapse:collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
             <tbody>
-
-                <tr style="border-bottom:1px solid #e5e7eb;">
-                    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; width:140px; font-weight:500;">01 Jan</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px;">New Year's Day ទិវាចូលឆ្នាំសកល</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb;">
-                    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; font-weight:500;">07 Jan</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px;">Victory over the Genocide Day ទិវាជ័យជម្នះលើរបបប្រល័យពូជសាសន៌ ខួបលើកទី៤៧</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb;">
-                    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; font-weight:500;">08 Mar</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px;">International Women's Rights Day ទិវាសិទ្ធិនារីអន្តរជាតិ</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb; background: #fef3c7;">
-                    <td style="padding:14px 20px; color:#d97706; font-size:14px; white-space:nowrap; font-weight:600;">14–16 Apr</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px; font-weight:500;">Khmer New Year's Day ពិធីបុណ្យចូលឆ្នាំថ្មីប្រពៃណីជាតិ-មហាសង្រ្កាន្ត</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb;">
-                    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; font-weight:500;">01 May</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px;">International Labor Day ទិវាពលកម្មអន្តរជាតិ</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb; background: #fef3c7;">
-                    <td style="padding:14px 20px; color:#d97706; font-size:14px; white-space:nowrap; font-weight:600;">05 May</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px; font-weight:500;">Royal Ploughing Ceremony ព្រះរាជពិធីច្រត់ព្រះនង្គ័ល</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb;">
-                    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; font-weight:500;">14 May</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px;">King Sihamoni's Birthday ព្រះរាជពិធីបុណ្យចម្រើនព្រះជន្មព្រះមហាក្សត្រ</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb;">
-                    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; font-weight:500;">18 Jun</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px;">Queen Mother's Birthday ទិវាបុណ្យចម្រើនព្រះជន្មព្រះវររាជមាតាជាតិខ្មែរ</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb;">
-                    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; font-weight:500;">24 Sep</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px;">Constitution Day ទិវាប្រកាសរដ្ឋធម្មនុញ្ញ</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb; background: #fef3c7;">
-                    <td style="padding:14px 20px; color:#d97706; font-size:14px; white-space:nowrap; font-weight:600;">10–12 Oct</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px; font-weight:500;">Pchum Ben Day ទិវាបុណ្យភ្ជុំបិណ្ឌ</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb;">
-                    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; font-weight:500;">15 Oct</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px;">King Father's Mourning Day ទិវាគោរពវិញ្ញាណក្ខន្ធ ព្រះករុណា ព្រះបាទសម្ដេចព្រះ នរោត្តម សីហនុ</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb;">
-                    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; font-weight:500;">29 Oct</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px;">King's Coronation Day ទិវាឡើងគ្រងរាជ្យរបស់ព្រះបាទសម្តេចព្រះបរមនាថ នរោត្តម សីហមុនី</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb; background: #fef3c7;">
-                    <td style="padding:14px 20px; color:#d97706; font-size:14px; white-space:nowrap; font-weight:600;">09 Nov</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px; font-weight:500;">National Independence Day បុណ្យឯករាជ្យជាតិ</td>
-                </tr>
-
-                <tr style="border-bottom:1px solid #e5e7eb; background: #fef3c7;">
-                    <td style="padding:14px 20px; color:#d97706; font-size:14px; white-space:nowrap; font-weight:600;">23–25 Nov</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px; font-weight:500;">Water Festival ព្រះរាជពិធីបុណ្យអុំទូក បណ្តែតប្រទីប និងសំពះព្រះខែ អកអំបុក</td>
-                </tr>
-
-                <tr>
-                    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; font-weight:500;">29 Dec</td>
-                    <td style="padding:14px 20px; color:#111827; font-size:14px;">Peace Day in Cambodia ទិវាសន្តិភាពនៅកម្ពុជា</td>
-                </tr>
+@foreach($events as $event)
+<tr style="border-bottom:1px solid #e5e7eb;">
+    <td style="padding:14px 20px; color:#6b7280; font-size:14px; white-space:nowrap; width:140px; font-weight:500;">{{ $event->date->format('d M Y') }}</td>
+    <td style="padding:14px 20px; color:#111827; font-size:14px;">{{ $event->name }}</td>
+    @auth
+        @if(auth()->user()->is_admin)
+        <td style="padding:14px 20px; white-space:nowrap;">
+            <a href="{{ route('posts.edit_events', $event) }}" style="font-size: 13px; color: #222; margin-right: 8px;">Edit</a>
+            <form method="POST" action="{{ route('events.destroy', $event) }}" style="display:inline;">
+                @csrf @method('DELETE')
+                <button type="submit" style="background: none; border: none; font-size: 13px; color: #888; cursor: pointer;">Delete</button>
+            </form>
+        </td>
+        @endif
+    @endauth
+</tr>
+@endforeach
 
             </tbody>
         </table>

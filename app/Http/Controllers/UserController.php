@@ -20,6 +20,7 @@ class UserController extends Controller
             'name'                  => 'required',
             'email'                 => 'required|email|unique:users',
             'password'              => 'required|min:6|confirmed', ], 
+        
             [
             'email.unique'          => 'This email is already registered.',
             'password.min'          => 'Password must be at least 6 characters.',
@@ -62,7 +63,7 @@ class UserController extends Controller
     }
 
     public function updateAvatar(Request $request){
-            $request->validate([
+            $request->validate([ 
                 'avatar' => ['required', 'image', 'max:5120'],
             ]);
 
