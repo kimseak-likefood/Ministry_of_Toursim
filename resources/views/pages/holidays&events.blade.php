@@ -13,7 +13,8 @@
     height: 500px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 60px;
     position: relative;
 ">
 
@@ -25,7 +26,7 @@
     "></div>
 
     
-    <div style="position: relative; text-align: center; color: white;">
+    <div style="position: relative; color: white;">
         <h1 style="font-size: 60px; font-weight: bold;">Events</h1>
         <p style="font-size: 20px; margin-top: 10px;">Explore Cambodia's official tourism guide — plan your perfect journey today.</p>
     </div>
