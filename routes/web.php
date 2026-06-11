@@ -63,9 +63,10 @@ Route::post('/deleteAccount', [UserController::class, 'deleteAccount']);
 
 //for events posting by admin
 Route::get('/holidays&events', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create'])->name('posts.create_events');
 Route::get('/events/{event}', [EventController::class, 'show'])->name('posts.viewevents');
+
 Route::middleware(['auth'])->group(function () {
-    Route::get('/events/create', [EventController::class, 'create'])->name('posts.create_events');
     Route::post('/events', [EventController::class, 'store'])->name('events.store');
     Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('posts.edit_events');
     Route::put('/events/{event}', [EventController::class, 'update'])->name('events.update');
