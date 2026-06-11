@@ -11,6 +11,9 @@
             </span>
         @endif
         <span class="small ms-1">{{ Auth::user()->name }}</span>
+        @if(Auth::user()->is_admin)
+    
+        @endif
     @else
         <span class="d-inline-block p-2 theme-bg-primary rounded-circle lh-1">
             <i class="bi bi-person"></i>

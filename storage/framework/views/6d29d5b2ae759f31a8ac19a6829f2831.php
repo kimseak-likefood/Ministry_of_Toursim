@@ -11,6 +11,9 @@
             </span>
         <?php endif; ?>
         <span class="small ms-1"><?php echo e(Auth::user()->name); ?></span>
+        <?php if(Auth::user()->is_admin): ?>
+    
+        <?php endif; ?>
     <?php else: ?>
         <span class="d-inline-block p-2 theme-bg-primary rounded-circle lh-1">
             <i class="bi bi-person"></i>

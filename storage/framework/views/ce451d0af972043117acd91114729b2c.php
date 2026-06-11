@@ -71,6 +71,9 @@ unset($__errorArgs, $__bag); ?>
     <input type="file" name="image" accept="image/*" id="imageInput">
 </div>
 
+        <button type="submit" style="background: #222; color: white; padding: 12px 30px; border: none; border-radius: 50px; font-size: 15px; cursor: pointer;">Update Post</button>
+    </form>
+</section>
 <script>
     document.getElementById('imageInput').addEventListener('change', function(e) {
         const file = e.target.files[0];
@@ -85,9 +88,5 @@ unset($__errorArgs, $__bag); ?>
         }
     });
 </script>
-
-        <button type="submit" style="background: #222; color: white; padding: 12px 30px; border: none; border-radius: 50px; font-size: 15px; cursor: pointer;">Update Post</button>
-    </form>
-</section>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\MSILMC\Ministry_of_Toursim\resources\views/posts/edit.blade.php ENDPATH**/ ?>

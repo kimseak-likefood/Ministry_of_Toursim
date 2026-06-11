@@ -54,6 +54,9 @@
     @error('image') <p style="color: red; margin-top: 6px;">{{ $message }}</p> @enderror
 </div>
 
+        <button type="submit" style="background: #222; color: white; padding: 12px 30px; border: none; border-radius: 50px; font-size: 15px; cursor: pointer;">Publish Post</button>
+    </form>
+</section>
 <script>
     document.getElementById('imageInput').addEventListener('change', function(e) {
         const file = e.target.files[0];
@@ -68,8 +71,4 @@
         }
     });
 </script>
-
-        <button type="submit" style="background: #222; color: white; padding: 12px 30px; border: none; border-radius: 50px; font-size: 15px; cursor: pointer;">Publish Post</button>
-    </form>
-</section>
 @endsection
