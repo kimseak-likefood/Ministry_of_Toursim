@@ -2,7 +2,6 @@
 
 @section('title', 'Activities')
 @section('content')
-@section('content')
     <div class="pagewrap">
         <div class="head-wrapper">
             @include('partials.header')
@@ -128,89 +127,36 @@
 
         <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;">
 
-            <!-- Card 1 -->
-            <a href="#" style="text-decoration:none; display:block;">
-                <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/dong-te.jpg"
-                         alt="Wooden river boats moored on calm water at Kampot Dong Te with green banks and distant limestone hills"
-                         style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-                   
-                </div>
-                <div style="padding:16px 4px 0;">
-                    <h3 style="color:#1f2937; font-size:16px; font-weight:600; margin:0 0 4px;">Kampot Dong Te</h3>
-                    <p style="color:#9ca3af; font-size:14px; margin:0;">កំពត ដូងទេ</p>
-                </div>
-            </a>
+            @foreach($attractions as $attraction)
+                <div class="img-card-wrap" style="border-radius:24px; overflow:hidden; position:relative; box-shadow:0 10px 40px rgba(0,0,0,0.12);">
+                    
+                    <div style="position:relative; width:100%; height:260px; overflow:hidden;">
+                        <img src="{{ asset($attraction->image) }}"
+                            alt="{{ $attraction->alt_text }}"
+                            style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease;"
+                            onmouseover="this.style.transform='scale(1.08)'"
+                            onmouseout="this.style.transform='scale(1)'">
 
-            <!-- Card 2 -->
-            <a href="#" style="text-decoration:none; display:block;">
-                <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/national-museum.jpg"
-                         alt="Phnom Penh - Minority"
-                         style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-                   
-                </div>
-                <div style="padding:16px 4px 0;">
-                    <h3 style="color:#1f2937; font-size:16px; font-weight:600; margin:0 0 4px;">Phnom Penh - Minority</h3>
-                    <p style="color:#9ca3af; font-size:14px; margin:0;">National Museum</p>
-                </div>
-            </a>
+                        @can('modify', $attraction)
+                        <div class="admin-overlay">
+                            <a href="{{ route('attractions.edit', $attraction) }}" class="admin-btn">✏️</a>
+                            <form method="POST" action="{{ route('attractions.destroy', $attraction) }}"
+                                onsubmit="return confirm('Delete this attraction?')" style="margin:0;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="admin-btn">🗑️</button>
+                            </form>
+                        </div>
+                        @endcan
+                    </div>
 
-            <!-- Card 3 -->
-            <a href="#" style="text-decoration:none; display:block;">
-                <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/yeak-loam.jpg"
-                         alt="Rattanakiri - EcoTourism"
-                         style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-                   
-                </div>
-                <div style="padding:16px 4px 0;">
-                    <h3 style="color:#1f2937; font-size:16px; font-weight:600; margin:0 0 4px;">Rattanakiri</h3>
-                    <p style="color:#9ca3af; font-size:14px; margin:0;">EcoTourism</p>
-                </div>
-            </a>
+                    <a href="#" style="text-decoration:none; display:block; padding:16px 4px 16px 16px;">
+                        <h3 style="color:#1f2937; font-size:16px; font-weight:600; margin:0 0 4px;">{{ $attraction->name }}</h3>
+                        <p style="color:#9ca3af; font-size:14px; margin:0;">{{ $attraction->name_kh ?? $attraction->subtitle }}</p>
+                    </a>
 
-            <!-- Card 4 -->
-            <a href="#" style="text-decoration:none; display:block;">
-                <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/koh-ker.jpg"
-                         alt="Ancient stone temple ruins surrounded by trees and moss at Koh Ker archaeological site"
-                         style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-                   
                 </div>
-                <div style="padding:16px 4px 0;">
-                    <h3 style="color:#1f2937; font-size:16px; font-weight:600; margin:0 0 4px;">Siem Reap Hidden Gem</h3>
-                    <p style="color:#9ca3af; font-size:14px; margin:0;">Koh Ker Temple</p>
-                </div>
-            </a>
-
-            <!-- Card 5 -->
-            <a href="#" style="text-decoration:none; display:block;">
-                <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/ttp.jpg"
-                         alt="Busy indoor market aisle lined with colorful stalls and shoppers in Phnom Penh"
-                         style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-                   
-                </div>
-                <div style="padding:16px 4px 0;">
-                    <h3 style="color:#1f2937; font-size:16px; font-weight:600; margin:0 0 4px;">Phnom Penh - Russian Market</h3>
-                    <p style="color:#9ca3af; font-size:14px; margin:0;">Toul Tom Poung</p>
-                </div>
-            </a>
-
-            <!-- Card 6 -->
-            <a href="#" style="text-decoration:none; display:block;">
-                <div style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/activities/part-of-the-large-external.jpg"
-                         alt="Open resort pavilion with landscaped gardens and shaded walkways at Maloop tourist complex"
-                         style="width:100%; height:260px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-                   
-                </div>
-                <div style="padding:16px 4px 0;">
-                    <h3 style="color:#1f2937; font-size:16px; font-weight:600; margin:0 0 4px;">Maloop</h3>
-                    <p style="color:#9ca3af; font-size:14px; margin:0;">Tourist Complex</p>
-                </div>
-            </a>
+            @endforeach
 
         </div>
     </div>

@@ -1,9 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\AttractionController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () { return view('home'); });
 
@@ -73,3 +75,17 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('events.destroy');
 });
 
+// Public
+// Route::get('/', [AttractionController::class, 'index']);
+
+Route::get('/activities', [AttractionController::class, 'index']);
+
+// Admin auth
+Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/admin/login', [LoginController::class, 'login']);
+Route::post('/admin/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
+
+// Protected attraction actions
+Route::resource('attractions', AttractionController::class)
+    ->middleware(['auth'])
+    ->only(['edit', 'update', 'destroy']);
