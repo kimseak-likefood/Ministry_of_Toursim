@@ -13,6 +13,8 @@ class AttractionController extends Controller
         return view('pages.activies', compact('attractions'));
     }
 
+    
+
     public function edit(Attraction $attraction)
     {
         return view('pages.edit_attractions', compact('attraction'));

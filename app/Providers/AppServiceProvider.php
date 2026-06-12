@@ -8,6 +8,8 @@ use App\Policies\PostPolicy;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use App\Models\Destination;
+use App\Policies\DestinationPolicy;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -32,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
         // Only show edit/delete icons if the logged-in user is actually an admin
         return $user->is_admin === true; 
     });
+         Gate::policy(Destination::class, DestinationPolicy::class);
         
     }
 }

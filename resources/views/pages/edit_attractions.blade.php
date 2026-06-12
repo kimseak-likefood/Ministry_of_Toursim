@@ -30,13 +30,9 @@
             <input type="file" name="image" style="width: 100%;">
         </div>
 
-        <div style="display: flex; gap: 12px;">
-            <button type="submit" style="background: #c0392b; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer;">
-                Save Changes
-            </button>
-            <a href="/activities" style="background: #f3f4f6; color: #4b5563; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; display: inline-block;">
-                Cancel
-            </a>
+        <div style="display: flex; gap: 12px; align-items: center;">
+            <button type="submit" style="background: #222; color: white; padding: 12px 30px; border: none; border-radius: 50px; font-size: 15px; cursor: pointer;">Update</button>
+           <a href="/activities" style="margin-left: 16px; color: #888; font-size: 14px;">Cancel</a>
         </div>
     </form>
 </div>

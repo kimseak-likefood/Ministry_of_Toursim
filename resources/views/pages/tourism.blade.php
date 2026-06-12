@@ -10,8 +10,8 @@
     height: 500px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding-left: 60px;
+    text-align: center;
+    justify-content: center;
     position: relative;
 ">
 
@@ -34,38 +34,42 @@
 <section style="padding: 60px 40px; background: #f9f9f9;">
     <h2 style="text-align: center; margin-bottom: 50px; font-size: 45px;">Top Destinations</h2>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; max-width:1200px; margin:0 auto;">
+        @foreach($destinations as $destination)
+            <div class="img-card-wrap" style="border-radius:24px; overflow:hidden; position:relative; box-shadow:0 10px 40px rgba(0,0,0,0.12);">
+                
+                <div style="position:relative; width:100%; height:260px; overflow:hidden;">
+                    @if($destination->image)
+    <img src="{{ asset($destination->image) }}"
+        alt="{{ $destination->alt_text }}"
+        style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease;"
+        onmouseover="this.style.transform='scale(1.08)'"
+        onmouseout="this.style.transform='scale(1)'">
+@else
+    <div style="width:100%; height:100%; background: #f0ede8; display:flex; align-items:center; justify-content:center;">
+        <span style="font-size: 48px;">no image</span>
+    </div>
+@endif
 
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/phnompenh.jpg" alt="Phnom Penh" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Phnom Penh</p>
-        </div>
+                    @can('modify', $destination)
+                    <div class="admin-overlay">
+                        <a href="{{ route('destinations.edit', $destination) }}" class="admin-btn">✏️</a>
+                        <form method="POST" action="{{ route('destinations.destroy', $destination) }}"
+                            onsubmit="return confirm('Delete this destination?')" style="margin:0;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="admin-btn">🗑️</button>
+                        </form>
+                    </div>
+                    @endcan
+                </div>
 
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/sieamreap.jpg" alt="Siem Reap" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Siem Reap</p>
-        </div>
+                <a href="#" style="text-decoration:none; display:block; padding:16px 4px 16px 16px;">
+                    <h3 style="color:#1f2937; font-size:16px; font-weight:600; margin:0 0 4px;">{{ $destination->name }}</h3>
+                </a>
 
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/kampot.jpg" alt="Kampot" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kampot</p>
-        </div>
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/mondulkiri.jpg" alt="Mondulkiri" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Mondulkiri</p>
-        </div>
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/kohkong.jpg" alt="Koh Kong" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Koh Kong</p>
-        </div>
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/battambang.jpg" alt="Battambang" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); object-position: center top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Battambang</p>
-        </div>
-
+            </div>
+        @endforeach
     </div>
 </section>
 

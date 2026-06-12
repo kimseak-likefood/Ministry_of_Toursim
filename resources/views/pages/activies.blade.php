@@ -15,8 +15,8 @@
     height: 500px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding-left: 60px;
+    text-align: center;
+    justify-content: center;
     position: relative;
 ">
 
