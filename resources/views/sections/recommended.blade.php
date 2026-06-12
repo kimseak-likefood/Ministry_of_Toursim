@@ -23,8 +23,9 @@
             <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex">
                 <div class="card-wrap w-100 d-flex flex-column">
                     <div class="con-img-wrap m-auto">
-                        <img src="/assets/images/recommend(1)/oudong-monastery.jpg" class="img-fluid mx-auto d-block" alt="product picture">
-                        
+                        <a href="https://en.wikipedia.org/wiki/Silver_Pagoda" target="_blank" style="display: block;">
+                            <img src="/assets/images/recommend(1)/oudong-monastery.jpg" class="img-fluid mx-auto d-block" alt="product picture">
+                        </a>
                     </div>
                     <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
                         <h2 class="fs-6 fw-bold text-truncate">Silver Pagoda at your nearest accomodation</h2>
@@ -37,8 +38,9 @@
             <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex">
                 <div class="card-wrap w-100 d-flex flex-column">
                     <div class="con-img-wrap m-auto">
-                        <img src="/assets/images/recommend(1)/phnom_chisor.jpg" class="img-fluid mx-auto d-block" alt="product picture">
-                        
+                        <a href="https://en.wikipedia.org/wiki/Phnom_Chisor" target="_blank" style="display: block;">
+                            <img src="/assets/images/recommend(1)/phnom_chisor.jpg" class="img-fluid mx-auto d-block" alt="product picture">
+                        </a>
                     </div>
                     <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
                         <h2 class="fs-6 fw-bold text-truncate">Prasat Kravan</h2>
@@ -51,8 +53,9 @@
             <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex">
                 <div class="card-wrap w-100 d-flex flex-column">
                     <div class="con-img-wrap m-auto">
-                        <img src="/assets/images/recommend(1)/Sokha_Beach.png" class="img-fluid mx-auto d-block" alt="product picture">
-                        
+                        <a href="https://en.wikipedia.org/wiki/Kep_(town)" target="_blank" style="display: block;">
+                            <img src="/assets/images/recommend(1)/Sokha_Beach.png" class="img-fluid mx-auto d-block" alt="product picture">
+                        </a>
                     </div>
                     <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
                         <h2 class="fs-6 fw-bold text-truncate">Kep Beach</h2>
@@ -65,8 +68,9 @@
             <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex">
                 <div class="card-wrap w-100 d-flex flex-column">
                     <div class="con-img-wrap m-auto">
-                        <img src="/assets/images/recommend(1)/Koh-Ker-Temple-2.png" class="img-fluid mx-auto d-block" alt="product picture">
-                        
+                        <a href="https://en.wikipedia.org/wiki/Koh_Ker" target="_blank" style="display: block;">
+                            <img src="/assets/images/recommend(1)/Koh-Ker-Temple-2.png" class="img-fluid mx-auto d-block" alt="product picture">
+                        </a>
                     </div>
                     <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
                         <h2 class="fs-6 fw-bold text-truncate">Ta Keo Temple</h2>

@@ -10,26 +10,34 @@
 
     <!-- Offer 1 -->
     <div class="col-12 col-md-6 hoverShine">
-        <div class="box product01">
-        </div>
+        <a href="https://en.wikipedia.org/wiki/Koh_Rong" target="_blank" style="display: block; text-decoration: none;">
+            <div class="box product01">
+            </div>
+        </a>
     </div>
 
     <!-- Offer 2 -->
     <div class="col-12 col-md-6 hoverShine">
-        <div class="box product02">
-        </div>
+        <a href="https://en.wikipedia.org/wiki/Sihanoukville" target="_blank" style="display: block; text-decoration: none;">
+            <div class="box product02">
+            </div>
+        </a>
     </div>
 
     <!-- Offer 3 -->
     <div class="col-12 col-md-6 hoverShine">
-        <div class="box product03">
-        </div>
+        <a href="https://en.wikipedia.org/wiki/Siem_Reap" target="_blank" style="display: block; text-decoration: none;">
+            <div class="box product03">
+            </div>
+        </a>
     </div>
 
     <!-- Offer 4 -->
     <div class="col-12 col-md-6 hoverShine">
-        <div class="box product04">
-        </div>
+        <a href="https://en.wikipedia.org/wiki/Phnom_Kulen_National_Park" target="_blank" style="display: block; text-decoration: none;">
+            <div class="box product04">
+            </div>
+        </a>
     </div>
 
 </div>

@@ -25,7 +25,7 @@
         background: rgba(0,0,0,0.5);
     "></div>
 
-    
+
     <div style="position: relative; color: white;">
         <h1 style="font-size: 60px; font-weight: bold;">Events</h1>
         <p style="font-size: 20px; margin-top: 10px;">Explore Cambodia's official tourism guide — plan your perfect journey today.</p>
@@ -75,39 +75,71 @@
 </section>
 
 <!-- Holiday Stories -->
-<section style="padding: 60px 40px; background: white;">
-    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Holiday Traditions</h2>
-
-    <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
-        <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/celebration/kny_1.jpg" alt="Khmer New Year" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-        </div>
-        <div>
-            <h3 style="font-size: 28px; margin-bottom: 15px;">Khmer New Year</h3>
-            <p style="color: #666; font-size: 18px; line-height: 1.8;">The most anticipated celebration in Cambodia, marking the end of the harvest season. Families gather to play traditional games, visit pagodas, and welcome the new year with blessings and joy.</p>
+<section class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <h2 style="font-weight: 700; font-size: 2.4rem; color: #1f2937; margin-bottom: 1.5rem; margin-top: 3rem; ">
+                Holiday Traditions
+            </h2>
         </div>
     </div>
+</section>
 
-    <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px; flex-direction: row-reverse;">
-        <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/celebration/pchum.jpeg" alt="Pchum Ben" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+<!-- Khmer New Year -->
+<section class="container mb-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
+                <a href="https://en.wikipedia.org/wiki/Cambodian_New_Year" target="_blank" style="display: block;">
+                    <img src="/assets/images/celebration/kny_1.jpg" alt="Khmer New Year" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                </a>
+            </div>
         </div>
-        <div>
-            <h3 style="font-size: 28px; margin-bottom: 15px;">Pchum Ben</h3>
-            <p style="color: #666; font-size: 18px; line-height: 1.8;">A 15-day religious festival where Cambodians honor their ancestors. Families visit pagodas to offer food to monks and spirits, believing that the deceased return to receive blessings during this sacred time.</p>
+        <div class="col-md-6">
+            <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">Khmer New Year</h3>
+            <p style="color: #6b7280; line-height: 1.8;">
+                The most anticipated celebration in Cambodia, marking the end of the harvest season. Families gather to play traditional games, visit pagodas, and welcome the new year with blessings and joy.
+            </p>
         </div>
     </div>
+</section>
 
-    <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
-        <div style="overflow: hidden; border-radius: 15px; flex-shrink: 0;">
-            <img src="/assets/images/celebration/om_tuk.jpg" alt="Water Festival" style="width: 450px; height: 280px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+<!-- Pchum Ben -->
+<section class="container mb-5">
+    <div class="row align-items-center flex-md-row-reverse">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
+                <a href="https://en.wikipedia.org/wiki/Pchum_Ben" target="_blank" style="display: block;">
+                    <img src="/assets/images/celebration/pchum.jpeg" alt="Pchum Ben" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                </a>
+            </div>
         </div>
-        <div>
-            <h3 style="font-size: 28px; margin-bottom: 15px;">Water Festival</h3>
-            <p style="color: #666; font-size: 18px; line-height: 1.8;">Thousands gather along the Tonle Sap river to watch spectacular boat races, illuminated floats, and fireworks. This ancient festival celebrates the reversal of the river's flow and marks the end of the rainy season.</p>
+        <div class="col-md-6">
+            <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">Pchum Ben</h3>
+            <p style="color: #6b7280; line-height: 1.8;">
+                A 15-day religious festival where Cambodians honor their ancestors. Families visit pagodas to offer food to monks and spirits, believing that the deceased return to receive blessings during this sacred time.
+            </p>
         </div>
     </div>
+</section>
 
+<!-- Water Festival -->
+<section class="container mb-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
+                <a href="https://en.wikipedia.org/wiki/Bon_Om_Touk" target="_blank" style="display: block;">
+                    <img src="/assets/images/celebration/om_tuk.jpg" alt="Water Festival" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">Water Festival</h3>
+            <p style="color: #6b7280; line-height: 1.8;">
+                Thousands gather along the Tonle Sap river to watch spectacular boat races, illuminated floats, and fireworks. This ancient festival celebrates the reversal of the river's flow and marks the end of the rainy season.
+            </p>
+        </div>
+    </div>
 </section>
 
 <!-- Full Holiday List -->
