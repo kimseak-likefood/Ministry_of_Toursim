@@ -24,9 +24,10 @@
         </div>
 
         <div style="margin-bottom: 1.5rem;">
-            <label style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Upload Image</label>
-            <input type="file" name="image" style="width: 100%;" required>
-        </div>
+    <label style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Upload Image</label>
+    <img id="imagePreview" src="" style="width: 100px; height: 60px; object-fit: cover; border-radius: 4px; margin-bottom: 0.5rem; display: none;">
+    <input type="file" name="image" id="imageInput" style="width: 100%;" required>
+</div>
 
         <div style="display: flex; gap: 12px;">
             <button type="submit" style="background: #27ae60; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer;">
@@ -38,4 +39,18 @@
         </div>
     </form>
 </div>
+<script>
+    document.getElementById('imageInput').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = e => {
+                const preview = document.getElementById('imagePreview');
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
 @endsection

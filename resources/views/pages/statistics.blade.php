@@ -4,7 +4,7 @@
 @include('partials.header')
 
 <section style="
-    background-image: url('/assets/images/section/banner-image.jpg');
+    background-image: url('/assets/images/section/stats.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;

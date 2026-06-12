@@ -72,7 +72,8 @@ class AttractionController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('attractions', 'public');
+            $path = $request->file('image')->store('attractions', 'public');
+            $data['image'] = 'storage/' . $path;
         }
 
         $attraction->update($data);

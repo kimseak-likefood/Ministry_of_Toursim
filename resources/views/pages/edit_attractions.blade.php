@@ -9,7 +9,7 @@
         @csrf
         @method('PUT') <div style="margin-bottom: 1.25rem;">
             <label style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Attraction Name</label>
-            <input type="text" name="name" value="{{ old('name', $attraction->name) }}" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;" required>
+            <input type="text" name="name" value="{{ old('name', $attraction->name) }}" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;" required readonly>
         </div>
 
         <div style="margin-bottom: 1.25rem;">
@@ -25,9 +25,11 @@
         <div style="margin-bottom: 1.5rem;">
             <label style="display:block; margin-bottom: 0.5rem; font-weight: 600;">Change Image</label>
             @if($attraction->image)
-                <img src="{{ asset($attraction->image) }}" style="width: 100px; height: 60px; object-fit: cover; border-radius: 4px; margin-bottom: 0.5rem; display: block;">
-            @endif
-            <input type="file" name="image" style="width: 100%;">
+    <img id="imagePreview" src="{{ asset($attraction->image) }}" style="width: 100px; height: 60px; object-fit: cover; border-radius: 4px; margin-bottom: 0.5rem; display: block;">
+@else
+    <img id="imagePreview" src="" style="width: 100px; height: 60px; object-fit: cover; border-radius: 4px; margin-bottom: 0.5rem; display: none;">
+@endif
+<input type="file" name="image" id="imageInput" style="width: 100%;">
         </div>
 
         <div style="display: flex; gap: 12px; align-items: center;">
@@ -35,5 +37,20 @@
            <a href="/activities" style="margin-left: 16px; color: #888; font-size: 14px;">Cancel</a>
         </div>
     </form>
+    <script>
+    document.getElementById('imageInput').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = e => {
+                const preview = document.getElementById('imagePreview');
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
 </div>
+
 @endsection

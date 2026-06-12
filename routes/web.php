@@ -8,7 +8,10 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DestinationController;
 
-Route::get('/', function () { return view('home'); });
+Route::get('/', function () {
+    $posts = \App\Models\Post::with('user')->withCount('likes')->orderBy('likes_count', 'desc')->take(3)->get();
+    return view('home', compact('posts'));
+});
 
 Route::middleware('guest')->group(function () {
     Route::get('/register', [UserController::class, 'showRegister'])->name('register');
@@ -98,3 +101,8 @@ Route::get('/tourism', [DestinationController::class, 'index']);
 Route::resource('destinations', DestinationController::class)
     ->middleware(['auth'])
     ->only(['edit', 'update', 'destroy']);
+
+
+Route::middleware('auth')->group(function () {
+    Route::post('/posts/{post}/like', [PostController::class, 'like'])->name('posts.like');
+});

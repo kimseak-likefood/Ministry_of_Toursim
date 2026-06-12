@@ -3,7 +3,7 @@
 @section('content')
 @include('partials.header')
 <section style="
-    background-image: url('/assets/images/phnom penh/pp.jpg');
+    background-image: url('/assets/images/section/blog3.jpg');
     background-size: cover;
     background-position: center top;
     height: 500px;
@@ -75,7 +75,18 @@
 
             <div style="margin-top: 16px; display: flex; gap: 12px; align-items: center;">
                 <a href="{{ route('posts.viewposts', $post) }}" style="color: #222; font-size: 14px; font-weight: 600; text-decoration: underline;">Read more</a>
-
+                @auth
+    <form method="POST" action="{{ route('posts.like', $post) }}" style="display:contents;">
+        @csrf
+        @php $liked = $post->isLikedBy(auth()->user()); @endphp
+        <button type="submit" style="background: none; border: none; cursor: pointer; font-size: 14px; color: {{ $liked ? '#e74c3c' : '#888' }}">
+            {{ $liked ? '❤️' : '🤍' }} {{ $post->likes_count }}
+        </button>
+    </form>
+@else
+    <a href="{{ route('login') }}" style="font-size: 14px; color: #888; text-decoration: none;">🤍 {{ $post->likes_count }}</a>
+@endauth
+                
                 @can('update', $post)
                     <a href="{{ route('posts.edit', $post) }}" style="color: #222; font-size: 14px; font-weight: 600;">Edit</a>
                 @endcan

@@ -9,7 +9,7 @@
     </div>
 
 <section style="
-    background-image: url('/assets/images/section/banner-image.jpg');
+    background-image: url('/assets/images/section/activity3.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;

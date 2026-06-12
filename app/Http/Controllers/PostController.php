@@ -16,7 +16,12 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::with('user')->latest()->paginate(10);
-        return view('posts.blogposts', compact('posts'));
+        $posts = Post::with('user', 'likes')
+        ->withCount('likes')
+        ->orderBy('likes_count', 'desc')
+        ->paginate(10);
+    return view('posts.blogposts', compact('posts'));
+        
     }
 
     /**
@@ -105,4 +110,17 @@ class PostController extends Controller
 
         return redirect()->route('blogposts')->with('success', 'Post deleted!');
     }
+
+    public function like(Post $post)
+{
+    $existing = $post->likes()->where('user_id', auth()->id())->first();
+
+    if ($existing) {
+        $existing->delete();
+    } else {
+        $post->likes()->create(['user_id' => auth()->id()]);
+    }
+
+    return back();
+}
 }

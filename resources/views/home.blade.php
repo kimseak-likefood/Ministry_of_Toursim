@@ -88,7 +88,49 @@
         </div>
     </section>
 
+    <!-- Blog Section -->
+    <section style="padding: 60px 40px; background: #f9f9f9;">
+        <h2 style="text-align: center; margin-bottom: 10px; font-size: 32px;">Latest From Our Blog</h2>
+        <p style="text-align: center; color: #888; margin-bottom: 40px;">See what travellers are saying about Cambodia</p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1100px; margin: 0 auto;">
+            @foreach($posts as $post)
+            <div style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
+                @if($post->image)
+                    <img src="{{ asset('storage/' . $post->image) }}" style="width: 100%; height: 200px; object-fit: cover;">
+                @else
+                    <div style="width: 100%; height: 200px; background: #f0ede8; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 48px;">📝</span>
+                    </div>
+                @endif
+                <div style="padding: 20px;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                        <div style="width: 28px; height: 28px; border-radius: 50%; background: #c8a46e; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold; overflow: hidden;">
+                            @if($post->user && $post->user->avatar)
+                                <img src="{{ asset('storage/' . $post->user->avatar) }}" style="width: 100%; height: 100%; object-fit: cover;">
+                            @else
+                                {{ strtoupper(substr($post->user->name ?? 'D', 0, 1)) }}
+                            @endif
+                        </div>
+                        <span style="font-size: 13px; color: #888;">{{ $post->user->name ?? 'Deleted User' }} · {{ $post->created_at->format('M j, Y') }}</span>
+                    </div>
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">{{ $post->title }}</h3>
+                    <p style="color: #666; font-size: 14px; line-height: 1.7;">{{ Str::limit($post->content, 100) }}</p>
+                    <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center;">
+                        <a href="{{ route('posts.viewposts', $post) }}" style="color: #222; font-size: 13px; font-weight: 600; text-decoration: underline;">Read more</a>
+                        <span style="font-size: 13px; color: #888;">🤍 {{ $post->likes_count }}</span>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="{{ route('blogposts') }}" style="background: #222; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-size: 15px;">View All Posts</a>
+        </div>
+    </section>
+
     
-    @include('sections.blog')
+
     @include('sections.newsletter')
 @endsection

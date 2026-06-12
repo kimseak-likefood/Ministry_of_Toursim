@@ -7,7 +7,7 @@
 
 <!-- Hero Banner -->
 <section style="
-    background-image: url('/assets/images/section/banner-image.jpg');
+    background-image: url('/assets/images/section/event3.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;
