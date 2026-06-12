@@ -76,7 +76,7 @@ class AttractionController extends Controller
         }
 
         $attraction->update($data);
-        return redirect('/activies')->with('success', 'Attraction updated.');
+        return redirect('/activities')->with('success', 'Attraction updated.');
     }
 
     public function destroy(Attraction $attraction)
