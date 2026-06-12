@@ -65,6 +65,47 @@ class AttractionSeeder extends Seeder
             ],
         ];
 
+        Attraction::updateOrCreate(
+            ['slug' => 'geography'], // Add a 'slug' text column to your table if you want to find them easily!
+            [
+                'name' => 'Geography',
+                'subtitle' => 'Cambodia shares borders with Thailand, Laos, and Vietnam. The country features a diverse landscape of low-lying plains, the Mekong River delta, mountains, and the Gulf of Thailand coastline. The Tonle Sap, Southeast Asia \'s largest freshwater lake, is the beating heart of the nation\'s ecology and agriculture.',
+                'alt_text' => 'Rattanakiri - EcoTourism',
+                'image' => 'assets/images/destinations/geography.jpg',
+            ]
+        );
+
+        Attraction::updateOrCreate(
+            ['slug' => 'history'],
+            [
+                'name' => 'History',
+                'subtitle' => 'The Khmer Empire, which flourished from the 9th to 15th century, left behind the magnificent Angkor temple complex — one of the world\'s greatest archaeological treasures. After periods of French colonial rule and recent recovery, Cambodia today stands as a resilient nation proud of its heritage.
+                ',
+                'alt_text' => 'Ancient stone temple ruins at Koh Ker',
+                'image' => 'assets/images/destinations/history.jpg',
+            ]
+        );
+
+        Attraction::updateOrCreate(
+            ['slug' => 'culture'],
+            [
+                'name' => 'People and Culture',
+                'subtitle' => 'The Khmer people form the majority of Cambodia\'s population, known for their gentle nature and enduring spirit. Buddhism is the official religion and deeply influences daily life, art, and architecture. Traditional Apsara dance, silk weaving, and vibrant festivals reflect a culture that has thrived for centuries.',
+                'alt_text' => 'Phnom Penh - Minority',
+                'image' => 'assets/images/destinations/peopleandculture.jpg',
+            ]
+        );
+
+        Attraction::updateOrCreate(
+            ['slug' => 'climate'],
+            [
+                'name' => 'Climate',
+                'subtitle' => 'Cambodia enjoys a tropical climate with two distinct seasons: the dry season (November to April) and the wet season (May to October). Temperatures range from 21°C to 35°C year-round, making it an ideal destination for travelers seeking sunshine, adventure, and cultural discovery at any time of year.',
+                'alt_text' => 'Wooden river boats moored on calm water at Kampot',
+                'image' => 'assets/images/destinations/climate.jpg',
+            ]
+        );
+
         foreach ($attractions as $attraction) {
             Attraction::updateOrCreate(
                 ['slug' => $attraction['slug']],

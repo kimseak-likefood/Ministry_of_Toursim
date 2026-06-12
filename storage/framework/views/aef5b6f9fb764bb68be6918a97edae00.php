@@ -30,7 +30,7 @@
 
 
 <section style="padding: 60px 40px; background: #f9f9f9;">
-    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Top Destinations</h2>
+    <h2 style="text-align: center; margin-bottom: 50px; font-size: 45px;">Top Destinations</h2>
 
     <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
 
@@ -70,7 +70,7 @@
 
 
 <section style="padding: 60px 40px; background: white;">
-    <h2 style="text-align: center; margin-bottom: 40px; font-size: 32px;">Things To Do</h2>
+    <h2 style="text-align: center; margin-bottom: 80px; font-size: 45px;">Things To Do</h2>
 
     
     <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 40px;">
@@ -79,7 +79,7 @@
         </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Culture</h3>
-            <p style="color: #666; font-size: 20px; line-height: 1.8;">Explore ancient temples, royal palaces, and world-class museums that tell Cambodia's remarkable story.</p>
+            <p style="color: #666; font-size: 20px; line-height: 1.8;">Discover the heart and soul of Cambodia through its magnificent temples, royal palaces, vibrant traditions, and world-class museums. From the awe-inspiring legacy of the Khmer Empire to the colorful customs and warm hospitality of local communities, every destination offers a unique glimpse into the nation's rich heritage. Explore centuries of history, admire traditional arts and architecture, experience cultural performances, and uncover the stories that have shaped Cambodia into one of Southeast Asia's most fascinating cultural treasures. Whether wandering through ancient landmarks or participating in local celebrations, you'll find culture woven into every aspect of Cambodian life.</p>
         </div>
     </div>
 
@@ -90,7 +90,7 @@
         </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Nature</h3>
-            <p style="color: #666; font-size: 20px; line-height: 1.8;">Trek through lush forests, swim in volcanic lakes, and discover stunning waterfalls across the countryside.</p>
+            <p style="color: #666; font-size: 20px; line-height: 1.8;">Experience the breathtaking natural beauty of Cambodia, where lush forests, rolling mountains, pristine rivers, and hidden waterfalls await discovery. Trek through scenic national parks, explore tranquil lakes, encounter diverse wildlife, and relax in some of the country's most stunning landscapes. From the remote jungles of the Cardamom Mountains to the serene countryside and tropical coastlines, Cambodia offers countless opportunities to connect with nature and uncover its untouched wonders. Each landscape reveals a different side of the Kingdom, inviting visitors to slow down, explore, and appreciate its remarkable natural diversity.</p>
         </div>
     </div>
 
@@ -101,7 +101,7 @@
         </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Adventure</h3>
-            <p style="color: #666; font-size: 20px; line-height: 1.8;">Climb ancient pyramid temples, go off-road through remote provinces, and experience real adventure.</p>
+            <p style="color: #666; font-size: 20px; line-height: 1.8;">Embark on unforgettable adventures across Cambodia, where ancient ruins, rugged landscapes, and thrilling outdoor experiences await. Climb hidden temple mountains, trek through dense jungles, explore remote provinces, and navigate winding trails that lead to breathtaking views. Whether you're seeking adrenaline-pumping activities, off-the-beaten-path destinations, or exciting encounters with nature and history, Cambodia offers endless opportunities for exploration and discovery at every turn. Every journey promises new challenges, memorable experiences, and the excitement of uncovering places few travelers have seen.</p>
         </div>
     </div>
 

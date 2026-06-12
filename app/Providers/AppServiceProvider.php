@@ -31,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
         Gate::define('modify', function (User $user) {
         // Only show edit/delete icons if the logged-in user is actually an admin
         return $user->is_admin === true; 
+
     });
         
     }

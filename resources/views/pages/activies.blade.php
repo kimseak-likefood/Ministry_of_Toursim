@@ -48,6 +48,7 @@
     </section>
 
     <!-- Geography -->
+    {{-- @if($geography)
     <section class="container mb-5">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
@@ -57,15 +58,89 @@
             </div>
             <div class="col-md-6">
                 <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">Geography</h3>
-                <p style="color: #6b7280; line-height: 1.8;">
+                <p style="color: #6b7280; line-height: 1.8;">]'.
+                    
+                    
+                    '
                     Cambodia shares borders with Thailand, Laos, and Vietnam. The country features a diverse landscape of low-lying plains, the Mekong River delta, mountains, and the Gulf of Thailand coastline. The Tonle Sap, Southeast Asia's largest freshwater lake, is the beating heart of the nation's ecology and agriculture.
                 </p>
             </div>
         </div>
     </section>
+    @endif --}}
+    @if($geography)
+    <section class="container mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                
+                <div class="img-card-wrap" style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12); height: 320px;">
+                    
+                    <img src="{{ asset($geography->image) }}" 
+                        alt="{{ $geography->alt_text }}" 
+                        style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;" 
+                        onmouseover="this.style.transform='scale(1.08)'" 
+                        onmouseout="this.style.transform='scale(1)'">
+
+                    @can('modify', $geography)
+                    <div class="admin-overlay">
+                        <a href="{{ route('attractions.edit', $geography) }}" class="admin-btn">✏️</a>
+                        <form method="POST" action="{{ route('attractions.destroy', $geography) }}" onsubmit="return confirm('Delete this section?')" style="margin:0;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="admin-btn">🗑️</button>
+                        </form>
+                    </div>
+                    @endcan
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">{{ $geography->name }}</h3>
+                <p style="color: #6b7280; line-height: 1.8;">
+                    {{ $geography->subtitle }}
+                </p>
+            </div>
+        </div>
+    </section>
+    @endif
 
     <!-- History -->
+    @if($history)
     <section class="container mb-5">
+        <div class="row align-items-center flex-md-row-reverse">
+            <div class="col-md-6 mb-4 mb-md-0">
+                
+                <div class="img-card-wrap" style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12); height: 320px;">
+                    
+                    <img src="{{ asset($history->image) }}" 
+                        alt="{{ $history->alt_text }}" 
+                        style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;" 
+                        onmouseover="this.style.transform='scale(1.08)'" 
+                        onmouseout="this.style.transform='scale(1)'">
+
+                    @can('modify', $history)
+                    <div class="admin-overlay">
+                        <a href="{{ route('attractions.edit', $history) }}" class="admin-btn">✏️</a>
+                        <form method="POST" action="{{ route('attractions.destroy', $history) }}" onsubmit="return confirm('Delete this section?')" style="margin:0;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="admin-btn">🗑️</button>
+                        </form>
+                    </div>
+                    @endcan
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">{{ $history->name }}</h3>
+                <p style="color: #6b7280; line-height: 1.8;">
+                    {{ $history->subtitle }}
+                </p>
+            </div>
+        </div>
+    </section>
+    @endif
+    {{-- <section class="container mb-5">
         <div class="row align-items-center flex-md-row-reverse">
             <div class="col-md-6 mb-4 mb-md-0">
                 <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
@@ -79,10 +154,45 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Culture -->
+    @if($culture)
     <section class="container mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                
+                <div class="img-card-wrap" style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12); height: 320px;">
+                    
+                    <img src="{{ asset($culture->image) }}" 
+                        alt="{{ $history->alt_text }}" 
+                        style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;" 
+                        onmouseover="this.style.transform='scale(1.08)'" 
+                        onmouseout="this.style.transform='scale(1)'">
+
+                    @can('modify', $culture)
+                    <div class="admin-overlay">
+                        <a href="{{ route('attractions.edit', $culture) }}" class="admin-btn">✏️</a>
+                        <form method="POST" action="{{ route('attractions.destroy', $history) }}" onsubmit="return confirm('Delete this section?')" style="margin:0;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="admin-btn">🗑️</button>
+                        </form>
+                    </div>
+                    @endcan
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">{{ $culture->name }}</h3>
+                <p style="color: #6b7280; line-height: 1.8;">
+                    {{ $culture->subtitle }}
+                </p>
+            </div>
+        </div>
+    </section>
+    @endif
+    {{-- <section class="container mb-5">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
                 <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
@@ -96,10 +206,45 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Climate -->
+    @if($climate)
     <section class="container mb-5">
+        <div class="row align-items-center flex-md-row-reverse">
+            <div class="col-md-6 mb-4 mb-md-0">
+                
+                <div class="img-card-wrap" style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12); height: 320px;">
+                    
+                    <img src="{{ asset($climate->image) }}" 
+                        alt="{{ $history->alt_text }}" 
+                        style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;" 
+                        onmouseover="this.style.transform='scale(1.08)'" 
+                        onmouseout="this.style.transform='scale(1)'">
+
+                    @can('modify', $climate)
+                    <div class="admin-overlay">
+                        <a href="{{ route('attractions.edit', $culture) }}" class="admin-btn">✏️</a>
+                        <form method="POST" action="{{ route('attractions.destroy', $climate) }}" onsubmit="return confirm('Delete this section?')" style="margin:0;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="admin-btn">🗑️</button>
+                        </form>
+                    </div>
+                    @endcan
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">{{ $climate->name }}</h3>
+                <p style="color: #6b7280; line-height: 1.8;">
+                    {{ $climate->subtitle }}
+                </p>
+            </div>
+        </div>
+    </section>
+    @endif
+    {{-- <section class="container mb-5">
         <div class="row align-items-center flex-md-row-reverse">
             <div class="col-md-6 mb-4 mb-md-0">
                 <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
@@ -113,9 +258,10 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Featured Tourist Attractions -->
+    
     <div style="max-width:1200px; margin:3rem auto; padding:0 1.5rem;">
 
         <div style="text-align:center; margin-bottom:2.5rem;">
@@ -123,6 +269,13 @@
                 Featured Tourist Attractions
             </h2>
             <div style="width:60px; height:3px; background:#c0392b; margin:0 auto;"></div>
+            @can('modify', App\Models\Attraction::class)
+            <div style="text-align: right; margin-bottom: 2rem;">
+                <a href="{{ route('attractions.create') }}" style="background: #27ae60; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; display: inline-block; box-shadow: 0 4px 12px rgba(39,174,96,0.2); transition: background 0.2s;">
+                    ➕ Add New Attraction
+                </a>
+            </div>
+            @endcan
         </div>
 
         <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;">

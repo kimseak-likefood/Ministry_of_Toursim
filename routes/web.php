@@ -89,3 +89,5 @@ Route::post('/admin/logout', [LoginController::class, 'logout'])->name('logout')
 Route::resource('attractions', AttractionController::class)
     ->middleware(['auth'])
     ->only(['edit', 'update', 'destroy']);
+
+Route::resource('attractions', AttractionController::class);

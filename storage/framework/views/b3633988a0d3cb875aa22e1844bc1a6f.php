@@ -46,74 +46,163 @@
     </section>
 
     <!-- Geography -->
+    
+    <?php if($geography): ?>
     <section class="container mb-5">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
-                <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/destinations/geography.jpg" alt="Rattanakiri - EcoTourism" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                
+                <div class="img-card-wrap" style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12); height: 320px;">
+                    
+                    <img src="<?php echo e(asset($geography->image)); ?>" 
+                        alt="<?php echo e($geography->alt_text); ?>" 
+                        style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;" 
+                        onmouseover="this.style.transform='scale(1.08)'" 
+                        onmouseout="this.style.transform='scale(1)'">
+
+                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', $geography)): ?>
+                    <div class="admin-overlay">
+                        <a href="<?php echo e(route('attractions.edit', $geography)); ?>" class="admin-btn">✏️</a>
+                        <form method="POST" action="<?php echo e(route('attractions.destroy', $geography)); ?>" onsubmit="return confirm('Delete this section?')" style="margin:0;">
+                            <?php echo csrf_field(); ?>
+                            <?php echo method_field('DELETE'); ?>
+                            <button type="submit" class="admin-btn">🗑️</button>
+                        </form>
+                    </div>
+                    <?php endif; ?>
+
                 </div>
             </div>
             <div class="col-md-6">
-                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">Geography</h3>
+                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;"><?php echo e($geography->name); ?></h3>
                 <p style="color: #6b7280; line-height: 1.8;">
-                    Cambodia shares borders with Thailand, Laos, and Vietnam. The country features a diverse landscape of low-lying plains, the Mekong River delta, mountains, and the Gulf of Thailand coastline. The Tonle Sap, Southeast Asia's largest freshwater lake, is the beating heart of the nation's ecology and agriculture.
+                    <?php echo e($geography->subtitle); ?>
+
                 </p>
             </div>
         </div>
     </section>
+    <?php endif; ?>
 
     <!-- History -->
+    <?php if($history): ?>
     <section class="container mb-5">
         <div class="row align-items-center flex-md-row-reverse">
             <div class="col-md-6 mb-4 mb-md-0">
-                <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/destinations/history.jpg" alt="Ancient stone temple ruins surrounded by trees and moss at Koh Ker archaeological site" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                
+                <div class="img-card-wrap" style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12); height: 320px;">
+                    
+                    <img src="<?php echo e(asset($history->image)); ?>" 
+                        alt="<?php echo e($history->alt_text); ?>" 
+                        style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;" 
+                        onmouseover="this.style.transform='scale(1.08)'" 
+                        onmouseout="this.style.transform='scale(1)'">
+
+                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', $history)): ?>
+                    <div class="admin-overlay">
+                        <a href="<?php echo e(route('attractions.edit', $history)); ?>" class="admin-btn">✏️</a>
+                        <form method="POST" action="<?php echo e(route('attractions.destroy', $history)); ?>" onsubmit="return confirm('Delete this section?')" style="margin:0;">
+                            <?php echo csrf_field(); ?>
+                            <?php echo method_field('DELETE'); ?>
+                            <button type="submit" class="admin-btn">🗑️</button>
+                        </form>
+                    </div>
+                    <?php endif; ?>
+
                 </div>
             </div>
             <div class="col-md-6">
-                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">History</h3>
+                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;"><?php echo e($history->name); ?></h3>
                 <p style="color: #6b7280; line-height: 1.8;">
-                    The Khmer Empire, which flourished from the 9th to 15th century, left behind the magnificent Angkor temple complex — one of the world's greatest archaeological treasures. After periods of French colonial rule and recent recovery, Cambodia today stands as a resilient nation proud of its heritage.
+                    <?php echo e($history->subtitle); ?>
+
                 </p>
             </div>
         </div>
     </section>
+    <?php endif; ?>
+    
 
     <!-- Culture -->
+    <?php if($culture): ?>
     <section class="container mb-5">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
-                <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/destinations/peopleandculture.jpg" alt="Phnom Penh - Minority" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                
+                <div class="img-card-wrap" style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12); height: 320px;">
+                    
+                    <img src="<?php echo e(asset($culture->image)); ?>" 
+                        alt="<?php echo e($history->alt_text); ?>" 
+                        style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;" 
+                        onmouseover="this.style.transform='scale(1.08)'" 
+                        onmouseout="this.style.transform='scale(1)'">
+
+                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', $culture)): ?>
+                    <div class="admin-overlay">
+                        <a href="<?php echo e(route('attractions.edit', $culture)); ?>" class="admin-btn">✏️</a>
+                        <form method="POST" action="<?php echo e(route('attractions.destroy', $history)); ?>" onsubmit="return confirm('Delete this section?')" style="margin:0;">
+                            <?php echo csrf_field(); ?>
+                            <?php echo method_field('DELETE'); ?>
+                            <button type="submit" class="admin-btn">🗑️</button>
+                        </form>
+                    </div>
+                    <?php endif; ?>
+
                 </div>
             </div>
             <div class="col-md-6">
-                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">People and Culture</h3>
+                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;"><?php echo e($culture->name); ?></h3>
                 <p style="color: #6b7280; line-height: 1.8;">
-                    The Khmer people form the majority of Cambodia's population, known for their gentle nature and enduring spirit. Buddhism is the official religion and deeply influences daily life, art, and architecture. Traditional Apsara dance, silk weaving, and vibrant festivals reflect a culture that has thrived for centuries.
+                    <?php echo e($culture->subtitle); ?>
+
                 </p>
             </div>
         </div>
     </section>
+    <?php endif; ?>
+    
 
     <!-- Climate -->
+    <?php if($climate): ?>
     <section class="container mb-5">
         <div class="row align-items-center flex-md-row-reverse">
             <div class="col-md-6 mb-4 mb-md-0">
-                <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.12);">
-                    <img src="/assets/images/destinations/climate.jpg" alt="Wooden river boats moored on calm water at Kampot Dong Te with green banks and distant limestone hills" style="width:100%; height:320px; object-fit:cover; display:block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+                
+                <div class="img-card-wrap" style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12); height: 320px;">
+                    
+                    <img src="<?php echo e(asset($climate->image)); ?>" 
+                        alt="<?php echo e($history->alt_text); ?>" 
+                        style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;" 
+                        onmouseover="this.style.transform='scale(1.08)'" 
+                        onmouseout="this.style.transform='scale(1)'">
+
+                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', $climate)): ?>
+                    <div class="admin-overlay">
+                        <a href="<?php echo e(route('attractions.edit', $culture)); ?>" class="admin-btn">✏️</a>
+                        <form method="POST" action="<?php echo e(route('attractions.destroy', $climate)); ?>" onsubmit="return confirm('Delete this section?')" style="margin:0;">
+                            <?php echo csrf_field(); ?>
+                            <?php echo method_field('DELETE'); ?>
+                            <button type="submit" class="admin-btn">🗑️</button>
+                        </form>
+                    </div>
+                    <?php endif; ?>
+
                 </div>
             </div>
             <div class="col-md-6">
-                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;">Climate</h3>
+                <h3 style="font-weight: 700; font-size: 1.5rem; color: #1f2937; margin-bottom: 1rem;"><?php echo e($climate->name); ?></h3>
                 <p style="color: #6b7280; line-height: 1.8;">
-                    Cambodia enjoys a tropical climate with two distinct seasons: the dry season (November to April) and the wet season (May to October). Temperatures range from 21°C to 35°C year-round, making it an ideal destination for travelers seeking sunshine, adventure, and cultural discovery at any time of year.
+                    <?php echo e($climate->subtitle); ?>
+
                 </p>
             </div>
         </div>
     </section>
+    <?php endif; ?>
+    
 
     <!-- Featured Tourist Attractions -->
+    
     <div style="max-width:1200px; margin:3rem auto; padding:0 1.5rem;">
 
         <div style="text-align:center; margin-bottom:2.5rem;">
@@ -121,6 +210,13 @@
                 Featured Tourist Attractions
             </h2>
             <div style="width:60px; height:3px; background:#c0392b; margin:0 auto;"></div>
+            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', App\Models\Attraction::class)): ?>
+            <div style="text-align: right; margin-bottom: 2rem;">
+                <a href="<?php echo e(route('attractions.create')); ?>" style="background: #27ae60; color: white; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; display: inline-block; box-shadow: 0 4px 12px rgba(39,174,96,0.2); transition: background 0.2s;">
+                    ➕ Add New Attraction
+                </a>
+            </div>
+            <?php endif; ?>
         </div>
 
         <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;">

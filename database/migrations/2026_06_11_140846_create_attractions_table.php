@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('name_kh')->nullable();      // Khmer name
-            $table->string('subtitle')->nullable();      // e.g. "EcoTourism"
+            $table->text('subtitle')->nullable();      // e.g. "EcoTourism"
             $table->string('image');                     // path to image
             $table->string('alt_text')->nullable();
-            $table->string('slug')->unique();            // for clean URLs
+            $table->string('slug')->nullable();            // for clean URLs
             $table->timestamps();
         });
     }
