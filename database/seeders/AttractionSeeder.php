@@ -13,7 +13,7 @@ class AttractionSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        
         $attractions = [
             [
                 'name'     => 'Kampot Dong Te',

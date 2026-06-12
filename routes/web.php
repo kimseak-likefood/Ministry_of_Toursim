@@ -6,6 +6,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DestinationController;
 
 Route::get('/', function () { return view('home'); });
 
@@ -80,6 +81,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/activities', [AttractionController::class, 'index']);
 
+
 // Admin auth
 Route::get('/admin/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/admin/login', [LoginController::class, 'login']);
@@ -91,3 +93,8 @@ Route::resource('attractions', AttractionController::class)
     ->only(['edit', 'update', 'destroy']);
 
 Route::resource('attractions', AttractionController::class);
+Route::get('/tourism', [DestinationController::class, 'index']);
+
+Route::resource('destinations', DestinationController::class)
+    ->middleware(['auth'])
+    ->only(['edit', 'update', 'destroy']);

@@ -54,6 +54,8 @@ class AttractionController extends Controller
         return view('pages.activies', compact('geography', 'history', 'culture', 'climate', 'attractions'));
     }
 
+    
+
     public function edit(Attraction $attraction)
     {
         return view('pages.edit_attractions', compact('attraction'));

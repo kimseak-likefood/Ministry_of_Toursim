@@ -15,6 +15,7 @@
     height: 500px;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     position: relative;
 ">
@@ -27,9 +28,9 @@
     "></div>
 
     
-    <div style="position: relative; text-align: center; color: white;">
-        <h1 style="font-size: 60px; font-weight: bold;">Cambodia Tourism</h1>
-        <p style="font-size: 20px; margin-top: 10px;">Explore Cambodia's official tourism guide — plan your perfect journey today.</p>
+    <div style="position: relative; color: white;">
+        <h1 style="font-size: 60px; font-weight: bold;">Activities in Cambodia</h1>
+        <p style="font-size: 20px; margin-top: 10px;">From ancient temples to jungle adventures — find your next experience in the Kingdom of Wonder.</p>
     </div>
 </section>
 

@@ -17,22 +17,22 @@
                 <ul class="navbar-nav me-auto page-menu" id="nav">
                     
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle pe-5" href="#" id="DiscoverDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Discover</a>
-                             <ul class="dropdown-menu" aria-labelledby="DiscoverDropdown">
-                                 <li><a class="dropdown-item" href="{{ url('phnompenh') }}">Phnom Penh</a></li>
-                                 <li><a class="dropdown-item" href="{{ url('siemreap') }}">Siem Reap</a></li>
-                                 <li><a class="dropdown-item" href="{{ url('mondulkiri') }}">Mondulkiri</a></li>
-                                 <li><a class="dropdown-item" href="{{ url('battambang') }}">Battambang</a></li>
-                                 <li><a class="dropdown-item" href="{{ url('kohkong') }}">Kohkong</a></li>
-                                 <li><a class="dropdown-item" href="{{ url('kampot') }}">Kampot</a></li>
-                            </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('activities') }}">Activities</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('holidays&events') }}">Events</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('tourism') }}">Tourism</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('statistics') }}">Statistics</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('laws&regulations') }}">Regulations</a></li>
-                    <li class="nav-item"><a class="nav-link pe-5" href="{{ url('blogposts') }}">Blog</a></li>
+    <a class="nav-link dropdown-toggle pe-5 {{ request()->is('phnompenh*') || request()->is('siemreap*') || request()->is('mondulkiri*') || request()->is('battambang*') || request()->is('kohkong*') || request()->is('kampot*') ? 'fw-bold' : '' }}" href="#" id="DiscoverDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Discover</a>
+        <ul class="dropdown-menu" aria-labelledby="DiscoverDropdown">
+            <li><a class="dropdown-item {{ request()->is('phnompenh*') ? 'fw-bold' : '' }}" href="{{ url('phnompenh') }}">Phnom Penh</a></li>
+            <li><a class="dropdown-item {{ request()->is('siemreap*') ? 'fw-bold' : '' }}" href="{{ url('siemreap') }}">Siem Reap</a></li>
+            <li><a class="dropdown-item {{ request()->is('mondulkiri*') ? 'fw-bold' : '' }}" href="{{ url('mondulkiri') }}">Mondulkiri</a></li>
+            <li><a class="dropdown-item {{ request()->is('battambang*') ? 'fw-bold' : '' }}" href="{{ url('battambang') }}">Battambang</a></li>
+            <li><a class="dropdown-item {{ request()->is('kohkong*') ? 'fw-bold' : '' }}" href="{{ url('kohkong') }}">Kohkong</a></li>
+            <li><a class="dropdown-item {{ request()->is('kampot*') ? 'fw-bold' : '' }}" href="{{ url('kampot') }}">Kampot</a></li>
+        </ul>
+</li>
+                    <li class="nav-item"><a class="nav-link pe-5 {{ request()->is('activities*') ? 'fw-bold' : '' }}" href="{{ url('activities') }}">Activities</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5 {{ request()->is('holidays&events*') ? 'fw-bold' : '' }}" href="{{ url('holidays&events') }}">Events</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5 {{ request()->is('tourism*') ? 'fw-bold' : '' }}" href="{{ url('tourism') }}">Tourism</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5 {{ request()->is('statistics*') ? 'fw-bold' : '' }}" href="{{ url('statistics') }}">Statistics</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5 {{ request()->is('laws&regulations*') ? 'fw-bold' : '' }}" href="{{ url('laws&regulations') }}">Regulations</a></li>
+                    <li class="nav-item"><a class="nav-link pe-5 {{ request()->is('blogposts*') ? 'fw-bold' : '' }}" href="{{ url('blogposts') }}">Blog</a></li>
                 </ul>
                 <ul class="navbar-nav page-menu mb-3 mb-lg-0">
                     @include('partials.nav.language')

@@ -10,6 +10,7 @@
     height: 500px;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     position: relative;
 ">
@@ -22,7 +23,7 @@
     "></div>
 
     
-    <div style="position: relative; text-align: center; color: white;">
+    <div style="position: relative; color: white;">
         <h1 style="font-size: 60px; font-weight: bold;">Tourism Statistics</h1>
         <p style="font-size: 20px; margin-top: 10px;">Cambodia Tourism Data and Performance Overview 2025</p>
     </div>

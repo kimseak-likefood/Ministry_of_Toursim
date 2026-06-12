@@ -9,6 +9,7 @@
     height: 500px;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     position: relative;
 ">
@@ -21,7 +22,7 @@
     "></div>
 
     
-    <div style="position: relative; text-align: center; color: white;">
+    <div style="position: relative; color: white;">
         <h1 style="font-size: 60px; font-weight: bold;">Cambodia Tourism</h1>
         <p style="font-size: 20px; margin-top: 10px;">Explore Cambodia's official tourism guide — plan your perfect journey today.</p>
     </div>
@@ -32,38 +33,42 @@
 <section style="padding: 60px 40px; background: #f9f9f9;">
     <h2 style="text-align: center; margin-bottom: 50px; font-size: 45px;">Top Destinations</h2>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; max-width:1200px; margin:0 auto;">
+        <?php $__currentLoopData = $destinations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $destination): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="img-card-wrap" style="border-radius:24px; overflow:hidden; position:relative; box-shadow:0 10px 40px rgba(0,0,0,0.12);">
+                
+                <div style="position:relative; width:100%; height:260px; overflow:hidden;">
+                    <?php if($destination->image): ?>
+    <img src="<?php echo e(asset($destination->image)); ?>"
+        alt="<?php echo e($destination->alt_text); ?>"
+        style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease;"
+        onmouseover="this.style.transform='scale(1.08)'"
+        onmouseout="this.style.transform='scale(1)'">
+<?php else: ?>
+    <div style="width:100%; height:100%; background: #f0ede8; display:flex; align-items:center; justify-content:center;">
+        <span style="font-size: 48px;">no image</span>
+    </div>
+<?php endif; ?>
 
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/phnompenh.jpg" alt="Phnom Penh" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Phnom Penh</p>
-        </div>
+                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', $destination)): ?>
+                    <div class="admin-overlay">
+                        <a href="<?php echo e(route('destinations.edit', $destination)); ?>" class="admin-btn">✏️</a>
+                        <form method="POST" action="<?php echo e(route('destinations.destroy', $destination)); ?>"
+                            onsubmit="return confirm('Delete this destination?')" style="margin:0;">
+                            <?php echo csrf_field(); ?>
+                            <?php echo method_field('DELETE'); ?>
+                            <button type="submit" class="admin-btn">🗑️</button>
+                        </form>
+                    </div>
+                    <?php endif; ?>
+                </div>
 
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/sieamreap.jpg" alt="Siem Reap" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Siem Reap</p>
-        </div>
+                <a href="#" style="text-decoration:none; display:block; padding:16px 4px 16px 16px;">
+                    <h3 style="color:#1f2937; font-size:16px; font-weight:600; margin:0 0 4px;"><?php echo e($destination->name); ?></h3>
+                </a>
 
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/kampot.jpg" alt="Kampot" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Kampot</p>
-        </div>
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/mondulkiri.jpg" alt="Mondulkiri" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Mondulkiri</p>
-        </div>
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/kohkong.jpg" alt="Koh Kong" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Koh Kong</p>
-        </div>
-
-        <div style="text-align: center; overflow: hidden; border-radius: 15px;">
-            <img src="/assets/images/destinations/battambang.jpg" alt="Battambang" style="width: 350px; height: 250px; object-fit: cover; border-radius: 15px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); object-position: center top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
-            <p style="margin-top: 10px; font-size: 16px; font-weight: bold;">Battambang</p>
-        </div>
-
+            </div>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 </section>
 
@@ -79,7 +84,8 @@
         </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Culture</h3>
-            <p style="color: #666; font-size: 20px; line-height: 1.8;">Discover the heart and soul of Cambodia through its magnificent temples, royal palaces, vibrant traditions, and world-class museums. From the awe-inspiring legacy of the Khmer Empire to the colorful customs and warm hospitality of local communities, every destination offers a unique glimpse into the nation's rich heritage. Explore centuries of history, admire traditional arts and architecture, experience cultural performances, and uncover the stories that have shaped Cambodia into one of Southeast Asia's most fascinating cultural treasures. Whether wandering through ancient landmarks or participating in local celebrations, you'll find culture woven into every aspect of Cambodian life.</p>
+            <p style="color: #666; margin-bottom: 30px; font-size: 20px; line-height: 1.8;">Discover the heart and soul of Cambodia through its magnificent temples, royal palaces, vibrant traditions, and world-class museums. From the awe-inspiring legacy of the Khmer Empire to the colorful customs and warm hospitality of local communities, every destination offers a unique glimpse into the nation's rich heritage.</p>
+            <p style="color: #0393f3; font-size: 20px; line-height: 1.8;">Learn more...</p>
         </div>
     </div>
 
@@ -90,7 +96,8 @@
         </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Nature</h3>
-            <p style="color: #666; font-size: 20px; line-height: 1.8;">Experience the breathtaking natural beauty of Cambodia, where lush forests, rolling mountains, pristine rivers, and hidden waterfalls await discovery. Trek through scenic national parks, explore tranquil lakes, encounter diverse wildlife, and relax in some of the country's most stunning landscapes. From the remote jungles of the Cardamom Mountains to the serene countryside and tropical coastlines, Cambodia offers countless opportunities to connect with nature and uncover its untouched wonders. Each landscape reveals a different side of the Kingdom, inviting visitors to slow down, explore, and appreciate its remarkable natural diversity.</p>
+            <p style="color: #666666; margin-bottom: 30px; font-size: 20px; line-height: 1.8;">Experience the breathtaking natural beauty of Cambodia, where lush forests, rolling mountains, pristine rivers, and hidden waterfalls await discovery. Trek through scenic national parks, explore tranquil lakes, encounter diverse wildlife, and relax in some of the country's most stunning landscapes.</p>
+            <p style="color: #0393f3; font-size: 20px; line-height: 1.8;">Learn more...</p>
         </div>
     </div>
 
@@ -101,7 +108,8 @@
         </div>
         <div>
             <h3 style="font-size: 34px; margin-bottom: 15px;">Adventure</h3>
-            <p style="color: #666; font-size: 20px; line-height: 1.8;">Embark on unforgettable adventures across Cambodia, where ancient ruins, rugged landscapes, and thrilling outdoor experiences await. Climb hidden temple mountains, trek through dense jungles, explore remote provinces, and navigate winding trails that lead to breathtaking views. Whether you're seeking adrenaline-pumping activities, off-the-beaten-path destinations, or exciting encounters with nature and history, Cambodia offers endless opportunities for exploration and discovery at every turn. Every journey promises new challenges, memorable experiences, and the excitement of uncovering places few travelers have seen.</p>
+            <p style="color: #666; font-size: 20px; line-height: 1.8;">Embark on unforgettable adventures across Cambodia, where ancient ruins, rugged landscapes, and thrilling outdoor experiences await. Climb hidden temple mountains, trek through dense jungles, explore remote provinces, and navigate winding trails that lead to breathtaking views. Whether you're seeking adrenaline-pumping activities, off-the-beaten-path destinations, or exciting encounters with nature and history.</p>
+            <p style="color: #0393f3; font-size: 20px; line-height: 1.8;">Learn more...</p>
         </div>
     </div>
 

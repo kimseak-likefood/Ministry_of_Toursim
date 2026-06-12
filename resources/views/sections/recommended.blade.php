@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <h4 class="fs-2 fw-bold theme-text-secondary mb-0">Recommended</h4>
-                <p class="mb-0 theme-text-accent-one">International & Domestic fames ac ante ipsum</p>
+                <p class="mb-0 theme-text-accent-one">Cultural & Natural Locations of the Kingdom of Wonder</p>
             </div>
             <div class="col-12 col-lg-6 align-self-center justify-content-end d-flex">
                 <div class="d-flex">
@@ -27,8 +27,8 @@
                         <span class="wishlist-tag"><i class="bi bi-heart"></i></span>
                     </div>
                     <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
-                        <h2 class="fs-6 fw-bold text-truncate">The Montcalm At Brewery London City</h2>
-                        <p class="mb-0 theme-text-accent-two small">Westminster Borough, London</p>
+                        <h2 class="fs-6 fw-bold text-truncate">Silver Pagoda at your nearest accomodation</h2>
+                        <p class="mb-0 theme-text-accent-two small">Phnom Penh, Cambodia</p>
                     </div>
                 </div>
             </div>
@@ -41,8 +41,8 @@
                         <span class="wishlist-tag"><i class="bi bi-heart"></i></span>
                     </div>
                     <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
-                        <h2 class="fs-6 fw-bold text-truncate">Flying Over Bali</h2>
-                        <p class="mb-0 theme-text-accent-two small">Beautiful Lands, Indonesia</p>
+                        <h2 class="fs-6 fw-bold text-truncate">Prasat Kravan</h2>
+                        <p class="mb-0 theme-text-accent-two small">Siem Reap, Cambodia</p>
                     </div>
                 </div>
             </div>
@@ -55,8 +55,8 @@
                         <span class="wishlist-tag"><i class="bi bi-heart"></i></span>
                     </div>
                     <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
-                        <h2 class="fs-6 fw-bold text-truncate">American Landscapes</h2>
-                        <p class="mb-0 theme-text-accent-two small">Pestminster Worough, USA</p>
+                        <h2 class="fs-6 fw-bold text-truncate">Kep Beach</h2>
+                        <p class="mb-0 theme-text-accent-two small">Kep Province, Cambodia</p>
                     </div>
                 </div>
             </div>
@@ -69,8 +69,8 @@
                         <span class="wishlist-tag"><i class="bi bi-heart"></i></span>
                     </div>
                     <div class="con-wrap mt-4 flex-grow-1 d-flex flex-column">
-                        <h2 class="fs-6 fw-bold text-truncate">The Beauty of Scotland</h2>
-                        <p class="mb-0 theme-text-accent-two small">Mestminster Gorough, UK</p>
+                        <h2 class="fs-6 fw-bold text-truncate">Ta Keo Temple</h2>
+                        <p class="mb-0 theme-text-accent-two small">Siem Reap, Cambodia</p>
                     </div>
                 </div>
             </div>
