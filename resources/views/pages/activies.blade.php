@@ -174,7 +174,7 @@
                     @can('modify', $culture)
                     <div class="admin-overlay">
                         <a href="{{ route('attractions.edit', $culture) }}" class="admin-btn">✏️</a>
-                        <form method="POST" action="{{ route('attractions.destroy', $history) }}" onsubmit="return confirm('Delete this section?')" style="margin:0;">
+                        <form method="POST" action="{{ route('attractions.destroy', $culture) }}" onsubmit="return confirm('Delete this section?')" style="margin:0;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="admin-btn">🗑️</button>

@@ -133,7 +133,7 @@
                 <div class="img-card-wrap" style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12); height: 320px;">
                     
                     <img src="<?php echo e(asset($culture->image)); ?>" 
-                        alt="<?php echo e($history->alt_text); ?>" 
+                        alt="<?php echo e($culture->alt_text); ?>" 
                         style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;" 
                         onmouseover="this.style.transform='scale(1.08)'" 
                         onmouseout="this.style.transform='scale(1)'">
@@ -141,7 +141,7 @@
                     <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('modify', $culture)): ?>
                     <div class="admin-overlay">
                         <a href="<?php echo e(route('attractions.edit', $culture)); ?>" class="admin-btn">✏️</a>
-                        <form method="POST" action="<?php echo e(route('attractions.destroy', $history)); ?>" onsubmit="return confirm('Delete this section?')" style="margin:0;">
+                        <form method="POST" action="<?php echo e(route('attractions.destroy', $culture)); ?>" onsubmit="return confirm('Delete this section?')" style="margin:0;">
                             <?php echo csrf_field(); ?>
                             <?php echo method_field('DELETE'); ?>
                             <button type="submit" class="admin-btn">🗑️</button>
@@ -172,7 +172,7 @@
                 <div class="img-card-wrap" style="border-radius: 24px; overflow: hidden; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.12); height: 320px;">
                     
                     <img src="<?php echo e(asset($climate->image)); ?>" 
-                        alt="<?php echo e($history->alt_text); ?>" 
+                        alt="<?php echo e($climate->alt_text); ?>" 
                         style="width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease;" 
                         onmouseover="this.style.transform='scale(1.08)'" 
                         onmouseout="this.style.transform='scale(1)'">
